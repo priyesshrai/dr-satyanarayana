@@ -41,7 +41,7 @@ export function Subheading({ children, className, style }: Props) {
 }
 export function ButtonPrimary({ children, className, style, ...rest }: BtnProps) {
     return (
-        <button className={`${className ?? ''} text-white bg-dark-navy md:text-base text-sm font-semibold px-5 h-14 border-none outline-none cursor-pointer transition-all duration-300 ease-linear hover:bg-hover-navy rounded-full`}
+        <button className={`${className ?? ''} text-white bg-dark-navy md:text-base text-sm font-semibold px-5 py-2.5 border-none outline-none cursor-pointer transition-all duration-300 ease-linear hover:bg-hover-navy rounded-full`}
             {...rest}
             style={style}>
             {children}
@@ -50,7 +50,7 @@ export function ButtonPrimary({ children, className, style, ...rest }: BtnProps)
 }
 export function ButtonSecondry({ children, className, style, ...rest }: BtnProps) {
     return (
-        <button className={`${className ?? ''} text-white bg-light-blue md:text-base text-sm font-semibold px-5 h-14 border-none outline-none cursor-pointer transition-all duration-200 ease-linear hover:bg-hover-blue rounded-full`}
+        <button className={`${className ?? ''} text-white bg-light-blue md:text-base text-sm font-semibold px-5 py-2.5 border-none outline-none cursor-pointer transition-all duration-300 ease-linear hover:bg-hover-blue rounded-full`}
             {...rest}
             style={style}>
             {children}

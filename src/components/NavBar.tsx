@@ -59,7 +59,7 @@ export default function NavBar() {
     }, [isMenuOpen, stopScroll, startScroll]);
 
     return (
-        <header className='relative w-full'>
+        <header className={`${currentPath === '/' ? 'absolute left-0 top-0 bg-transparent' : 'relative bg-white'}  w-full z-30`}>
             <nav className='relative w-full max-w-7xl mx-auto px-5 py-3 flex items-center justify-between'>
                 <div className='relative shrink-0 w-max'>
                     <Link href={'/'}>
