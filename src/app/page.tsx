@@ -1,5 +1,6 @@
 import About from '@/components/About'
 import Hero from '@/components/Hero'
+import TreatmentList from '@/components/TreatmentList'
 import React from 'react'
 
 export default function HomePage() {
@@ -7,6 +8,7 @@ export default function HomePage() {
     <main>
       <Hero />
       <About />
+      <TreatmentList />
     </main>
   )
 }
