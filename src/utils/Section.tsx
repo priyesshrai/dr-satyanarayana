@@ -27,7 +27,7 @@ export function Wrapper({ children, className, style }: Props) {
 }
 export function Heading({ children, className, style }: Props) {
     return (
-        <h2 className={`${className ?? ''} lg:text-4xl md:text-[28px] text-2xl leading-[1.2] font-bold text-primary-dark`} style={style}>
+        <h2 className={`${className ?? ''} lg:text-4xl md:text-[28px] text-2xl leading-[1.3] font-bold text-dark-navy`} style={style}>
             {children}
         </h2>
     )
