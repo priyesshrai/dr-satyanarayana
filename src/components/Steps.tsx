@@ -13,7 +13,7 @@ export default function Steps() {
                     </div>
                     <div className="w-full flex justify-center flex-col gap-10">
                         <div className='relative flex flex-col gap-5'>
-                            <Heading className='lg:text-dark-navy !text-white'>
+                            <Heading className='lg:!text-dark-navy !text-white'>
                                 Easy steps and get your solution
                             </Heading>
                             <Subheading className='!text-left lg:!text-dark-navy !text-white'>

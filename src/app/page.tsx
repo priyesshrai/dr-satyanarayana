@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import Marquee from '@/components/Marquee'
 import Steps from '@/components/Steps'
 import TreatmentList from '@/components/TreatmentList'
+import WhyUs from '@/components/WhyUs'
 import React from 'react'
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
       <TreatmentList />
       <Steps />
       <Marquee/>
+      <WhyUs/>
     </main>
   )
 }
