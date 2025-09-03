@@ -63,7 +63,8 @@ export default function NavBar() {
             <nav className='relative w-full max-w-7xl mx-auto px-5 py-3 flex items-center justify-between'>
                 <div className='relative shrink-0 w-max'>
                     <Link href={'/'}>
-                        <Image src={'/images/logo/logo.svg'} width={300} height={200} alt='Dr. Satyanarayana' className='' />
+                        <Image src={'/images/logo/logo.svg'} width={300} height={200} alt='Dr. Satyanarayana' 
+                        className='md:w-[300px] w-[200px] h-auto ' />
                     </Link>
                 </div>
 
@@ -102,7 +103,7 @@ export default function NavBar() {
                 <div className='w-full h-full relative'>
                     <div className='relative w-full flex justify-between'>
                         <Link href={'/'}>
-                            <Image src={'/images/logo/logo.svg'} width={300} height={200} alt='Dr. Satyanarayan' />
+                            <Image src={'/images/logo/logo.svg'} width={300} height={200} alt='Dr. Satyanarayan' className='md:w-[300px] w-[200px] h-auto '/>
                         </Link>
                         <button className='w-10 h-10 bg-dark-navy rounded-full flex items-center justify-center border-none cursor-pointer' onClick={() => { setIsMenuOpen(false) }}>
                             <X color='white' />
