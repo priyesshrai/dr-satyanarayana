@@ -1,4 +1,5 @@
 import About from '@/components/About'
+import Academic from '@/components/Academic'
 import ContactBanner from '@/components/ContactBanner'
 import Hero from '@/components/Hero'
 import Marquee from '@/components/Marquee'
@@ -14,9 +15,10 @@ export default function HomePage() {
       <About />
       <TreatmentList />
       <Steps />
-      <Marquee/>
-      <WhyUs/>
-      <ContactBanner/>
+      <Marquee />
+      <WhyUs />
+      <ContactBanner />
+      <Academic />
     </main>
   )
 }
