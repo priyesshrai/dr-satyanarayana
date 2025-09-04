@@ -1,6 +1,7 @@
 import About from '@/components/About'
 import Academic from '@/components/Academic'
 import ContactBanner from '@/components/ContactBanner'
+import CTABanner from '@/components/CTABanner'
 import Hero from '@/components/Hero'
 import HiglightArea from '@/components/HiglightArea'
 import Marquee from '@/components/Marquee'
@@ -23,6 +24,8 @@ export default function HomePage() {
       <Academic />
       <HiglightArea />
       <Testimonial/>
+      <CTABanner />
+      <Marquee />
     </main>
   )
 }
