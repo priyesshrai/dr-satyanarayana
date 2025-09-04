@@ -4,6 +4,7 @@ import Blog from '@/components/Blog'
 import ContactBanner from '@/components/ContactBanner'
 import ContactForm from '@/components/ContactForm'
 import CTABanner from '@/components/CTABanner'
+import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import HiglightArea from '@/components/HiglightArea'
 import Marquee from '@/components/Marquee'
@@ -30,6 +31,7 @@ export default function HomePage() {
       <Marquee />
       <Blog />
       <ContactForm />
+      <Footer/>
     </main>
   )
 }
