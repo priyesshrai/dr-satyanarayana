@@ -1,4 +1,5 @@
 import About from '@/components/About'
+import ContactBanner from '@/components/ContactBanner'
 import Hero from '@/components/Hero'
 import Marquee from '@/components/Marquee'
 import Steps from '@/components/Steps'
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Steps />
       <Marquee/>
       <WhyUs/>
+      <ContactBanner/>
     </main>
   )
 }
