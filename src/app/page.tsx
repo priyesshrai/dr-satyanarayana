@@ -1,5 +1,6 @@
 import About from '@/components/About'
 import Academic from '@/components/Academic'
+import Blog from '@/components/Blog'
 import ContactBanner from '@/components/ContactBanner'
 import CTABanner from '@/components/CTABanner'
 import Hero from '@/components/Hero'
@@ -26,6 +27,7 @@ export default function HomePage() {
       <Testimonial/>
       <CTABanner />
       <Marquee />
+      <Blog/>
     </main>
   )
 }
