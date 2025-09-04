@@ -2,6 +2,7 @@ import About from '@/components/About'
 import Academic from '@/components/Academic'
 import Blog from '@/components/Blog'
 import ContactBanner from '@/components/ContactBanner'
+import ContactForm from '@/components/ContactForm'
 import CTABanner from '@/components/CTABanner'
 import Hero from '@/components/Hero'
 import HiglightArea from '@/components/HiglightArea'
@@ -24,10 +25,11 @@ export default function HomePage() {
       <ContactBanner />
       <Academic />
       <HiglightArea />
-      <Testimonial/>
+      <Testimonial />
       <CTABanner />
       <Marquee />
-      <Blog/>
+      <Blog />
+      <ContactForm />
     </main>
   )
 }
