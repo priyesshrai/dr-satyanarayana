@@ -5,6 +5,7 @@ import Hero from '@/components/Hero'
 import HiglightArea from '@/components/HiglightArea'
 import Marquee from '@/components/Marquee'
 import Steps from '@/components/Steps'
+import Testimonial from '@/components/Testimonial'
 import TreatmentList from '@/components/TreatmentList'
 import WhyUs from '@/components/WhyUs'
 import React from 'react'
@@ -21,6 +22,7 @@ export default function HomePage() {
       <ContactBanner />
       <Academic />
       <HiglightArea />
+      <Testimonial/>
     </main>
   )
 }
