@@ -28,7 +28,7 @@ export default function About() {
                             Dr. Satyanarayana Garre is a distinguished Nephrologist based in Hyderabad, Telangana, with over 6 years of experience in the field of kidney health and renal treatments. As a highly qualified medical professional, he holds an MBBS, MD, and DNB in Nephrology, ensuring that he possesses an in-depth understanding of the complexities associated with kidney diseases.
                         </Subheading>
                         <Subheading className='mt-2 text-left font-normal'>
-                            Dr. Garre's dedication to patient care is reflected in his ability to communicate effectively in multiple languages, including English, Hindi, Telugu, and Kannada, making him accessible to a diverse patient population.
+                            Dr. Garre&apos;s dedication to patient care is reflected in his ability to communicate effectively in multiple languages, including English, Hindi, Telugu, and Kannada, making him accessible to a diverse patient population.
                         </Subheading>
                         <div className='mt-8 flex items-center gap-3'>
                             <ButtonPrimary>
