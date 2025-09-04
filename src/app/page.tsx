@@ -2,6 +2,7 @@ import About from '@/components/About'
 import Academic from '@/components/Academic'
 import ContactBanner from '@/components/ContactBanner'
 import Hero from '@/components/Hero'
+import HiglightArea from '@/components/HiglightArea'
 import Marquee from '@/components/Marquee'
 import Steps from '@/components/Steps'
 import TreatmentList from '@/components/TreatmentList'
@@ -19,6 +20,7 @@ export default function HomePage() {
       <WhyUs />
       <ContactBanner />
       <Academic />
+      <HiglightArea />
     </main>
   )
 }
