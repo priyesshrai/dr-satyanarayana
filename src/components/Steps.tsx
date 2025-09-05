@@ -7,7 +7,7 @@ export default function Steps() {
     return (
         <Section>
             <Wrapper>
-                <div className='relative w-full rounded-2xl bg-gradient-to-r from-dark-navy to-[#F3F3F3] p-5 grid lg:grid-cols-[500px_1fr] grid-cols-1 lg:gap-16 gap-8'>
+                <div className='relative w-full rounded-2xl md:bg-gradient-to-r bg-gradient-to-b from-dark-navy to-[#F3F3F3] p-5 grid lg:grid-cols-[500px_1fr] md:grid-cols-[300px_1fr] grid-cols-1 lg:gap-16 md:gap-5 gap-8'>
                     <div className="w-full h-full">
                         <Image src={'/images/contact/cta-img.png'} width={500} height={500} alt='Easy steps and get your solution' className='w-full' />
                     </div>
