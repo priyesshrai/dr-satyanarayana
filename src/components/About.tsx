@@ -11,13 +11,13 @@ export default function About() {
 
                     <div className="w-full h-full relative flex items-start md:justify-start justify-center">
                         <Image src='/images/about/about.png' width={520} height={500} alt='About dr satyanarayana'
-                        className='w-full h-auto max-w-[520px]' />
+                            className='w-full h-auto max-w-[520px]' />
                     </div>
 
                     <div className="w-full h-full relative flex flex-col justify-center">
                         <span className='!font-open-sans flex items-center justify-between px-4 py-2 border border-light-blue text-light-blue text-base w-max rounded-lg'>More About Me</span>
 
-                        <Heading className='mt-4'>
+                        <Heading className='mt-4 lg:!text-4xl md:!text-[28px] !text-xl'>
                             Trusted <span className='!font-open-sans text-light-blue'>Nephrology Specialist</span> with Extensive Clinical Expertise
                         </Heading>
                         <Subheading className='mt-2 text-left max-w-md'>
@@ -30,11 +30,12 @@ export default function About() {
                         <Subheading className='mt-2 text-left font-normal'>
                             Dr. Garre&apos;s dedication to patient care is reflected in his ability to communicate effectively in multiple languages, including English, Hindi, Telugu, and Kannada, making him accessible to a diverse patient population.
                         </Subheading>
-                        <div className='mt-8 flex items-center gap-3'>
+                        <div className='mt-8 flex items-center gap-3 justify-start max-[420px]:flex-col'>
                             <ButtonPrimary>
                                 Make an Appointment
                             </ButtonPrimary>
-                            <Link href='/about' className='rounded-full text-base font-medium !font-montserrat text-dark-navy px-4 py-2 border border-dark-navy'>
+                            <Link href='/about'
+                                className='rounded-full md:text-base text-sm font-semibold px-5 py-2 !font-montserrat text-dark-navy border border-dark-navy'>
                                 Know More
                             </Link>
                         </div>

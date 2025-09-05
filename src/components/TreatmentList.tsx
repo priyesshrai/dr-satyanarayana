@@ -43,7 +43,7 @@ export default function TreatmentList() {
                         </Subheading>
                     </div>
 
-                    <div className='flex-1 relative grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] lg:gap-4 md:gap-6 gap-8'>
+                    <div className='flex-1 relative grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] lg:gap-4 md:gap-6 gap-8'>
                         {
                             data.map((items, idx) => (
                                 <div key={idx} className={`w-full h-full p-5 rounded-xl ${idx === 0 ? 'bg-[#DBEAFE]' : idx === 1 ? 'bg-[#FFEDD5]' : 'bg-[#F4F9CE]'}`}>
