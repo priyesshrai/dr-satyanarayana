@@ -36,7 +36,7 @@ export default function WhyUs() {
                     </div>
 
                     <div className='flex-1 relative grid md:grid-cols-2 grid-cols-1 gap-10'>
-                        <div className='w-full h-full relative flex flex-col justify-center gap-7'>
+                        <div className='w-full h-full relative flex flex-col justify-center gap-7 order-2 md:order-1'>
                             {
                                 list.map((item, idx) => (
                                     <div className='max-w-xl relative' key={idx}>
@@ -57,7 +57,7 @@ export default function WhyUs() {
                             </ButtonPrimary>
                         </div>
 
-                        <div className='w-full h-full relative flex md:justify-end justify-center'>
+                        <div className='w-full h-full relative flex md:justify-end justify-center order-1 md:order-2'>
                             <Image src='/images/about/about-2.png' width={550} height={400} alt='Why Choose Dr. Satayanarayan' className=' h-auto' />
                         </div>
                     </div>
