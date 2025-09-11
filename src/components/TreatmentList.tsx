@@ -25,7 +25,7 @@ export default function TreatmentList() {
                 </div>
             ),
             icon: '/images/treatment/icon-1.svg',
-            link: '',
+            link: '/services/acute-kidney-injury',
         },
         {
             title: 'Chronic Kidney Disease Treatment',
@@ -40,7 +40,7 @@ export default function TreatmentList() {
                 </div>
             ),
             icon: '/images/treatment/icon-2.svg',
-            link: '',
+            link: '/services/chronic-kidney-disease',
         },
         {
             title: 'Nephrotic Syndrome Treatment',
@@ -55,7 +55,7 @@ export default function TreatmentList() {
                 </div>
             ),
             icon: '/images/treatment/icon-3.svg',
-            link: '',
+            link: '/services/nephrotic-syndrome',
         },
     ]
     return (
