@@ -1,7 +1,11 @@
+'use client'
 import { ButtonPrimary, Section, Subheading, Wrapper } from '@/utils/Section'
 import { Calendar } from 'lucide-react'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import AppointmanetForm from './AppointmanetForm';
+import { AnimatePresence } from 'motion/react'
+import { useLenisControl } from '@/utils/SmoothScroll'
 
 interface Data {
     title: string;
@@ -31,6 +35,18 @@ export default function Hero() {
             image: '/images/hero/icon-4.svg'
         },
     ]
+    const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
+    const { stopScroll, startScroll } = useLenisControl();
+
+    useEffect(() => {
+        if (isFormOpen) {
+            stopScroll();
+        } else {
+            startScroll();
+        }
+        return () => startScroll();
+    }, [isFormOpen, stopScroll, startScroll]);
+
     return (
         <Section className='bg-[url(/images/hero/bg-image.png)] w-full bg-cover bg-no-repeat bg-center lg:!pt-[120px] md:!pt-[100px] !pt-[120px]'>
             <Wrapper>
@@ -44,7 +60,7 @@ export default function Hero() {
                             <strong>Dr. Satyanarayana Garre</strong>, Specialist in Nephrology - Providing Personalized Treatment for Kidney Health, Dialysis, and More
                         </Subheading>
                         <div className='relative mt-10 flex items-center gap-2 md:justify-start justify-center'>
-                            <ButtonPrimary className='flex items-center gap-2 font-normal'>
+                            <ButtonPrimary className='flex items-center gap-2 font-normal' onClick={() => setIsFormOpen(true)}>
                                 MAKE AN APPOINTMENT
                                 <Calendar size={16} />
                             </ButtonPrimary>
@@ -78,6 +94,13 @@ export default function Hero() {
                     }
                 </div>
             </Wrapper>
+            {
+                isFormOpen && (
+                    <AnimatePresence mode='wait'>
+                        <AppointmanetForm key="appointment-form" closeForm={setIsFormOpen} />
+                    </AnimatePresence>
+                )
+            }
         </Section>
     )
 }
