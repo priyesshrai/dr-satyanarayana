@@ -1,33 +1,61 @@
 import { Heading, Section, Subheading, Wrapper } from '@/utils/Section'
 import Image from 'next/image';
-import React from 'react'
+import Link from 'next/link';
+import React, { ReactNode } from 'react'
 
 interface Data {
     title: string;
-    summary: string;
-    summary2: string;
+    summary: ReactNode;
     icon: string;
+    link: string;
 }
 
 export default function TreatmentList() {
     const data: Data[] = [
         {
             title: 'Acute Kidney Injury Treatment',
-            summary: 'Acute Kidney Injury (AKI) is a sudden loss of kidney function, often caused by infection, dehydration, medications, or surgery.',
-            summary2: 'Dr. Satyanarayana Garre provides rapid diagnosis and personalized treatment to stabilize kidney function, manage fluid and electrolyte balance, and prevent long-term damage.',
-            icon: '/images/treatment/icon-1.svg'
+            summary: (
+                <div className='w-full mt-3 flex flex-col gap-2'>
+                    <p className='lg:text-base text-zinc-600 mt-1 font-medium text-sm'>
+                        Acute Kidney Injury (AKI) is a sudden loss of kidney function, often caused by infection, dehydration, medications, or surgery.
+                    </p>
+                    <p className='lg:text-base text-sm text-zinc-600 mt-1 font-medium'>
+                        Dr. Satyanarayana Garre provides rapid diagnosis and personalized treatment to stabilize kidney function, manage fluid and electrolyte balance, and prevent long-term damage.
+                    </p>
+                </div>
+            ),
+            icon: '/images/treatment/icon-1.svg',
+            link: '',
         },
         {
             title: 'Chronic Kidney Disease Treatment',
-            summary: 'Chronic Kidney Disease (CKD) is a gradual loss of kidney function over time, often linked to diabetes, hypertension, or genetic factors.',
-            summary2: 'Dr. Garre creates customized care plans that include lifestyle modifications, blood pressure and sugar control, medication, and regular monitoring to slow disease progression and delay the need for dialysis or transplant.',
-            icon: '/images/treatment/icon-2.svg'
+            summary: (
+                <div className='w-full mt-3 flex flex-col gap-2'>
+                    <p className='lg:text-base text-zinc-600 mt-1 font-medium text-sm'>
+                        Chronic Kidney Disease (CKD) is a gradual loss of kidney function over time, often linked to diabetes, hypertension, or genetic factors.
+                    </p>
+                    <p className='lg:text-base text-sm text-zinc-600 mt-1 font-medium'>
+                        Dr. Garre creates customized care plans that include lifestyle modifications, blood pressure and sugar control, medication, and regular monitoring to slow disease progression and delay the need for dialysis or transplant.
+                    </p>
+                </div>
+            ),
+            icon: '/images/treatment/icon-2.svg',
+            link: '',
         },
         {
             title: 'Nephrotic Syndrome Treatment',
-            summary: 'Nephrotic Syndrome is a kidney disorder that causes the body to excrete too much protein in the urine, leading to swelling, low protein levels, and high cholesterol.',
-            summary2: 'Dr. Garre offers comprehensive care including corticosteroid therapy, blood pressure control, dietary counseling, and long-term disease monitoring to manage relapses and prevent complications.',
-            icon: '/images/treatment/icon-3.svg'
+            summary: (
+                <div className='w-full mt-3 flex flex-col gap-2'>
+                    <p className='lg:text-base text-zinc-600 mt-1 font-medium text-sm'>
+                        Nephrotic Syndrome is a kidney disorder that causes the body to excrete too much protein in the urine, leading to swelling, low protein levels, and high cholesterol.
+                    </p>
+                    <p className='lg:text-base text-sm text-zinc-600 mt-1 font-medium'>
+                        Dr. Garre offers comprehensive care including corticosteroid therapy, blood pressure control, dietary counseling, and long-term disease monitoring to manage relapses and prevent complications.
+                    </p>
+                </div>
+            ),
+            icon: '/images/treatment/icon-3.svg',
+            link: '',
         },
     ]
     return (
@@ -43,7 +71,7 @@ export default function TreatmentList() {
                         </Subheading>
                     </div>
 
-                    <div className='flex-1 relative grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] lg:gap-4 md:gap-6 gap-8'>
+                    <div className='flex-1 relative grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-4 md:gap-6 gap-8'>
                         {
                             data.map((items, idx) => (
                                 <div key={idx} className={`w-full h-full p-5 rounded-xl ${idx === 0 ? 'bg-[#DBEAFE]' : idx === 1 ? 'bg-[#FFEDD5]' : 'bg-[#F4F9CE]'}`}>
@@ -55,14 +83,10 @@ export default function TreatmentList() {
                                             {items.title}
                                         </h3>
                                     </div>
-                                    <div className='w-full mt-3 flex flex-col gap-2'>
-                                        <Subheading className='text-left !text-sm'>
-                                            {items.summary}
-                                        </Subheading>
-                                        <Subheading className='text-left !text-sm'>
-                                            {items.summary2}
-                                        </Subheading>
-                                    </div>
+                                    {items.summary}
+                                    <Link href={items.link} className='mt-3 block w-max ml-auto text-blue-500'>
+                                        Learn More
+                                    </Link> 
                                 </div>
                             ))
                         }

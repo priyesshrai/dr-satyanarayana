@@ -28,12 +28,7 @@ export default function NavBar() {
         {
             key: 'services',
             name: 'Services',
-            path: '#'
-        },
-        {
-            key: 'appointment',
-            name: 'Appointment',
-            path: '/#'
+            path: '/services'
         },
         {
             key: 'contact',
