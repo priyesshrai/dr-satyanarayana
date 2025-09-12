@@ -47,21 +47,6 @@ export default function TreatmentList() {
             link: '/services/chronic-kidney-disease',
         },
         {
-            title: 'Nephrotic Syndrome Treatment',
-            summary: (
-                <div className='w-full mt-3 flex flex-col gap-2'>
-                    <p className='lg:text-base text-zinc-600 mt-1 font-medium text-sm'>
-                        Nephrotic Syndrome is a kidney disorder that causes the body to excrete too much protein in the urine, leading to swelling, low protein levels, and high cholesterol.
-                    </p>
-                    <p className='lg:text-base text-sm text-zinc-600 mt-1 font-medium'>
-                        Dr. Garre offers comprehensive care including corticosteroid therapy, blood pressure control, dietary counseling, and long-term disease monitoring to manage relapses and prevent complications.
-                    </p>
-                </div>
-            ),
-            icon: '/images/treatment/icon-3.svg',
-            link: '/services/nephrotic-syndrome',
-        },
-        {
             title: 'Kidney Stones & Urinary Disorders',
             summary: (
                 <div className='w-full mt-3 flex flex-col gap-2'>
