@@ -34,7 +34,7 @@ export default function AppointmanetForm({ closeForm }: { closeForm: Dispatch<Re
         new Date("2025-06-01")
     )
     const [month, setMonth] = useState<Date | undefined>(date)
-    const [value, setValue] = useState(formatDate(date))
+    const [value, setValue] = useState(formatDate( new Date()))
     return (
         <motion.div className="fixed inset-0 w-full min-h-screen bg-black/30 backdrop-blur-[4px] p-5 flex justify-center items-start overflow-y-auto z-50" data-lenis-prevent
             key="appointment-form"
