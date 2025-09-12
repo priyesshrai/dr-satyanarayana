@@ -9,14 +9,14 @@ export default function About() {
             <Wrapper>
                 <div className='w-full relative grid md:grid-cols-2 grid-cols-1 gap-5'>
 
-                    {/*** 
+                   
                     <div className="w-full h-full relative flex items-start md:justify-start justify-center">
                         <Image src='/images/about/about.png' width={520} height={500} alt='About dr satyanarayana'
                             className='w-full h-auto max-w-[520px]' />
                     </div>
-                    ***/} 
+           
                     <div className="w-full h-full relative flex flex-col justify-center">
-                        <span className='!font-open-sans flex items-center justify-between px-4 py-2 border border-light-blue text-light-blue text-base w-max rounded-lg'>More About Me</span>
+                         /////   <span className='!font-open-sans flex items-center justify-between px-4 py-2 border border-light-blue text-light-blue text-base w-max rounded-lg'>More About Me</span>
 
                         <Heading className='mt-4 lg:!text-4xl md:!text-[28px] !text-xl'>
                             Trusted <span className='!font-open-sans text-light-blue'>Nephrology Specialist</span> with Extensive Clinical Expertise
