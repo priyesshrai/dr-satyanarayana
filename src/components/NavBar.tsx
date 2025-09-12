@@ -33,12 +33,12 @@ export default function NavBar() {
         {
             key: 'contact',
             name: 'Contact Us',
-            path: '#'
+            path: '/contact'
         },
         {
             key: 'blog',
             name: 'Nephrology Blogs',
-            path: '#'
+            path: '/blogs'
         }
     ]
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,7 +84,7 @@ export default function NavBar() {
                             (+91) 123-4567890
                         </Link>
                     </div>
-                    <span className='text-[12px] text-zinc-400 font-medium'>24/7 Emergency Line</span>
+                    {/* <span className='text-[12px] text-zinc-400 font-medium'>24/7 Emergency Line</span> */}
                 </div>
 
                 <button onClick={() => setIsMenuOpen((prev) => !prev)} className='lg:hidden w-12 h-12 flex items-center justify-center cursor-pointer bg-primary rounded-full '>
