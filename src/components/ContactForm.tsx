@@ -13,25 +13,25 @@ export default function ContactForm() {
     const contactInfo: ContactInfo[] = [
         {
             title: 'Address',
-            content: 'D58/7-8-1M, First Floor, Sigra, Varanasi, Uttar Pradesh-221010',
+            content: '12-2-718, Khader Bagh Road, Padmanabha Nagar, Toli Chowki, Hyderabad - 500008',
             icon: '/images/contact/pin.svg',
             link: '#'
         },
         {
             title: 'Phone',
-            content: '+91 1234567890',
+            content: '+91 9844181188',
             icon: '/images/contact/phone.svg',
             link: '#'
         },
         {
             title: 'E-Mail',
-            content: 'info@gmail.com',
+            content: 'satyakishoregarre@gmail.com',
             icon: '/images/contact/mail.svg',
             link: '#'
         },
         {
-            title: 'Office Hours',
-            content: 'Monday - Friday: 8:00 AM - 5:00 PM Saturday: 9:00 AM - 2:00 PM Sunday: Closed',
+            title: 'Clinic Hours',
+            content: 'Will be Updated Shortly',
             icon: '/images/contact/clock-2.svg',
             link: '#'
         },

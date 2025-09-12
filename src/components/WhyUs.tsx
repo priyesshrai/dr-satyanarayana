@@ -28,7 +28,7 @@ export default function WhyUs() {
                 <div className='relative w-full flex flex-col lg:gap-14 md:gap-10 gap-8'>
                     <div className='flex-1 text-center'>
                         <Heading>
-                            Why Choose Dr. Satyanarayana Garre?
+                            Dr. Satyanarayana Garre - Best Nephrologist in Hyderabad
                         </Heading>
                         <Subheading className='mx-auto'>
                             Trusted Expertise in Kidney Health & Compassionate Nephrology Care

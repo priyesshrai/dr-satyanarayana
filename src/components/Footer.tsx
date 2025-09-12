@@ -27,18 +27,13 @@ export default function Footer() {
         },
         {
             key: 'about',
-            name: 'About',
+            name: 'Dr. Garre Profile',
             path: '/about'
         },
         {
             key: 'services',
-            name: 'Services',
+            name: 'Treatments',
             path: '#'
-        },
-        {
-            key: 'appointment',
-            name: 'Appointment',
-            path: '/#'
         },
         {
             key: 'contact',
@@ -47,23 +42,23 @@ export default function Footer() {
         },
         {
             key: 'blog',
-            name: 'Blogs',
+            name: 'Nephrology Blogs',
             path: '#'
         }
     ]
     const contactInfo: Contact[] = [
         {
-            name: 'D58/7-8-1M, First Floor, Sigra, Varanasi, Uttar Pradesh-221010',
+            name: '12-2-718, Khader Bagh Road, Padmanabha Nagar, Toli Chowki, Hyderabad - 500008',
             icon: '/images/footer/pin-white.svg',
             link: '#'
         },
         {
-            name: '+91 1234567890',
+            name: '+91 9844181188',
             icon: '/images/footer/phone-white.svg',
             link: '#'
         },
         {
-            name: 'info@gmail.com',
+            name: 'satyakishoregarre@gmail.com',
             icon: '/images/footer/mail-white.svg',
             link: '#'
         },
