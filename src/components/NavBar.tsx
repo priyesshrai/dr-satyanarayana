@@ -79,9 +79,9 @@ export default function NavBar() {
                 <div className='lg:flex flex-col items-end hidden relative w-max'>
                     <div className='relative flex items-center text-dark-navy gap-2'>
                         <Phone size={16} className='mt-[3px]' />
-                        <Link href={'tel:(555)123-4567'}
+                        <Link href={'tel:+919844181188'}
                             className='flex flex-col text-lg text-dark-navy font-semibold leading-[1.2]'>
-                            (+91) 123-4567890
+                            (+91) 9844181188
                         </Link>
                     </div>
                     {/* <span className='text-[12px] text-zinc-400 font-medium'>24/7 Emergency Line</span> */}
