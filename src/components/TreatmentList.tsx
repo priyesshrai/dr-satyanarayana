@@ -17,21 +17,6 @@ export default function TreatmentList() {
     const currentPath = usePathname()
     const data: Data[] = [
         {
-            title: 'Kidney Stones & Urinary Disorders',
-            summary: (
-                <div className='w-full mt-3 flex flex-col gap-2'>
-                    <p className='lg:text-base text-zinc-600 mt-1 font-medium text-sm'>
-                        Kidney stones and urinary disorders are common conditions that can affect people of all ages. Kidney stones are hard deposits that form inside the kidneys, while urinary disorders include problems such as infections, frequent urination, or difficulty in passing urine.
-                    </p>
-                    <p className='lg:text-base text-sm text-zinc-600 mt-1 font-medium'>
-                        Early diagnosis and proper treatment help prevent complications and protect long-term kidney health.
-                    </p>
-                </div>
-            ),
-            icon: '/images/treatment/icon-1.svg',
-            link: '/services/acute-kidney-injury',
-        },
-        {
             title: 'Acute Kidney Injury Treatment',
             summary: (
                 <div className='w-full mt-3 flex flex-col gap-2'>
@@ -77,6 +62,21 @@ export default function TreatmentList() {
             link: '/services/nephrotic-syndrome',
         },
         {
+            title: 'Kidney Stones & Urinary Disorders',
+            summary: (
+                <div className='w-full mt-3 flex flex-col gap-2'>
+                    <p className='lg:text-base text-zinc-600 mt-1 font-medium text-sm'>
+                        Kidney stones and urinary disorders are common conditions that can affect people of all ages. Kidney stones are hard deposits that form inside the kidneys, while urinary disorders include problems such as infections, frequent urination, or difficulty in passing urine.
+                    </p>
+                    <p className='lg:text-base text-sm text-zinc-600 mt-1 font-medium'>
+                        Early diagnosis and proper treatment help prevent complications and protect long-term kidney health.
+                    </p>
+                </div>
+            ),
+            icon: '/images/treatment/icon-4.svg',
+            link: '/services/kidney-stone',
+        },
+        {
             title: 'Kidney Transplantation',
             summary: (
                 <div className='w-full mt-3 flex flex-col gap-2'>
@@ -88,8 +88,8 @@ export default function TreatmentList() {
                     </p>
                 </div>
             ),
-            icon: '/images/treatment/icon-3.svg',
-            link: '/services/nephrotic-syndrome',
+            icon: '/images/treatment/icon-5.svg',
+            link: '/services/kidney-transplantation',
         },
         {
             title: 'Dialysis Care',
@@ -103,8 +103,8 @@ export default function TreatmentList() {
                     </p>
                 </div>
             ),
-            icon: '/images/treatment/icon-3.svg',
-            link: '/services/nephrotic-syndrome',
+            icon: '/images/treatment/icon-6.svg',
+            link: '/services/dialysic-care',
         },
         {
             title: 'Hypertension & Diabetes-related Kidney Problems',
@@ -118,8 +118,8 @@ export default function TreatmentList() {
                     </p>
                 </div>
             ),
-            icon: '/images/treatment/icon-3.svg',
-            link: '/services/nephrotic-syndrome',
+            icon: '/images/treatment/icon-7.svg',
+            link: '/services/hypertension-and-diabetes-kidney-problems',
         },
         {
             title: 'Inherited & Rare Kidney Disorders',
@@ -133,8 +133,8 @@ export default function TreatmentList() {
                     </p>
                 </div>
             ),
-            icon: '/images/treatment/icon-3.svg',
-            link: '/services/nephrotic-syndrome',
+            icon: '/images/treatment/icon-8.svg',
+            link: '/services/inherited-and-rare-kidney-disorders',
         },
         {
             title: 'Interventional Nephrology & Renal Imaging',
@@ -148,8 +148,8 @@ export default function TreatmentList() {
                     </p>
                 </div>
             ),
-            icon: '/images/treatment/icon-3.svg',
-            link: '/services/nephrotic-syndrome',
+            icon: '/images/treatment/icon-9.svg',
+            link: '/services/interventional-nephrology-and-renal-imaging',
         },
         {
             title: 'Preventive Kidney Health & Lifestyle Guidance',
@@ -163,8 +163,8 @@ export default function TreatmentList() {
                     </p>
                 </div>
             ),
-            icon: '/images/treatment/icon-3.svg',
-            link: '/services/nephrotic-syndrome',
+            icon: '/images/treatment/icon-10.svg',
+            link: '/services/preventive-kidney-health',
         },
     ]
     const bgColors = [
