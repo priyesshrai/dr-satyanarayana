@@ -33,12 +33,12 @@ export default function NavBar() {
         {
             key: 'contact',
             name: 'Contact',
-            path: '#'
+            path: '/contact'
         },
         {
             key: 'blog',
             name: 'Blogs',
-            path: '#'
+            path: '/blogs'
         }
     ]
     const [isMenuOpen, setIsMenuOpen] = useState(false);
