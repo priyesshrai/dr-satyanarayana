@@ -17,12 +17,12 @@ export default function HomePage() {
       <About />
       <TreatmentList />
       <Marquee />
-      <Steps />
-      {/* <ContactBanner /> */}
-      <HiglightArea />
+      {/* <Steps />  */}
+      {/* <ContactBanner />  */}
+      {/* <HiglightArea />  */}
       <Testimonial />
-      <CTABanner />
-      <Marquee />
+      {/* <CTABanner />  */}
+      {/* <Marquee /> */}
       <Blog />
     </main>
   )
