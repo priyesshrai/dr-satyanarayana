@@ -97,7 +97,7 @@ export default function page() {
                         </Subheading>
                         <ul className='flex flex-col gap-1 list-disc pl-6 text-zinc-600 text-normal font-montserrat'>
                             <li>Swelling in ankles, feet, or hands (due to fluid retention) </li>
-                            <li>High blood pressure that's hard to control</li>
+                            <li>High blood pressure that&apos;s hard to control</li>
                             <li>Protein in urine (detected by urine test)</li>
                             <li>Feeling bloated or puffed up</li>
                             <li>Weight gain from water retention</li>
