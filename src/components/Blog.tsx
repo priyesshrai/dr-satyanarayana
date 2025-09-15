@@ -13,35 +13,29 @@ interface Blog {
 export default function Blog() {
     const blog: Blog[] = [
         {
-            title: 'Understanding Chronic Kidney Disease: A Beginner’s Guide',
-            content: 'Chronic Kidney Disease (CKD) is often called a "silent condition" because symptoms rarely appear until significant damage has occurred. This blog breaks down the basics of CKD — from how your kidneys work, to the common causes such as diabetes and high blood pressure, to the stages of the disease. Readers will also learn why early screening is crucial, how blood and urine tests help in diagnosis, and what lifestyle and dietary changes can slow down kidney damage. Perfect for patients, caregivers, and anyone who wants to understand this growing global health challenge.',
-            slug: '',
-            image: '/images/blog/blog-1.png'
+            title: 'Symptoms of Kidney Stones',
+            content: 'Kidney stones are hard mineral masses inside your kidneys or urinary tract. They can be very painful, but knowing the symptoms early helps in quick treatment and avoiding complications. Here are the common signs and what to watch out for. Kidney stones (also called renal calculi or nephrolithiasis) form when wastes like calcium, oxalate, uric acid and other substances crystallize in the urine. Normally urine contains chemicals that prevent crystals, but if those chemicals are out of balance...',
+            slug: '/blogs/symptoms-of-kidney-stones',
+            image: '/images/blog/blog-1.jpg'
         },
         {
-            title: 'The Importance of Staying Hydrated for Kidney Health',
-            content: 'Water is the unsung hero of kidney health. In this post, we explore how hydration directly supports the kidneys in filtering waste, regulating blood pressure, and balancing electrolytes. We’ll also look at how much water is “enough” for different individuals, warning signs of dehydration, and why overhydration can also be harmful. Real-life examples',
-            slug: '',
-            image: '/images/blog/blog-2.png'
+            title: 'How to Prevent Kidney Failure',
+            content: 'Our kidneys are like natural filters of the body. They remove waste, balance fluids, keep blood pressure under control, and help produce red blood cells. When the kidneys stop working properly, it can lead to kidney failure, a life-threatening condition...',
+            slug: '/blogs/how-to-prevent-kidney-failure',
+            image: '/images/blog/blog-2.jpg'
         },
         {
-            title: 'Kidney-Friendly Diet: Foods to Eat and Avoid',
-            content: 'When it comes to kidney health, what you eat matters — a lot. This blog takes readers through the essentials of a kidney-friendly diet, including low-sodium choices, healthy protein sources, and foods rich in antioxidants. We’ll also discuss why limiting phosphorus and potassium may be necessary for some patients, and provide a sample.',
-            slug: '',
-            image: '/images/blog/blog-3.png'
+            title: 'How Diabetes Causes Kidney Failure',
+            content: 'Diabetes is one of the leading causes of kidney disease around the world. When blood sugar is not well controlled over years, it gradually damages the kidneys until they can no longer do their job. This blog explains in plain language how diabetes causes kidney failure...',
+            slug: '/blogs/how-diabetes-causes-kidney-failure',
+            image: '/images/blog/blog-3.jpg'
         },
         {
-            title: 'Dialysis Demystified: What to Expect During Treatment',
-            content: 'For patients starting dialysis, the unknown can be more frightening than the treatment itself. This article walks readers step-by-step through the process, explaining the differences between hemodialysis and peritoneal dialysis, how each is performed, and what equipment is used. We’ll discuss the duration and frequency of sessions, pos.',
-            slug: '',
-            image: '/images/blog/blog-4.png'
-        },
-        {
-            title: 'Preventing Kidney Stones: Tips for a Healthy Urinary System',
-            content: 'Kidney stones are notorious for causing sudden, intense pain — but they are often preventable. This blog explains what kidney stones are, how they form, and the main types that affect people. We’ll share evidence-based prevention strategies, including optimal hydration, dietary adjustments, and lifestyle habits that reduce the risk. M.',
-            slug: '',
-            image: '/images/blog/blog-5.png'
-        },
+            title: 'Can Too Much Salt Cause Kidney Damage?',
+            content: 'Salt is something we all use – in cooking, in packaged foods, and at the table. A small amount of salt (sodium) is necessary for our body to work properly. But when salt intake is too high, it can start to harm our kidneys. In this blog,....',
+            slug: '/blogs/can-too-much-salt-cause-kidney-damage',
+            image: '/images/blog/blog-4.jpg'
+        }
     ]
     return (
         <Section>
@@ -82,11 +76,11 @@ export default function Blog() {
                                     if (idx === 0) return;
 
                                     return (
-                                        <div className='flex-1 flex items-start gap-4 max-[600px]:flex-col' key={data.title}>
+                                        <div className='flex items-start gap-4 max-[600px]:flex-col' key={data.title}>
                                             <div className='w-28 h-28 max-[600px]:w-full max-[600px]:h-auto shrink-0'>
-                                                <Image src={data.image} width={500} height={300} alt={data.title} className='w-full h-auto rounded-lg max-[600px]:h-[250px] object-cover object-center' />
+                                                <Image src={data.image} width={500} height={300} alt={data.title} className='w-full h-[100px] rounded-lg max-[600px]:h-[250px] object-cover object-center' />
                                             </div>
-                                            <div className='flex-1 flex flex-col gap-1'>
+                                            <div className='flex flex-col gap-1'>
                                                 <Link href={data.slug} className='flex-1 text-base font-semibold text-dark-navy'>
                                                     {data.title}
                                                 </Link>
