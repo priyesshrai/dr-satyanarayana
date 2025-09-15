@@ -54,7 +54,7 @@ export default function KidneyStoneBlogPage() {
     return (
         <Section>
             <Wrapper>
-                <div className='relative w-full max-w-xl mx-auto'>
+                <div className='relative w-full max-w-4xl mx-auto'>
                     <h1 className='md:text-4xl text-dark-navy font-bold'>
                         Symptoms of Kidney Stones
                     </h1>
