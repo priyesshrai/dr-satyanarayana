@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
         }
 
         const { data, error } = await resend.emails.send({
-            from: 'Acme <onboarding@resend.dev>',
+            from: 'Dr. Satyanarayana Garre <info@drsatyanarayanagarre.in>',
             to: 'info@drsatyanarayanagarre.in',
             subject: 'New Contact Request',
             html: `
