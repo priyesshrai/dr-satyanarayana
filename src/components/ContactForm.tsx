@@ -1,13 +1,22 @@
+'use client';
 import { ButtonPrimary, Heading, Section, Subheading, Wrapper } from '@/utils/Section';
 import Image from 'next/image'
 import Link from 'next/link';
-import React from 'react'
+import React, { ChangeEvent, FormEvent, useState } from 'react'
+import { toast, Toaster } from 'react-hot-toast'
+import axios from 'axios'
 
 interface ContactInfo {
     title: string;
     icon: string;
     content: string
     link: string;
+}
+interface FormData {
+    name: string,
+    email: string;
+    phone: string;
+    message: string
 }
 export default function ContactForm() {
     const contactInfo: ContactInfo[] = [
@@ -36,6 +45,61 @@ export default function ContactForm() {
             link: '#'
         },
     ]
+    const [contactFormData, setContactFormData] = useState<FormData>({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+    })
+    function handleChange(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+        e.preventDefault();
+        const { name, value } = e.target
+        setContactFormData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }))
+    }
+    async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('name', contactFormData.name)
+        formData.append('email', contactFormData.email)
+        formData.append('phone', contactFormData.phone)
+        formData.append('message', contactFormData.message)
+
+        try {
+            await toast.promise(
+                axios
+                    .post("/api/v1/contact", formData)
+                    .then((response) => {
+                        if (response.status === 200) {
+                            setContactFormData({
+                                name: "",
+                                email: "",
+                                phone: "",
+                                message: "",
+                            });
+                            return response.data.message || "Message sent successfully!";
+                        } else {
+                            return response.data.message || "Something went wrong!";
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error sending message:", error.message);
+                        throw new Error("Failed to send message");
+                    }),
+                {
+                    loading: "Sending message...",
+                    success: (message) => message,
+                    error: (err) => err.message || "Something went wrong",
+                }
+            );
+        } catch (error) {
+            console.error(error);
+            toast.error("Something went wrong");
+        }
+    }
+
     return (
         <Section className='bg-neutral-100'>
             <Wrapper>
@@ -84,27 +148,47 @@ export default function ContactForm() {
                                     Send us a Message
                                 </h3>
                             </div>
-                            <div className='w-full mt-5 flex flex-col gap-5'>
+                            <form className='w-full mt-5 flex flex-col gap-5' onSubmit={handleSubmit}>
                                 <div className='w-full grid grid-cols-2 gap-2'>
-                                    <input type="text" placeholder='Full Name' className='w-full h-full bg-transparent border border-neutral-300 rounded-md px-2 py-2 outline-none text-xl text-dark-navy font-montserrat' />
-                                    <input type="tel" placeholder='Phone' className='w-full h-full bg-transparent border border-neutral-300 rounded-md px-2 py-2 outline-none text-xl text-dark-navy  font-montserrat' />
+                                    <input type="text"
+                                        placeholder='Full Name'
+                                        name='name'
+                                        value={contactFormData.name}
+                                        onChange={handleChange}
+                                        className='w-full h-full bg-transparent border border-neutral-300 rounded-md px-2 py-2 outline-none text-xl text-dark-navy font-montserrat' />
+                                    <input type="tel"
+                                        placeholder='Phone'
+                                        name='phone'
+                                        value={contactFormData.phone}
+                                        onChange={handleChange}
+                                        className='w-full h-full bg-transparent border border-neutral-300 rounded-md px-2 py-2 outline-none text-xl text-dark-navy  font-montserrat' />
                                 </div>
                                 <div className='w-full relative'>
-                                    <input type="email" placeholder='E-Mail' className='w-full h-full bg-transparent border border-neutral-300 rounded-md px-2 py-2 outline-none text-xl text-dark-navy font-montserrat' />
+                                    <input type="email"
+                                        name='email'
+                                        value={contactFormData.email}
+                                        onChange={handleChange}
+                                        placeholder='E-Mail'
+                                        className='w-full h-full bg-transparent border border-neutral-300 rounded-md px-2 py-2 outline-none text-xl text-dark-navy font-montserrat' />
                                 </div>
                                 <div className='w-full relative'>
-                                    <textarea placeholder='Message' rows={4} className='w-full h-full bg-transparent border border-neutral-300 rounded-md px-2 py-2 outline-none text-xl text-dark-navy font-montserrat' />
+                                    <textarea
+                                        placeholder='Message' rows={4}
+                                        name='message'
+                                        value={contactFormData.message}
+                                        onChange={handleChange}
+                                        className='w-full h-full bg-transparent border border-neutral-300 rounded-md px-2 py-2 outline-none text-xl text-dark-navy font-montserrat' />
                                 </div>
                                 <div className='w-full relative'>
                                     <ButtonPrimary className='w-full'>
                                         Send Message
                                     </ButtonPrimary>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-
+                <Toaster />
             </Wrapper>
         </Section>
     )
