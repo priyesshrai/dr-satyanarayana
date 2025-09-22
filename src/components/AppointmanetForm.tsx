@@ -39,7 +39,7 @@ interface AppointmentData {
 
 export default function AppointmanetForm({ closeForm }: { closeForm: Dispatch<React.SetStateAction<boolean>> }) {
     const [open, setOpen] = useState(false)
-    const [date, setDate] = useState<Date | undefined>(new Date("2025-06-01"))
+    const [date, setDate] = useState<Date | undefined>(new Date())
     const [month, setMonth] = useState<Date | undefined>(date)
     const [value, setValue] = useState(formatDate(new Date()))
     const [loading, setLoading] = useState<boolean>(false)
