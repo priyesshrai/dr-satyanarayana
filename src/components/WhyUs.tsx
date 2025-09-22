@@ -69,7 +69,7 @@ export default function WhyUs() {
                                     </div>
                                 ))
                             }
-                            <ButtonPrimary className='mt-6'>
+                            <ButtonPrimary className='mt-6' onClick={()=>setIsFormOpen(true)}>
                                 Make an Appointment
                             </ButtonPrimary>
                         </div>
