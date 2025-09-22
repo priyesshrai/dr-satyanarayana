@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react'
 import AppointmanetForm from './AppointmanetForm';
 import { AnimatePresence } from 'motion/react'
 import { useLenisControl } from '@/utils/SmoothScroll'
+import { Toaster } from 'react-hot-toast'
 
 interface Data {
     title: string;
@@ -101,6 +102,7 @@ export default function Hero() {
                     </AnimatePresence>
                 )
             }
+            <Toaster />
         </Section>
     )
 }
