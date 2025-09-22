@@ -4,6 +4,7 @@ import SmoothScrollProvider from "@/utils/SmoothScroll";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "Dr. Satyanarayan",
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Footer />
         </SmoothScrollProvider>
       </body>
+      <GoogleAnalytics gaId="G-G963FVQ89C" />
     </html>
   );
 }
