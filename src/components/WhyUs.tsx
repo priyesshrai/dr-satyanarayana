@@ -1,7 +1,12 @@
+'use client';
 import { ButtonPrimary, Heading, Section, Subheading, Wrapper } from '@/utils/Section'
 import { CircleCheckBig } from 'lucide-react';
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import AppointmanetForm from './AppointmanetForm';
+import { AnimatePresence } from 'motion/react'
+import { useLenisControl } from '@/utils/SmoothScroll'
+import { Toaster } from 'react-hot-toast'
 
 interface List {
     title: string;
@@ -22,6 +27,18 @@ export default function WhyUs() {
             summary: 'Access world-class diagnostic and treatment services equipped with the latest technology for precise and effective kidney care.'
         }
     ]
+    const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
+    const { stopScroll, startScroll } = useLenisControl();
+
+    useEffect(() => {
+        if (isFormOpen) {
+            stopScroll();
+        } else {
+            startScroll();
+        }
+        return () => startScroll();
+    }, [isFormOpen, stopScroll, startScroll]);
+
     return (
         <Section className='bg-[#F9FAFB]'>
             <Wrapper>
@@ -52,7 +69,7 @@ export default function WhyUs() {
                                     </div>
                                 ))
                             }
-                            <ButtonPrimary className='mt-6'>
+                            <ButtonPrimary className='mt-6' onClick={()=>setIsFormOpen(true)}>
                                 Make an Appointment
                             </ButtonPrimary>
                         </div>
@@ -61,9 +78,16 @@ export default function WhyUs() {
                             <Image src='/images/about/about-2.png' width={550} height={400} alt='Why Choose Dr. Satayanarayan' className=' h-auto' />
                         </div>
                     </div>
-
                 </div>
             </Wrapper>
+            {
+                isFormOpen && (
+                    <AnimatePresence mode='wait'>
+                        <AppointmanetForm key="appointment-form" closeForm={setIsFormOpen} />
+                    </AnimatePresence>
+                )
+            }
+            <Toaster />
         </Section>
     )
 }
