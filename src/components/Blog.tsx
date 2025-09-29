@@ -65,7 +65,7 @@ export default function Blog() {
                                 </Subheading>
                                 <Link href={blog[0].slug} className='mt-8 flex gap-1.5 items-center text-base text-dark-navy font-semibold'>
                                     <ArrowRight size={16} />
-                                    Read More
+                                    Read This Blog
                                 </Link>
                             </div>
                         </div>

@@ -30,7 +30,7 @@ export default function About() {
 
 
                     <div className="w-full h-full relative flex items-start md:justify-start justify-center">
-                        <Image src='/images/about/about.png' width={520} height={500} alt='About dr satyanarayana'
+                        <Image src='/images/about/about.png' width={520} height={560} alt='About dr satyanarayana'
                             className='w-full h-auto max-w-[520px]' />
                     </div>
 
