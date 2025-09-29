@@ -4,8 +4,8 @@ import React from 'react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: "About Dr. Monica’s Dental Clinic | Best Dentist in Varanasi",
-    description: "Discover Dr. Monica’s Dental Clinic in Varanasi – offering advanced dental treatments, expert dentists, modern technology & 15+ years of trusted patient care.",
+    title: "About Dr Satyanarayana Garre – Hyderabad Nephrologist",
+    description: "Know about Dr. Satyanarayana Garre, trusted nephrologist in Hyderabad with expertise in kidney diseases, dialysis, transplant, and patient-focused care.",
     alternates: {
         canonical: "https://www.drsatyanarayanagarre.in/about",
     },

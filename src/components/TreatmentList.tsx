@@ -202,7 +202,7 @@ export default function TreatmentList() {
                                         href={items.link}
                                         className="mt-3 block w-max ml-auto text-blue-500"
                                     >
-                                        Learn More
+                                        Learn more about this service
                                     </Link>
                                 </div>
                             ))

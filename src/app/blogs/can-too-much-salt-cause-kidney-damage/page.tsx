@@ -3,8 +3,8 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: "About Dr. Monica’s Dental Clinic | Best Dentist in Varanasi",
-    description: "Discover Dr. Monica’s Dental Clinic in Varanasi – offering advanced dental treatments, expert dentists, modern technology & 15+ years of trusted patient care.",
+    title: "Too Much Salt & Kidney Damage – Risks Explained",
+    description: "Can too much salt harm your kidneys? Dr. Satyanarayana Garre explains how excess salt affects kidney health and practical tips to prevent long-term damage.",
     alternates: {
         canonical: "https://www.drsatyanarayanagarre.in/blogs/can-too-much-salt-cause-kidney-damage",
     },

@@ -7,8 +7,8 @@ import ContactForm from "@/components/ContactForm";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
-  title: "Dr. Satyanarayan",
-  description: "Dr. Satyanarayan",
+  title: "Nephrologist in Hyderabad | Dr. Satyanarayana Garre - Kidney Specialist",
+  description: "Dr. Satyanarayana Garre, top nephrologist in Hyderabad, provides expert kidney care including dialysis, transplants, stone treatment & preventive health services",
 };
 
 export default function RootLayout({

@@ -107,8 +107,8 @@ export const Data = [
                 </div>
             </div>
         ),
-        metaTitle: "",
-        metaDescription: "",
+        metaTitle: "Acute Kidney Injury Treatment – Hyderabad",
+        metaDescription: "Expert care for Acute Kidney Injury in Hyderabad by Dr. Satyanarayana Garre. Early diagnosis, treatment, and recovery support for better kidney health.",
         canonical: "https://www.drsatyanarayanagarre.in/services/acute-kidney-injury"
     },
     {
@@ -217,8 +217,8 @@ export const Data = [
                 </div>
             </div>
         ),
-        metaTitle: "",
-        metaDescription: "",
+        metaTitle: "Kidney Stone Treatment – Hyderabad Specialist",
+        metaDescription: "Effective kidney stone treatment in Hyderabad by Dr. Satyanarayana Garre. Expert diagnosis, advanced care, and preventive guidance for healthy kidneys.",
         canonical: "https://www.drsatyanarayanagarre.in/services/kidney-stone"
     },
     {
@@ -327,8 +327,8 @@ export const Data = [
                 </div>
             </div>
         ),
-        metaTitle: "",
-        metaDescription: "",
+        metaTitle: "Chronic Kidney Disease Care – Hyderabad",
+        metaDescription: "Comprehensive care for Chronic Kidney Disease in Hyderabad by Dr. Satyanarayana Garre. Focused on early detection, treatment, and preventive strategies.",
         canonical: "https://www.drsatyanarayanagarre.in/services/chronic-kidney-disease"
     },
     {
@@ -437,8 +437,8 @@ export const Data = [
                 </div>
             </div>
         ),
-        metaTitle: "",
-        metaDescription: "",
+        metaTitle: "Kidney Transplantation & Renal Surgery Care",
+        metaDescription: "Kidney transplantation care in Hyderabad by Dr. Satyanarayana Garre. Comprehensive pre and post transplant support with expert nephrology treatment.",
         canonical: "https://www.drsatyanarayanagarre.in/services/kidney-transplantation"
     },
     {
@@ -547,8 +547,8 @@ export const Data = [
                 </div>
             </div>
         ),
-        metaTitle: "",
-        metaDescription: "",
+        metaTitle: "Advanced dialysis care in Hyderabad by Dr. Satyanarayana Garre. Personalized treatment, compassionate support, and expert nephrology for kidney patients.",
+        metaDescription: "Dialysis Care Center – Hyderabad Nephrology",
         canonical: "https://www.drsatyanarayanagarre.in/services/dialysic-care"
     },
     {
@@ -651,8 +651,8 @@ export const Data = [
                 </div>
             </div>
         ),
-        metaTitle: "",
-        metaDescription: "",
+        metaTitle: "Hypertension, Diabetes & Kidney Health Care",
+        metaDescription: "Specialized kidney care for hypertension and diabetes patients in Hyderabad. Dr. Satyanarayana Garre offers expert treatment to protect long-term health.",
         canonical: "https://www.drsatyanarayanagarre.in/services/hypertension-and-diabetes-kidney-problems"
     },
     {
@@ -755,8 +755,8 @@ export const Data = [
                 </div>
             </div>
         ),
-        metaTitle: "",
-        metaDescription: "",
+        metaTitle: "Rare & Inherited Kidney Disorders – Treatments",
+        metaDescription: "Treatment for inherited and rare kidney disorders in Hyderabad by Dr. Satyanarayana Garre. Expert care with advanced nephrology solutions and guidance.",
         canonical: "https://www.drsatyanarayanagarre.in/services/inherited-and-rare-kidney-disorders"
     },
     {
@@ -837,8 +837,8 @@ export const Data = [
                 </div>
             </div>
         ),
-        metaTitle: "",
-        metaDescription: "",
+        metaTitle: "nterventional Nephrology & Renal Imaging",
+        metaDescription: "Interventional nephrology and renal imaging services by Dr. Satyanarayana Garre in Hyderabad. Accurate diagnosis and advanced kidney care solutions.",
         canonical: "https://www.drsatyanarayanagarre.in/services/interventional-nephrology-and-renal-imaging"
     },
     {
@@ -911,8 +911,8 @@ export const Data = [
                 </div>
             </div>
         ),
-        metaTitle: "",
-        metaDescription: "",
+        metaTitle: "Preventive Kidney Health – Early Detection",
+        metaDescription: "Preventive kidney health care by Dr. Satyanarayana Garre in Hyderabad. Early detection, lifestyle advice, and regular checkups for stronger kidneys.",
         canonical: "https://www.drsatyanarayanagarre.in/services/preventive-kidney-health"
     }
 ]
