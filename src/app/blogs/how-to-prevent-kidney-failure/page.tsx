@@ -1,6 +1,15 @@
 import { Section, Subheading, Wrapper } from '@/utils/Section'
 import Image from 'next/image'
 import React from 'react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: "How to Prevent Kidney Failure – Tips & Strategies",
+    description: "Practical tips on how to prevent kidney failure from Dr. Satyanarayana Garre. Discover lifestyle changes, early detection, and healthy kidney care advice.",
+    alternates: {
+        canonical: "https://www.drsatyanarayanagarre.in/blogs/how-to-prevent-kidney-failure",
+    },
+}
 
 
 export default function KidneyFailure() {

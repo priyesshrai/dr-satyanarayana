@@ -1,6 +1,16 @@
 import { Section, Subheading, Wrapper } from '@/utils/Section'
 import Image from 'next/image'
 import React from 'react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: "Symptoms of Kidney Stones – What to Know",
+    description: "Know the key symptoms of kidney stones. Dr. Satyanarayana Garre explains warning signs, risks, and when to seek timely treatment for kidney stone care.",
+    alternates: {
+        canonical: "https://www.drsatyanarayanagarre.in/blogs/symptoms-of-kidney-stones",
+    },
+}
+
 
 export default function KidneyStoneBlogPage() {
     const list = [

@@ -4,16 +4,16 @@ export const Data = [
     {
         id: "acute-kidney-injury",
         content: (
-            <div className='relative w-full mx-auto max-w-2xl'>
+            <div className='relative w-full mx-auto max-w-4xl'>
                 <h1 className='font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy '>
                     Acute Kidney Injury (AKI) & Acute Renal Failure
                 </h1>
+                <p className='mt-4'>
+                    Acute Kidney Injury (AKI), also known as Acute Renal Failure, is a sudden loss of kidney function that develops within hours or days. It causes waste and fluid to build up in the body, which can be life-threatening if not treated quickly. With timely diagnosis and treatment, kidney function can often be restored fully or partially.
+                </p>
                 <Image src='/images/treatment/img-1.jpg' alt='Kidney Stones & Urinary Disorders' width={600} height={400} className='rounded-lg w-full h-[400px] object-cover object-center md:mt-8 mt-4 '
                 />
                 <div className='relative w-full flex flex-col gap-3 mt-10 md:text-lg text-base text-zinc-600 font-medium'>
-                    <p className=''>
-                        Acute Kidney Injury (AKI), also known as Acute Renal Failure, is a sudden loss of kidney function that develops within hours or days. It causes waste and fluid to build up in the body, which can be life-threatening if not treated quickly. With timely diagnosis and treatment, kidney function can often be restored fully or partially.
-                    </p>
 
                     <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
                         Symptoms of Acute Kidney Injury
@@ -106,21 +106,24 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "Acute Kidney Injury Treatment – Hyderabad",
+        metaDescription: "Expert care for Acute Kidney Injury in Hyderabad by Dr. Satyanarayana Garre. Early diagnosis, treatment, and recovery support for better kidney health.",
+        canonical: "https://www.drsatyanarayanagarre.in/services/acute-kidney-injury"
     },
     {
         id: "kidney-stone",
         content: (
-            <div className='relative w-full mx-auto max-w-2xl'>
+            <div className='relative w-full mx-auto max-w-4xl'>
                 <h1 className='font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy '>
                     Kidney Stones & Urinary Disorders
                 </h1>
+                <p className='mt-4'>
+                    Kidney stones and urinary disorders are common conditions that can affect people of all ages. Kidney stones are hard deposits that form inside the kidneys, while urinary disorders include problems such as infections, frequent urination, or difficulty in passing urine. Early diagnosis and proper treatment help prevent complications and protect long-term kidney health.
+                </p>
                 <Image src='/images/treatment/img-2.jpg' alt='Kidney Stones & Urinary Disorders' width={600} height={400} className='rounded-lg w-full h-[400px] object-cover object-center md:mt-8 mt-4 '
                 />
                 <div className='relative w-full flex flex-col gap-3 mt-10 md:text-lg text-base text-zinc-600 font-medium'>
-                    <p className=''>
-                        Kidney stones and urinary disorders are common conditions that can affect people of all ages. Kidney stones are hard deposits that form inside the kidneys, while urinary disorders include problems such as infections, frequent urination, or difficulty in passing urine. Early diagnosis and proper treatment help prevent complications and protect long-term kidney health.
-                    </p>
 
                     <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
                         Signs You May Have a Kidney or Urinary Problem
@@ -213,21 +216,24 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "Kidney Stone Treatment – Hyderabad Specialist",
+        metaDescription: "Effective kidney stone treatment in Hyderabad by Dr. Satyanarayana Garre. Expert diagnosis, advanced care, and preventive guidance for healthy kidneys.",
+        canonical: "https://www.drsatyanarayanagarre.in/services/kidney-stone"
     },
     {
         id: "chronic-kidney-disease",
         content: (
-            <div className='relative w-full mx-auto max-w-2xl'>
+            <div className='relative w-full mx-auto max-w-4xl'>
                 <h1 className='font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy '>
                     Chronic Kidney Disease (CKD) & Renal Failure
                 </h1>
+                <p className='mt-4'>
+                    Chronic Kidney Disease (CKD) is a condition where the kidneys gradually lose their ability to filter waste and excess fluids from the blood. If not treated on time, CKD can progress to renal failure, where kidneys stop working completely and require dialysis or a transplant. Early detection and proper management can slow down the progression and improve quality of life.
+                </p>
                 <Image src='/images/treatment/img-3.jpg' alt='Kidney Stones & Urinary Disorders' width={600} height={400} className='rounded-lg w-full h-[400px] object-cover object-center md:mt-8 mt-4 '
                 />
                 <div className='relative w-full flex flex-col gap-3 mt-10 md:text-lg text-base text-zinc-600 font-medium'>
-                    <p className=''>
-                        Chronic Kidney Disease (CKD) is a condition where the kidneys gradually lose their ability to filter waste and excess fluids from the blood. If not treated on time, CKD can progress to renal failure, where kidneys stop working completely and require dialysis or a transplant. Early detection and proper management can slow down the progression and improve quality of life.
-                    </p>
 
                     <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
                         Warning Signs of CKD & Renal Failure
@@ -320,21 +326,24 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "Chronic Kidney Disease Care – Hyderabad",
+        metaDescription: "Comprehensive care for Chronic Kidney Disease in Hyderabad by Dr. Satyanarayana Garre. Focused on early detection, treatment, and preventive strategies.",
+        canonical: "https://www.drsatyanarayanagarre.in/services/chronic-kidney-disease"
     },
     {
         id: "kidney-transplantation",
         content: (
-            <div className='relative w-full mx-auto max-w-2xl'>
+            <div className='relative w-full mx-auto max-w-4xl'>
                 <h1 className='font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy '>
                     Kidney Transplantation
                 </h1>
+                <p className="mt-4">
+                    Kidney transplantation is a surgical procedure where a healthy kidney from a living or deceased donor is placed into a patient whose kidneys have failed. It is often the best treatment option for patients with end-stage renal disease (ESRD), offering improved quality of life compared to long-term dialysis. With proper care, a transplanted kidney can function for many years
+                </p>
                 <Image src='/images/treatment/img-4.jpg' alt='Kidney Stones & Urinary Disorders' width={600} height={400} className='rounded-lg w-full h-[400px] object-cover object-center md:mt-8 mt-4 '
                 />
                 <div className='relative w-full flex flex-col gap-3 mt-10 md:text-lg text-base text-zinc-600 font-medium'>
-                    <p className=''>
-                        Kidney transplantation is a surgical procedure where a healthy kidney from a living or deceased donor is placed into a patient whose kidneys have failed. It is often the best treatment option for patients with end-stage renal disease (ESRD), offering improved quality of life compared to long-term dialysis. With proper care, a transplanted kidney can function for many years
-                    </p>
 
                     <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
                         When Transplant May Be Needed
@@ -427,21 +436,24 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "Kidney Transplantation & Renal Surgery Care",
+        metaDescription: "Kidney transplantation care in Hyderabad by Dr. Satyanarayana Garre. Comprehensive pre and post transplant support with expert nephrology treatment.",
+        canonical: "https://www.drsatyanarayanagarre.in/services/kidney-transplantation"
     },
     {
         id: "dialysic-care",
         content: (
-            <div className='relative w-full mx-auto max-w-2xl'>
+            <div className='relative w-full mx-auto max-w-4xl'>
                 <h1 className='font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy '>
                     Dialysis Care (Hemodialysis & Peritoneal Dialysis)
                 </h1>
+                <p className="mt-4">
+                    Dialysis is a life-saving treatment for patients whose kidneys can no longer filter waste and excess fluid from the blood. It can be done through Hemodialysis, where blood is cleaned using a dialysis machine, or Peritoneal Dialysis, where a cleansing fluid is used inside the abdomen. Dialysis helps patients manage symptoms and maintain quality of life until a kidney transplant is possible.
+                </p>
                 <Image src='/images/treatment/img-5.jpg' alt='Kidney Stones & Urinary Disorders' width={600} height={400} className='rounded-lg w-full h-[400px] object-cover object-center md:mt-8 mt-4 '
                 />
                 <div className='relative w-full flex flex-col gap-3 mt-10 md:text-lg text-base text-zinc-600 font-medium'>
-                    <p className=''>
-                        Dialysis is a life-saving treatment for patients whose kidneys can no longer filter waste and excess fluid from the blood. It can be done through Hemodialysis, where blood is cleaned using a dialysis machine, or Peritoneal Dialysis, where a cleansing fluid is used inside the abdomen. Dialysis helps patients manage symptoms and maintain quality of life until a kidney transplant is possible.
-                    </p>
 
                     <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
                         When Dialysis May Be Needed
@@ -534,21 +546,24 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "Advanced dialysis care in Hyderabad by Dr. Satyanarayana Garre. Personalized treatment, compassionate support, and expert nephrology for kidney patients.",
+        metaDescription: "Dialysis Care Center – Hyderabad Nephrology",
+        canonical: "https://www.drsatyanarayanagarre.in/services/dialysic-care"
     },
     {
         id: "hypertension-and-diabetes-kidney-problems",
         content: (
-            <div className='relative w-full mx-auto max-w-2xl'>
+            <div className='relative w-full mx-auto max-w-4xl'>
                 <h1 className='font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy '>
                     Hypertension & Diabetes-related Kidney Problems
                 </h1>
+                <p className="mt-4">
+                    High blood pressure (hypertension) and uncontrolled diabetes are two leading causes of chronic kidney disease (CKD). Over time, they damage the kidney&apos;s delicate blood vessels, reducing their ability to filter waste and excess fluids. Early detection and strict management of these conditions can significantly slow down kidney damage and protect overall health.
+                </p>
                 <Image src='/images/treatment/img-6.jpg' alt='Kidney Stones & Urinary Disorders' width={600} height={400} className='rounded-lg w-full h-[400px] object-cover object-center md:mt-8 mt-4 '
                 />
                 <div className='relative w-full flex flex-col gap-3 mt-10 md:text-lg text-base text-zinc-600 font-medium'>
-                    <p className=''>
-                        High blood pressure (hypertension) and uncontrolled diabetes are two leading causes of chronic kidney disease (CKD). Over time, they damage the kidney&apos;s delicate blood vessels, reducing their ability to filter waste and excess fluids. Early detection and strict management of these conditions can significantly slow down kidney damage and protect overall health.
-                    </p>
 
                     <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
                         When to Watch for Kidney Damage
@@ -635,21 +650,24 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "Hypertension, Diabetes & Kidney Health Care",
+        metaDescription: "Specialized kidney care for hypertension and diabetes patients in Hyderabad. Dr. Satyanarayana Garre offers expert treatment to protect long-term health.",
+        canonical: "https://www.drsatyanarayanagarre.in/services/hypertension-and-diabetes-kidney-problems"
     },
     {
         id: "inherited-and-rare-kidney-disorders",
         content: (
-            <div className='relative w-full mx-auto max-w-2xl'>
+            <div className='relative w-full mx-auto max-w-4xl'>
                 <h1 className='font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy '>
                     Inherited & Rare Kidney Disorders
                 </h1>
+                <p className="mt-4">
+                    Inherited and rare kidney disorders are conditions passed down genetically or occurring infrequently in the population. These include Polycystic Kidney Disease (PKD), Alport Syndrome, Bartter Syndrome, and Gitelman Syndrome. They affect kidney function differently—some cause cyst formation, others lead to salt imbalance or progressive kidney failure. Early diagnosis and continuous care are essential to manage symptoms and slow progression.
+                </p>
                 <Image src='/images/treatment/img-7.jpg' alt='Kidney Stones & Urinary Disorders' width={600} height={400} className='rounded-lg w-full h-[400px] object-cover object-center md:mt-8 mt-4 '
                 />
                 <div className='relative w-full flex flex-col gap-3 mt-10 md:text-lg text-base text-zinc-600 font-medium'>
-                    <p className=''>
-                        Inherited and rare kidney disorders are conditions passed down genetically or occurring infrequently in the population. These include Polycystic Kidney Disease (PKD), Alport Syndrome, Bartter Syndrome, and Gitelman Syndrome. They affect kidney function differently—some cause cyst formation, others lead to salt imbalance or progressive kidney failure. Early diagnosis and continuous care are essential to manage symptoms and slow progression.
-                    </p>
 
                     <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
                         When to Suspect a Rare Disorder
@@ -736,15 +754,27 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "Rare & Inherited Kidney Disorders – Treatments",
+        metaDescription: "Treatment for inherited and rare kidney disorders in Hyderabad by Dr. Satyanarayana Garre. Expert care with advanced nephrology solutions and guidance.",
+        canonical: "https://www.drsatyanarayanagarre.in/services/inherited-and-rare-kidney-disorders"
     },
     {
         id: "interventional-nephrology-and-renal-imaging",
         content: (
-            <div className="relative w-full mx-auto max-w-2xl">
+            <div className="relative w-full mx-auto max-w-4xl">
                 <h1 className="font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy">
                     Interventional Nephrology & Renal Imaging
                 </h1>
+                <p className="mt-4">
+                    Interventional Nephrology focuses on minimally invasive procedures and
+                    imaging techniques to diagnose and manage kidney-related conditions.
+                    Renal imaging, including ultrasound, Doppler, and advanced scans, helps
+                    assess kidney structure, blood flow, and function. Combined with
+                    interventional procedures such as vascular access placement, biopsy,
+                    and catheter insertions, it ensures accurate diagnosis and effective
+                    treatment.
+                </p>
                 <Image
                     src="/images/treatment/img-8.jpg"
                     alt="Interventional Nephrology & Renal Imaging"
@@ -754,15 +784,6 @@ export const Data = [
                 />
 
                 <div className="relative w-full flex flex-col gap-3 mt-10 md:text-lg text-base text-zinc-600 font-medium">
-                    <p>
-                        Interventional Nephrology focuses on minimally invasive procedures and
-                        imaging techniques to diagnose and manage kidney-related conditions.
-                        Renal imaging, including ultrasound, Doppler, and advanced scans, helps
-                        assess kidney structure, blood flow, and function. Combined with
-                        interventional procedures such as vascular access placement, biopsy,
-                        and catheter insertions, it ensures accurate diagnosis and effective
-                        treatment.
-                    </p>
 
                     <h2 className="md:text-2xl text-lg text-dark-navy font-semibold">
                         Symptoms (When to Consider Interventional Care)
@@ -816,14 +837,25 @@ export const Data = [
                 </div>
             </div>
         ),
+        metaTitle: "nterventional Nephrology & Renal Imaging",
+        metaDescription: "Interventional nephrology and renal imaging services by Dr. Satyanarayana Garre in Hyderabad. Accurate diagnosis and advanced kidney care solutions.",
+        canonical: "https://www.drsatyanarayanagarre.in/services/interventional-nephrology-and-renal-imaging"
     },
     {
         id: "preventive-kidney-health",
         content: (
-            <div className="relative w-full mx-auto max-w-2xl">
+            <div className="relative w-full mx-auto max-w-4xl">
                 <h1 className="font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy">
                     Preventive Kidney Health & Lifestyle Guidance
                 </h1>
+                <p className="mt-4">
+                    Prevention plays a vital role in protecting kidney health and reducing the
+                    risk of chronic diseases. With the right lifestyle habits, diet, and
+                    regular health check-ups, many kidney problems can be delayed or avoided.
+                    Preventive kidney care focuses on educating patients about healthy choices,
+                    monitoring risk factors, and adopting practices that keep kidneys
+                    functioning optimally.
+                </p>
                 <Image
                     src="/images/treatment/img-9.jpg"
                     alt="Preventive Kidney Health & Lifestyle Guidance"
@@ -833,14 +865,6 @@ export const Data = [
                 />
 
                 <div className="relative w-full flex flex-col gap-3 mt-10 md:text-lg text-base text-zinc-600 font-medium">
-                    <p>
-                        Prevention plays a vital role in protecting kidney health and reducing the
-                        risk of chronic diseases. With the right lifestyle habits, diet, and
-                        regular health check-ups, many kidney problems can be delayed or avoided.
-                        Preventive kidney care focuses on educating patients about healthy choices,
-                        monitoring risk factors, and adopting practices that keep kidneys
-                        functioning optimally.
-                    </p>
 
                     <h2 className="md:text-2xl text-lg text-dark-navy font-semibold">
                         Symptoms (When to Seek Preventive Guidance)
@@ -887,5 +911,8 @@ export const Data = [
                 </div>
             </div>
         ),
+        metaTitle: "Preventive Kidney Health – Early Detection",
+        metaDescription: "Preventive kidney health care by Dr. Satyanarayana Garre in Hyderabad. Early detection, lifestyle advice, and regular checkups for stronger kidneys.",
+        canonical: "https://www.drsatyanarayanagarre.in/services/preventive-kidney-health"
     }
 ]

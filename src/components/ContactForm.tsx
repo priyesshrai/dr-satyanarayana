@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React, { ChangeEvent, FormEvent, useState } from 'react'
 import { toast, Toaster } from 'react-hot-toast'
 import axios from 'axios'
+import { usePathname } from 'next/navigation';
 
 interface ContactInfo {
     title: string;
@@ -19,6 +20,7 @@ interface FormData {
     message: string
 }
 export default function ContactForm() {
+    const currentPath = usePathname()
     const contactInfo: ContactInfo[] = [
         {
             title: 'Address',
@@ -106,9 +108,17 @@ export default function ContactForm() {
                 <div className='relative w-full flex flex-col lg:gap-14 md:gap-10 gap-8'>
                     <div className='flex-1 text-center'>
                         <span className='lg:text-xl md:text-base text-sm font-medium text-dark-navy' >CONTACT US</span>
-                        <Heading>
-                            We&apos;re Here to Support You
-                        </Heading>
+                        {
+                            currentPath === '/contact' ? (
+                               <h1 className='lg:text-4xl md:text-[28px] text-2xl leading-[1.3] font-bold text-dark-navy'>
+                                    We&apos;re Here to Support You
+                                </h1>
+                            ) : (
+                                <Heading>
+                                    We&apos;re Here to Support You
+                                </Heading>
+                            )
+                        }
                         <Subheading className='max-w-md mx-auto'>
                             Ready to take the next step in your kidney care journey? Get in touch with us today.
                         </Subheading>

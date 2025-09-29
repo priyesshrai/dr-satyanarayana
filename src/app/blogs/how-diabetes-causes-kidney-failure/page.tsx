@@ -1,6 +1,15 @@
 import { Section, Subheading, Wrapper } from '@/utils/Section'
 import Image from 'next/image'
 import React from 'react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: "How Diabetes Leads to Kidney Failure – Guide",
+    description: "Learn how diabetes can cause kidney failure. Dr. Satyanarayana Garre explains causes, risks, and ways to protect kidney health with timely prevention.",
+    alternates: {
+        canonical: "https://www.drsatyanarayanagarre.in/blogs/how-diabetes-causes-kidney-failure",
+    },
+}
 
 export default function page() {
     return (

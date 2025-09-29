@@ -44,9 +44,9 @@ export default function WhyUs() {
             <Wrapper>
                 <div className='relative w-full flex flex-col lg:gap-14 md:gap-10 gap-8'>
                     <div className='flex-1 text-center'>
-                        <Heading>
+                        <h1 className='lg:text-4xl md:text-[28px] text-2xl leading-[1.3] font-bold text-dark-navy'>
                             Dr. Satyanarayana Garre - Best Nephrologist in Hyderabad
-                        </Heading>
+                        </h1>
                         <Subheading className='mx-auto'>
                             Trusted Expertise in Kidney Health & Compassionate Nephrology Care
                         </Subheading>

@@ -1,5 +1,15 @@
 import { Section, Subheading, Wrapper } from '@/utils/Section'
 import Image from 'next/image'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: "Too Much Salt & Kidney Damage – Risks Explained",
+    description: "Can too much salt harm your kidneys? Dr. Satyanarayana Garre explains how excess salt affects kidney health and practical tips to prevent long-term damage.",
+    alternates: {
+        canonical: "https://www.drsatyanarayanagarre.in/blogs/can-too-much-salt-cause-kidney-damage",
+    },
+}
+
 
 export default function page() {
     return (
