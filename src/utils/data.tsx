@@ -106,7 +106,10 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "",
+        metaDescription: "",
+        canonical: "https://www.drsatyanarayanagarre.in/services/acute-kidney-injury"
     },
     {
         id: "kidney-stone",
@@ -213,7 +216,10 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "",
+        metaDescription: "",
+        canonical: "https://www.drsatyanarayanagarre.in/services/kidney-stone"
     },
     {
         id: "chronic-kidney-disease",
@@ -320,7 +326,10 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "",
+        metaDescription: "",
+        canonical: "https://www.drsatyanarayanagarre.in/services/chronic-kidney-disease"
     },
     {
         id: "kidney-transplantation",
@@ -427,7 +436,10 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "",
+        metaDescription: "",
+        canonical: "https://www.drsatyanarayanagarre.in/services/kidney-transplantation"
     },
     {
         id: "dialysic-care",
@@ -534,7 +546,10 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "",
+        metaDescription: "",
+        canonical: "https://www.drsatyanarayanagarre.in/services/dialysic-care"
     },
     {
         id: "hypertension-and-diabetes-kidney-problems",
@@ -635,7 +650,10 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "",
+        metaDescription: "",
+        canonical: "https://www.drsatyanarayanagarre.in/services/hypertension-and-diabetes-kidney-problems"
     },
     {
         id: "inherited-and-rare-kidney-disorders",
@@ -736,7 +754,10 @@ export const Data = [
                     </ul>
                 </div>
             </div>
-        )
+        ),
+        metaTitle: "",
+        metaDescription: "",
+        canonical: "https://www.drsatyanarayanagarre.in/services/inherited-and-rare-kidney-disorders"
     },
     {
         id: "interventional-nephrology-and-renal-imaging",
@@ -816,6 +837,9 @@ export const Data = [
                 </div>
             </div>
         ),
+        metaTitle: "",
+        metaDescription: "",
+        canonical: "https://www.drsatyanarayanagarre.in/services/interventional-nephrology-and-renal-imaging"
     },
     {
         id: "preventive-kidney-health",
@@ -887,5 +911,8 @@ export const Data = [
                 </div>
             </div>
         ),
+        metaTitle: "",
+        metaDescription: "",
+        canonical: "https://www.drsatyanarayanagarre.in/services/preventive-kidney-health"
     }
 ]
