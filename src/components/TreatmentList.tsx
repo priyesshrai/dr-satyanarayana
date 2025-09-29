@@ -169,9 +169,9 @@ export default function TreatmentList() {
             <Wrapper>
                 <div className='relative w-full flex flex-col lg:gap-14 md:gap-10 gap-8'>
                     <div className='flex-1 text-center'>
-                        <Heading>
+                        <h1 className='lg:text-4xl md:text-[28px] text-2xl leading-[1.3] font-bold text-dark-navy'>
                             List of <span className='font-open-sans text-light-blue'>Treatments</span>
-                        </Heading>
+                        </h1>
                         <Subheading className='mx-auto max-w-md'>
                             Specialized Nephrology Services Tailored to Your Kidney Health Needs
                         </Subheading>
