@@ -69,7 +69,7 @@ export default function Hero() {
                     </div>
 
                     <div className="w-full h-full relative flex items-center md:justify-end justify-center">
-                        <Image src={'/images/hero/hero-image-2.png'} width={800} height={450}
+                        <Image src={'/images/hero/hero-image-2.png'} width={450} height={460}
                             alt='Hero Image'
                             className='w-full h-auto max-w-[450px] ' />
                     </div>

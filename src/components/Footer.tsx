@@ -66,28 +66,16 @@ export default function Footer() {
     const socialMedia: SocialIcons[] = [
         {
             icon: '/images/footer/instagram.svg',
-            link: ''
+            link: 'https://www.instagram.com/drsatyanarayana_garre/'
         },
         {
             icon: '/images/footer/facebook.svg',
-            link: ''
-        },
-        {
-            icon: '/images/footer/linkedin.svg',
-            link: ''
+            link: 'https://www.facebook.com/Dr.Satyanarayanagare/reels/'
         },
         {
             icon: '/images/footer/youtube.svg',
-            link: ''
-        },
-        {
-            icon: '/images/footer/x.svg',
-            link: ''
-        },
-        {
-            icon: '/images/footer/google.svg',
-            link: ''
-        },
+            link: 'https://www.youtube.com/@Dr.SatyanarayanaGarre/shorts'
+        }
     ]
 
     return (
@@ -101,7 +89,7 @@ export default function Footer() {
                     <div className='mt-5 w-full relative flex items-center gap-2'>
                         {
                             socialMedia.map((item, idx) => (
-                                <Link key={idx} href={item.link}>
+                                <Link key={idx} href={item.link} target='_blank'>
                                     <Image src={item.icon} width={32} height={32} alt='Social icon' />
                                 </Link>
                             ))

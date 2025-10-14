@@ -74,7 +74,7 @@ export default function Blogs() {
                     </Subheading>
 
                     <Link href={data.slug} className='mt-7 w-max ml-auto !font-montserrat font-medium text-blue-500 flex items-center gap-2'>
-                      Read More
+                      Read this Blog
                       <ArrowRight />
                     </Link>
                   </div>
