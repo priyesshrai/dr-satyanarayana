@@ -84,7 +84,7 @@ export default function Footer() {
                 <div className="w-full h-full relative flex flex-col">
                     <Image src='/images/logo/logo-2.svg' alt='' width={400} height={200} />
                     <Subheading className='text-left mt-5 !text-white'>
-                        Dr. Satyanarayana Garre is a distinguished Nephrologist based in Hyderabad, Telangana, with over 6 years of experience in the field of kidney health and renal treatments.
+                        Dr. Satyanarayana Garre is a distinguished Nephrologist based in Hyderabad, Telangana, with over 10 years of experience in the field of kidney health and renal treatments.
                     </Subheading>
                     <div className='mt-5 w-full relative flex items-center gap-2'>
                         {
