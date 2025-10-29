@@ -48,19 +48,19 @@ export default function Footer() {
     ]
     const contactInfo: Contact[] = [
         {
-            name: '12-2-718, Khader Bagh Road, Padmanabha Nagar, Toli Chowki, Hyderabad - 500008',
+            name: 'Apollo Health City, Road No 72, Opp. Bharatiya Vidya Bhavan School, Film Nagar, Jubilee Hills, Hyderabad, TS, 500033',
             icon: '/images/footer/pin-white.svg',
-            link: '#'
+            link: 'https://maps.app.goo.gl/uGPgNUKfMc24ihfR7'
         },
         {
-            name: '+91 9844181188',
+            name: '+91 9844181188, 9391086902',
             icon: '/images/footer/phone-white.svg',
-            link: '#'
+            link: 'tel:+919844181188'
         },
         {
             name: 'satyakishoregarre@gmail.com',
             icon: '/images/footer/mail-white.svg',
-            link: '#'
+            link: 'mailto:satyakishoregarre@gmail.com'
         },
     ]
     const socialMedia: SocialIcons[] = [
@@ -84,7 +84,7 @@ export default function Footer() {
                 <div className="w-full h-full relative flex flex-col">
                     <Image src='/images/logo/logo-2.svg' alt='' width={400} height={200} />
                     <Subheading className='text-left mt-5 !text-white'>
-                        Dr. Satyanarayana Garre is a distinguished Nephrologist based in Hyderabad, Telangana, with over 6 years of experience in the field of kidney health and renal treatments.
+                        Dr. Satyanarayana Garre is a distinguished Nephrologist based in Hyderabad, Telangana, with over 10 years of experience in the field of kidney health and renal treatments.
                     </Subheading>
                     <div className='mt-5 w-full relative flex items-center gap-2'>
                         {
@@ -130,7 +130,7 @@ export default function Footer() {
                     <div className='relative mt-5 flex items-center justify-center'>
                         <iframe
                             className='rounded-xl h-52'
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15249885.318783779!2d82.75252935!3d21.0680074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1756547193533!5m2!1sen!2sin" width="100%" height="100%" style={{ border: "0" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.9349405823364!2d78.40953837390659!3d17.414909602014188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97dce007c333%3A0xa1adf392630ab690!2sDr.%20Satyanarayana%20Garre%20-%20Best%20Nephrologist%20in%20Hyderabad!5e0!3m2!1sen!2sin!4v1761735190598!5m2!1sen!2sin" width="100%" height="100%" style={{ border: "0" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>

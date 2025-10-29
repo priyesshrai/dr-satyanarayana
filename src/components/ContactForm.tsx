@@ -24,27 +24,27 @@ export default function ContactForm() {
     const contactInfo: ContactInfo[] = [
         {
             title: 'Address',
-            content: '12-2-718, Khader Bagh Road, Padmanabha Nagar, Toli Chowki, Hyderabad - 500008',
+            content: 'Apollo Health City, Road No 72, Opp. Bharatiya Vidya Bhavan School, Film Nagar, Jubilee Hills, Hyderabad, TS, 500033',
             icon: '/images/contact/pin.svg',
-            link: '#'
+            link: 'https://maps.app.goo.gl/uGPgNUKfMc24ihfR7'
         },
         {
             title: 'Phone',
-            content: '+91 9844181188',
+            content: '+91 9844181188, 9391086902',
             icon: '/images/contact/phone.svg',
-            link: '#'
+            link: 'tel:+919844181188'
         },
         {
             title: 'E-Mail',
             content: 'satyakishoregarre@gmail.com',
             icon: '/images/contact/mail.svg',
-            link: '#'
+            link: 'mailto:satyakishoregarre@gmail.com'
         },
         {
             title: 'Clinic Hours',
-            content: 'Will be Updated Shortly',
+            content: 'Monday - Saturday(10:30 am to 6 pm)',
             icon: '/images/contact/clock-2.svg',
-            link: '#'
+            link: 'https://maps.app.goo.gl/uGPgNUKfMc24ihfR7'
         },
     ]
     const [contactFormData, setContactFormData] = useState<FormData>({
@@ -138,7 +138,7 @@ export default function ContactForm() {
                                             <div className='w-8 h-8 shrink-0'>
                                                 <Image src={info.icon} width={32} height={32} alt={info.title} />
                                             </div>
-                                            <div className='relative max-w-[240px]'>
+                                            <div className='relative max-w-[340px]'>
                                                 <h4 className='text-base text-dark-navy font-semibold'>
                                                     {info.title}
                                                 </h4>
