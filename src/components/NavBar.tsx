@@ -58,8 +58,8 @@ export default function NavBar() {
             <nav className='relative w-full max-w-7xl mx-auto px-5 py-3 flex items-center justify-between'>
                 <div className='relative shrink-0 w-max'>
                     <Link href={'/'}>
-                        <Image src={'/images/logo/logo.svg'} width={300} height={200} alt='Dr. Satyanarayana' 
-                        className='md:w-[300px] w-[200px] h-auto ' />
+                        <Image src={'/images/logo/logo.svg'} width={300} height={200} alt='Dr. Satyanarayana'
+                            className='md:w-[300px] w-[200px] h-auto ' />
                     </Link>
                 </div>
 
@@ -78,11 +78,17 @@ export default function NavBar() {
 
                 <div className='lg:flex flex-col items-end hidden relative w-max'>
                     <div className='relative flex items-center text-dark-navy gap-2'>
-                        <Phone size={16} className='mt-[3px]' />
-                        <Link href={'tel:+919844181188'}
-                            className='flex flex-col text-lg text-dark-navy font-semibold leading-[1.2]'>
-                            (+91) 9844181188
-                        </Link>
+                        <Phone size={24} className='mt-[3px]' />
+                        <div className='flex flex-col gap-1'>
+                            <Link href={'tel:+919844181188'}
+                                className='flex flex-col text-lg text-dark-navy font-semibold leading-[1.2]'>
+                                (+91) 9844181188
+                            </Link>
+                            <Link href={'tel:+919391086902'}
+                                className='flex flex-col text-lg text-dark-navy font-semibold leading-[1.2]'>
+                                (+91) 9391086902
+                            </Link>
+                        </div>
                     </div>
                     {/* <span className='text-[12px] text-zinc-400 font-medium'>24/7 Emergency Line</span> */}
                 </div>
@@ -98,7 +104,7 @@ export default function NavBar() {
                 <div className='w-full h-full relative'>
                     <div className='relative w-full flex justify-between'>
                         <Link href={'/'}>
-                            <Image src={'/images/logo/logo.svg'} width={300} height={200} alt='Dr. Satyanarayan' className='md:w-[300px] w-[200px] h-auto '/>
+                            <Image src={'/images/logo/logo.svg'} width={300} height={200} alt='Dr. Satyanarayan' className='md:w-[300px] w-[200px] h-auto ' />
                         </Link>
                         <button className='w-10 h-10 bg-dark-navy rounded-full flex items-center justify-center border-none cursor-pointer' onClick={() => { setIsMenuOpen(false) }}>
                             <X color='white' />
