@@ -75,7 +75,7 @@ export default function WhyUs() {
                         </div>
 
                         <div className='w-full h-full relative flex md:justify-end justify-center order-1 md:order-2'>
-                            <Image src='/images/about/about-2.png' width={550} height={400} alt='Why Choose Dr. Satayanarayan' className=' h-auto' />
+                            <Image src='/images/about/new-img.png' width={550} height={400} alt='Why Choose Dr. Satayanarayan' className=' h-auto' />
                         </div>
                     </div>
                 </div>
