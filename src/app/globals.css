@@ -74,3 +74,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
   display: none;
 }
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 2.5s linear infinite;
+}
