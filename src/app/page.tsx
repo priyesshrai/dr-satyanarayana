@@ -8,6 +8,7 @@ import Marquee from '@/components/Marquee'
 import Steps from '@/components/Steps'
 import Testimonial from '@/components/Testimonial'
 import TreatmentList from '@/components/TreatmentList'
+import Video from '@/components/Video'
 import React from 'react'
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
     <main>
       <Hero />
       <About />
+      <Video/>
       <TreatmentList />
       <Marquee />
       {/* <Steps />  */}
