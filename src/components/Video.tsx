@@ -77,13 +77,13 @@ const video: Video[] = [
                     During the procedure, contrast injection into the fistula showed no flow beyond the thrombus. Subsequently, balloon maceration of the clot was performed, followed by angioplasty of the cephalic arch using a high-pressure balloon, which restored excellent outflow and re-established normal fistula function.
                 </p>
                 <p className='mt-3 text-gray-100 max-w-2xl md:text-lg text-base'>
-                    This intervention not only salvaged the existing access but also prevented the need for a temporary dialysis catheter, thereby reducing infection risk and preserving the patient's native access longevity.
+                    This intervention not only salvaged the existing access but also prevented the need for a temporary dialysis catheter, thereby reducing infection risk and preserving the patient&apos;s native access longevity.
                 </p>
                 <h2 className='text-white font-bold md:text-2xl text-base mt-5 max-w-3xl'>
                     Learning Point
                 </h2>
                 <em className='block mt-4 text-gray-100 max-w-2xl md:text-lg text-base'>
-                    “In access salvage, don't just chase the clot — find and fix the reason behind it.Treating the underlying stenosis is key to durable success.”
+                    “In access salvage, don&apos;t just chase the clot — find and fix the reason behind it.Treating the underlying stenosis is key to durable success.”
                 </em>
             </div>
     },
