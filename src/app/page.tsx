@@ -9,6 +9,7 @@ import Steps from '@/components/Steps'
 import Testimonial from '@/components/Testimonial'
 import TreatmentList from '@/components/TreatmentList'
 import Video from '@/components/Video'
+import YoutubeVdo from '@/components/YoutubeVdo'
 import React from 'react'
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
       <About />
       <Video/>
       <TreatmentList />
+      <YoutubeVdo/>
       <Marquee />
       {/* <Steps />  */}
       {/* <ContactBanner />  */}
