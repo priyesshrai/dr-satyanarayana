@@ -13,7 +13,8 @@ export default function YoutubeVdo() {
         "https://www.youtube.com/embed/IAAWhsaMXoI?si=ngIuy8o_n2ShEHB0",
         "https://www.youtube.com/embed/RvIC4tfn3Vc?si=5kr32w-WfvjFjXBy",
         "https://www.youtube.com/embed/DbYZGAMZpbc?si=tbduCirPfO27uU8Q",
-        "https://www.youtube.com/embed/an0UCsNB55g?si=Kri2nCWaP-fp-FN4"
+        "https://www.youtube.com/embed/an0UCsNB55g?si=Kri2nCWaP-fp-FN4",
+        "https://www.youtube.com/embed/NQsmjtW1b0s?si=1li-RzrM0w8iPwOj",
     ]
     const [api, setApi] = useState<CarouselApi>()
     const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }))
