@@ -44,7 +44,13 @@ export default function Blogs() {
       content: 'Salt is something we all use – in cooking, in packaged foods, and at the table. A small amount of salt (sodium) is necessary for our body to work properly. But when salt intake is too high, it can start to harm our kidneys. In this blog,....',
       slug: '/blogs/can-too-much-salt-cause-kidney-damage',
       image: '/images/blog/blog-4.jpg'
-    }
+    },
+    {
+      title: 'Understanding Chronic Kidney Disease (CKD)',
+      content: 'Our kidneys do a lot of important work every day. They remove waste and extra fluid from the blood, balance minerals, control blood pressure, and keep the body healthy. When kidneys stop working properly over time, it is called Chronic Kidney Disease (CKD).....',
+      slug: '/blogs/understanding-chronic-kidney-disease',
+      image: '/images/blog/blog-5.jpg'
+    },
   ]
   return (
     <Section>
