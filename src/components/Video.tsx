@@ -87,6 +87,64 @@ const video: Video[] = [
                 </em>
             </div>
     },
+    {
+        cover: '/images/video/img-03.jpg',
+        url: "/video/vdo-3.mp4",
+        title: 'Acute Thrombosis of Right Radiocephalic AVF...',
+        content: (
+            <div className='relative flex-1'>
+                <h2 className='text-white font-bold lg:text-4xl md:text-2xl text-lg'>
+                    Acute Thrombosis of Right Radiocephalic AVF – Underlying Stenosis Identified and Successfully Treated
+                </h2>
+
+                <p className='mt-3 text-gray-100 max-w-2xl md:text-lg text-base'>
+                    A 42-year-old female on maintenance hemodialysis presented with sudden onset pain, swelling,
+                    and complete loss of thrill in her right radiocephalic AV fistula. Clinical assessment suggested
+                    an acute thrombotic occlusion, and declotting was initially advised. However, as often happens,
+                    the true causative lesion was not immediately evident.
+                </p>
+
+                <h2 className='text-white font-bold lg:text-4xl md:text-2xl text-lg mt-6'>
+                    Interventional Procedure – Finding the Real Problem
+                </h2>
+
+                <p className='mt-3 text-gray-100 max-w-2xl md:text-lg text-base'>
+                    Fistulography revealed no antegrade flow beyond the arterialized vein, with the anastomosis
+                    difficult to identify due to complete stasis. A large thrombus burden extended along the outflow
+                    vein. Because anatomical landmarks were obscured, both fluoroscopy and ultrasound guidance were used
+                    simultaneously to safely navigate the occluded segment.
+                </p>
+
+                <p className='mt-3 text-gray-100 max-w-2xl md:text-lg text-base'>
+                    Multiple guidewire attempts were required due to total occlusion, but with meticulous technique,
+                    the wire was eventually negotiated across the thrombus into the venous limb. Stepwise maceration
+                    restored partial flow, allowing visualization of the underlying pathology.
+                </p>
+
+                <p className='mt-3 text-gray-100 max-w-2xl md:text-lg text-base'>
+                    Once the clot was sufficiently cleared, a tight and critical juxta-anastomotic stenosis became
+                    evident — the actual reason for the thrombosis. The narrowing was so severe that a standard balloon
+                    could not cross effectively, requiring the use of a high-pressure balloon to achieve adequate dilatation.
+                </p>
+
+                <p className='mt-3 text-gray-100 max-w-2xl md:text-lg text-base'>
+                    Post-angioplasty images showed excellent luminal expansion, and the thrill returned immediately.
+                    The AV fistula was completely salvaged, avoiding catheter placement and preventing the morbidity
+                    associated with temporary dialysis access.
+                </p>
+
+                <h2 className='text-white font-bold md:text-2xl text-base mt-5 max-w-3xl'>
+                    Learning Point
+                </h2>
+
+                <em className='block mt-4 text-gray-100 max-w-2xl md:text-lg text-base'>
+                    “A clot is not the diagnosis — always search for the underlying stenosis.
+                    True success in access salvage means declotting the fistula AND correcting the causative lesion.”
+                </em>
+            </div>
+        )
+    },
+
 ]
 
 export default function Video() {
