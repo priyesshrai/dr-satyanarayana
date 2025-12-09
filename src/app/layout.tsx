@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScrollProvider from "@/utils/SmoothScroll";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
-import { GoogleAnalytics } from '@next/third-parties/google'
+const NavBar = dynamic(() => import("@/components/NavBar"), {
+  loading: () => <p>Loading…</p>
+});
+const Footer = dynamic(() => import("@/components/Footer"), {
+  loading: () => <p>Loading…</p>
+});
+const ContactForm = dynamic(() => import("@/components/ContactForm"), {
+  loading: () => <p>Loading…</p>
+});
 import { Montserrat, Open_Sans } from "next/font/google";
+import dynamic from "next/dynamic";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Nephrologist in Hyderabad | Dr. Satyanarayana Garre - Kidney Specialist",
@@ -35,13 +42,28 @@ export default function RootLayout({
       </head>
       <body className="overflow-x-hidden relative">
         <SmoothScrollProvider>
-          <NavBar />
+        <NavBar />
           {children}
-          <ContactForm />
-          <Footer />
         </SmoothScrollProvider>
+        <ContactForm />
+        <Footer />
       </body>
-      <GoogleAnalytics gaId="G-G963FVQ89C" />
+      <Script
+        id="gtm"
+        strategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=G-G963FVQ89C"
+      />
+
+      <Script id="gtm-config" strategy="lazyOnload">
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G963FVQ89C', { page_path: window.location.pathname });
+`}
+      </Script>
+
+
     </html>
   );
 }
