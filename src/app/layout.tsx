@@ -1,15 +1,33 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScrollProvider from "@/utils/SmoothScroll";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
-import { GoogleAnalytics } from '@next/third-parties/google'
+const NavBar = dynamic(() => import("@/components/NavBar"), {
+  loading: () => <p>Loading…</p>
+});
+const Footer = dynamic(() => import("@/components/Footer"), {
+  loading: () => <p>Loading…</p>
+});
+const ContactForm = dynamic(() => import("@/components/ContactForm"), {
+  loading: () => <p>Loading…</p>
+});
+import { Montserrat, Open_Sans } from "next/font/google";
+import dynamic from "next/dynamic";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Nephrologist in Hyderabad | Dr. Satyanarayana Garre - Kidney Specialist",
   description: "Dr. Satyanarayana Garre, top nephrologist in Hyderabad, provides expert kidney care including dialysis, transplants, stone treatment & preventive health services",
 };
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+});
 
 export default function RootLayout({
   children,
@@ -17,23 +35,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.variable} ${openSans.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='anonymous' />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"></link>
         <link rel="shortcut icon" href="/images/logo/fav-icon.svg" type="image/x-icon" />
         <link rel="canonical" href="https://www.drsatyanarayanagarre.in/" />
       </head>
-      <body className="overflow-x-hidden">
+      <body className="overflow-x-hidden relative">
         <SmoothScrollProvider>
-          <NavBar />
+        <NavBar />
           {children}
-          <ContactForm />
-          <Footer />
         </SmoothScrollProvider>
+        <ContactForm />
+        <Footer />
       </body>
-      <GoogleAnalytics gaId="G-G963FVQ89C" />
+      <Script
+        id="gtm"
+        strategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=G-G963FVQ89C"
+      />
+
+      <Script id="gtm-config" strategy="lazyOnload">
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G963FVQ89C', { page_path: window.location.pathname });
+`}
+      </Script>
+
+
     </html>
   );
 }

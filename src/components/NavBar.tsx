@@ -4,7 +4,7 @@ import { Menu, Phone, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 interface MenuItem {
     key: string;
@@ -54,12 +54,12 @@ export default function NavBar() {
     }, [isMenuOpen, stopScroll, startScroll]);
 
     return (
-        <header className={`${currentPath === '/' ? 'absolute left-0 top-0 bg-transparent' : 'relative bg-white'}  w-full z-30`}>
+        <header className={`${currentPath === '/' ? 'absolute left-0 top-0 bg-transparent inset-x-0' : 'relative w-full bg-white'} z-30`}>
             <nav className='relative w-full max-w-7xl mx-auto px-5 py-3 flex items-center justify-between'>
                 <div className='relative shrink-0 w-max'>
                     <Link href={'/'}>
-                        <Image src={'/images/logo/logo.svg'} width={300} height={200} alt='Dr. Satyanarayana'
-                            className='md:w-[300px] w-[200px] h-auto ' />
+                        <Image src={'/images/logo/logo.svg'} width={300} height={50} alt='Dr. Satyanarayana'
+                            className='md:w-[300px] w-[200px] h-auto' loading='eager'/>
                     </Link>
                 </div>
 

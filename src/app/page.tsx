@@ -1,32 +1,31 @@
+import dynamic from "next/dynamic";
 import About from '@/components/About'
-import Blog from '@/components/Blog'
-import ContactBanner from '@/components/ContactBanner'
-import CTABanner from '@/components/CTABanner'
+const Blog = dynamic(() => import('@/components/Blog'), {
+  loading: () => <p>Loading…</p>
+})
 import Hero from '@/components/Hero'
-import HiglightArea from '@/components/HiglightArea'
 import Marquee from '@/components/Marquee'
-import Steps from '@/components/Steps'
-import Testimonial from '@/components/Testimonial'
+const Testimonial = dynamic(() => import('@/components/Testimonial'), {
+  loading: () => <p>Loading…</p>
+})
 import TreatmentList from '@/components/TreatmentList'
-import Video from '@/components/Video'
-import YoutubeVdo from '@/components/YoutubeVdo'
-import React from 'react'
+const Video = dynamic(() => import('@/components/Video'), {
+  loading: () => <p>Loading…</p>
+})
+const YoutubeVdo = dynamic(() => import('@/components/YoutubeVdo'), {
+  loading: () => <p>Loading…</p>
+})
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="relative w-full">
       <Hero />
       <About />
-      <Video/>
+      <Video />
       <TreatmentList />
-      <YoutubeVdo/>
+      <YoutubeVdo />
       <Marquee />
-      {/* <Steps />  */}
-      {/* <ContactBanner />  */}
-      {/* <HiglightArea />  */}
       <Testimonial />
-      {/* <CTABanner />  */}
-      {/* <Marquee /> */}
       <Blog />
     </main>
   )

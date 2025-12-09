@@ -1,6 +1,8 @@
 'use client';
 import { Section, Wrapper } from '@/utils/Section'
 import React, { useRef, useState } from 'react'
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import {
     Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi
 } from "@/components/ui/carousel"
@@ -8,13 +10,13 @@ import Autoplay from "embla-carousel-autoplay";
 
 export default function YoutubeVdo() {
     const ytLinks: string[] = [
-        "https://www.youtube.com/embed/qHCl4Jl8--M?si=9aDB8TBX5_-DfGz6",
-        "https://www.youtube.com/embed/h6r_UO5GUL0?si=InuNH1lQMi6Ke5si",
-        "https://www.youtube.com/embed/IAAWhsaMXoI?si=ngIuy8o_n2ShEHB0",
-        "https://www.youtube.com/embed/RvIC4tfn3Vc?si=5kr32w-WfvjFjXBy",
-        "https://www.youtube.com/embed/DbYZGAMZpbc?si=tbduCirPfO27uU8Q",
-        "https://www.youtube.com/embed/an0UCsNB55g?si=Kri2nCWaP-fp-FN4",
-        "https://www.youtube.com/embed/NQsmjtW1b0s?si=1li-RzrM0w8iPwOj",
+        "qHCl4Jl8--M",
+        "h6r_UO5GUL0",
+        "IAAWhsaMXoI",
+        "RvIC4tfn3Vc",
+        "DbYZGAMZpbc",
+        "an0UCsNB55g",
+        "NQsmjtW1b0s",
     ]
     const [api, setApi] = useState<CarouselApi>()
     const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }))
@@ -37,18 +39,15 @@ export default function YoutubeVdo() {
                                 ytLinks.map((links, idx) => (
                                     <CarouselItem
                                         key={idx}
-                                        className="max-w-[500px] w-full shrink-0 cursor-pointer bg-white rounded-2xl  overflow-hidden"
+                                        className="max-w-[550px] w-full shrink-0 cursor-pointer bg-white overflow-hidden"
                                     >
-                                        <div className="relative w-full pt-[56.25%]">
-                                            <iframe
-                                                src={links}
-                                                title={`YouTube video ${idx}`}
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                referrerPolicy="strict-origin-when-cross-origin"
-                                                allowFullScreen
-                                                className="absolute top-0 left-0 w-full h-full rounded-2xl border-none"
-                                            ></iframe>
-                                        </div>
+                                        <LiteYouTubeEmbed
+                                            id={links}
+                                            title="Video Title"
+                                            lazyLoad={true}
+                                            poster="hqdefault"
+                                            webp={true}
+                                        />
                                     </CarouselItem>
                                 ))
                             }

@@ -1,14 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
 :root {
   --dark-navy: #004254;
   --light-blue: #00c0ff;
   --hover-navy: #0c5a6d;
   --hover-blue: #2ccfff;
-  --montserrat: "Montserrat", sans-serif;
-  --open-sans: "Open Sans", sans-serif;
+  --montserrat: var(--font-montserrat);
+  --open-sans: var(--font-open-sans);
 }
 
 @theme inline {
@@ -21,19 +20,19 @@
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }
