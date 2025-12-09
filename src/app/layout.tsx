@@ -5,11 +5,22 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { Montserrat, Open_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Nephrologist in Hyderabad | Dr. Satyanarayana Garre - Kidney Specialist",
   description: "Dr. Satyanarayana Garre, top nephrologist in Hyderabad, provides expert kidney care including dialysis, transplants, stone treatment & preventive health services",
 };
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+});
 
 export default function RootLayout({
   children,
@@ -17,15 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.variable} ${openSans.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='anonymous' />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"></link>
         <link rel="shortcut icon" href="/images/logo/fav-icon.svg" type="image/x-icon" />
         <link rel="canonical" href="https://www.drsatyanarayanagarre.in/" />
       </head>
-      <body className="overflow-x-hidden">
+      <body className="overflow-x-hidden relative">
         <SmoothScrollProvider>
           <NavBar />
           {children}
