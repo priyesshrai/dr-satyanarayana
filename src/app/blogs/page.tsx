@@ -51,6 +51,12 @@ export default function Blogs() {
       slug: '/blogs/understanding-chronic-kidney-disease',
       image: '/images/blog/blog-5.jpg'
     },
+    {
+      title: 'Blood Urea Nitrogen (BUN) – Complete Patient Guide',
+      content: 'A complete guide for patients to understand Blood Urea Nitrogen (BUN), normal ranges, causes of high or low BUN, symptoms, FAQ, and when to consult a nephrologist.',
+      slug: '/blogs/bun-complete-guide',
+      image: '/images/blog/blog-6.jpg'
+    },
   ]
   return (
     <Section>
