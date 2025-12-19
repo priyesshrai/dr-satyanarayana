@@ -144,6 +144,22 @@ const video: Video[] = [
             </div>
         )
     },
+    {
+        cover: '/images/video/img-04.png',
+        url: "/video/vdo-4.mp4",
+        title: 'Renal Biopsy – What It Is & Why Its Done',
+        content: (
+            <div className='relative flex-1'>
+                <h2 className='text-white font-bold lg:text-4xl md:text-2xl text-lg'>
+                    Renal Biopsy – What It Is & Why It&apos;s Done
+                </h2>
+
+                <p className='mt-3 text-gray-100 max-w-2xl md:text-lg text-base'>
+                    A renal biopsy is a safe and guided medical procedure used to diagnose kidney diseases accurately. Using ultrasound, the doctor first identifies the kidney and its depth, then prepares the area with strict aseptic precautions. Local anesthesia is given to minimize discomfort, and a small kidney tissue sample is collected for detailed examination. This test helps in conditions like nephrotic syndrome, acute kidney injury, unexplained protein in urine, and systemic diseases affecting the kidneys, allowing doctors to plan the most effective treatment.
+                </p>
+            </div>
+        )
+    },
 
 ]
 
