@@ -9,6 +9,7 @@ const Testimonial = dynamic(() => import('@/components/Testimonial'), {
   loading: () => <p>Loading…</p>
 })
 import TreatmentList from '@/components/TreatmentList'
+import { Metadata } from "next";
 const Video = dynamic(() => import('@/components/Video'), {
   loading: () => <p>Loading…</p>
 })
@@ -29,4 +30,12 @@ export default function HomePage() {
       <Blog />
     </main>
   )
+}
+
+export const metadata: Metadata = {
+  title: "Nephrologist in Hyderabad | Dr. Satyanarayana Garre - Kidney Specialist",
+  description: "Dr. Satyanarayana Garre, top nephrologist in Hyderabad, provides expert kidney care including dialysis, transplants, stone treatment & preventive health services",
+  alternates: {
+    canonical: "https://www.drsatyanarayanagarre.in",
+  },
 }

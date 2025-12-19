@@ -38,7 +38,6 @@ export default function RootLayout({
     <html lang="en" className={`${montserrat.variable} ${openSans.variable}`}>
       <head>
         <link rel="shortcut icon" href="/images/logo/fav-icon.svg" type="image/x-icon" />
-        <link rel="canonical" href="https://www.drsatyanarayanagarre.in/" />
       </head>
       <body className="overflow-x-hidden relative">
         <SmoothScrollProvider>
