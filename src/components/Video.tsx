@@ -155,20 +155,20 @@ const video: Video[] = [
                 </h2>
 
                 <p className='mt-3 text-gray-100 max-w-2xl md:text-lg text-base'>
-                    A renal biopsy is a safe and guided medical procedure used to diagnose kidney diseases accurately. Using ultrasound, the doctor first identifies the kidney and its depth, then prepares the area with strict aseptic precautions. Local anesthesia is given to minimize discomfort, and a small kidney tissue sample is collected for detailed examination. This test helps in conditions like nephrotic syndrome, acute kidney injury, unexplained protein in urine, and systemic diseases affecting the kidneys, allowing doctors to plan the most effective treatment.
+                    A Renal Biopsy is a safe and guided medical procedure used to diagnose kidney diseases accurately. Using ultrasound, the doctor first identifies the kidney and its depth, then prepares the area with strict aseptic precautions. Local anesthesia is given to minimize discomfort, and a small kidney tissue sample is collected for detailed examination. This test helps in conditions like nephrotic syndrome, acute kidney injury, unexplained protein in urine, and systemic diseases affecting the kidneys, allowing doctors to plan the most effective treatment.
                 </p>
                 <h2 className='text-white font-bold lg:text-4xl md:text-2xl text-lg mt-6'>
                     You may need a Renal Biopsy in case of any of the following indicators:
                 </h2>
-                <ul className='mt-5 pl-5 list-decimal text-base'>
-                    <li> Nephrotic syndrome </li>
-                    <li> Acute kidney injury </li>
-                    <li> Systemic disease with renal dysfunction</li>
-                    <li> Non-nephrotic proteinuria</li>
-                    <li>Isolated microscopic hematuria</li>
-                    <li>Unexplained chronic kidney disease</li>
-                    <li>Familial renal disease</li>
-                    <li>Renal transplant dysfunction</li>
+                <ul className='mt-5 pl-5 list-decimal text-base text-white'>
+                    <li> Nephrotic Syndrome </li>
+                    <li> Acute Kidney Injury </li>
+                    <li> Systemic disease with Renal Dysfunction</li>
+                    <li> Non-nephrotic Proteinuria</li>
+                    <li>Isolated Microscopic Hematuria</li>
+                    <li>Unexplained Chronic Kidney disease</li>
+                    <li>Familial Renal disease</li>
+                    <li>Renal Transplant dysfunction</li>
                 </ul>
             </div>
         )
