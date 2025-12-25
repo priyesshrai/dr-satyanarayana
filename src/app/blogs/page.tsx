@@ -57,6 +57,12 @@ export default function Blogs() {
       slug: '/blogs/bun-complete-guide',
       image: '/images/blog/blog-6.jpg'
     },
+    {
+      title: 'Cost of Kidney Transplantation',
+      content: 'A kidney transplant is one of the most effective treatments for patients with end-stage kidney disease. It offers a better quality of life, more stability, and more long-term health benefits compared to dialysis.',
+      slug: '/blogs/cost-of-kidney-transplantation',
+      image: '/images/blog/blog-7.jpg'
+    },
   ]
   return (
     <Section>
