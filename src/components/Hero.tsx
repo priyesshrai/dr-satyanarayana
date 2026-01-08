@@ -54,8 +54,8 @@ export default function Hero() {
                 <div className='w-full relative grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-5'>
                     <div className="w-full h-full relative flex flex-col justify-center md:items-start items-center">
                         <h1
-                            className='font-bold lg:text-5xl md:text-4xl text-[28px] text-dark-navy md:text-left text-center leading-[1.3] max-w-lg'>
-                            Expert Kidney Care You Can Trust
+                            className='font-bold md:text-4xl text-[24px] text-dark-navy md:text-left text-center leading-[1.3] max-w-lg'>
+                            Advanced Kidney Care with Best Nephrologist In Hyderabad
                         </h1>
                         <Subheading className=' md:text-left !mt-3 text-center max-w-md leading-[1.3]'>
                             <strong>Dr. Satyanarayana Garre</strong>, Specialist in Nephrology - Providing Personalized Treatment for Kidney Health, Dialysis, and More
