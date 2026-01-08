@@ -33,8 +33,8 @@ export default function HomePage() {
 }
 
 export const metadata: Metadata = {
-  title: "Nephrologist in Hyderabad | Dr. Satyanarayana Garre - Kidney Specialist",
-  description: "Dr. Satyanarayana Garre, top nephrologist in Hyderabad, provides expert kidney care including dialysis, transplants, stone treatment & preventive health services",
+  title: "Best Nephrologist In Hyderabad : Dr. Satyanarayana Garre",
+  description: "Dr. Satyanarayana Garre is one of the best nephrologist in Hyderabad, known for compassionate care, clear guidance, and advanced treatment for kidney disorders, dialysis patients, and transplant-related care.",
   alternates: {
     canonical: "https://www.drsatyanarayanagarre.in",
   },

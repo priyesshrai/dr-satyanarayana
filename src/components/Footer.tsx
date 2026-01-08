@@ -84,7 +84,7 @@ export default function Footer() {
                 <div className="w-full h-full relative flex flex-col">
                     <Image src='/images/logo/logo-2.svg' alt='' width={400} height={200} />
                     <Subheading className='text-left mt-5 !text-white'>
-                        Dr. Satyanarayana Garre is a distinguished Nephrologist based in Hyderabad, Telangana, with over 10 years of experience in the field of kidney health and renal treatments.
+                        Dr. Satyanarayana Garre is recognised as one of the best nephrologist in Hyderabad, providing comprehensive care for kidney diseases, dialysis patients, and long-term renal health with a compassionate, patient-first approach.
                     </Subheading>
                     <div className='mt-5 w-full relative flex items-center gap-2'>
                         {
@@ -139,7 +139,7 @@ export default function Footer() {
             <div className='relative border-t border-neutral-100 pt-5'>
                 <div className='flex items-center md:justify-between justify-center md:flex-row flex-col gap-1 max-w-7xl relative mx-auto px-6 w-full'>
                     <span className='md:text-sm text-[10px] font-normal text-white text-center'>
-                        Copyright @ 2025 Dr. Satyanarayana Garee. All rights reserved.
+                        Copyright @ {new Date().getFullYear()} Dr. Satyanarayana Garee. All rights reserved.
                     </span>
                     <Link href={'#'} className='!font-montserrat md:text-sm text-[10px] font-normal text-white'>
                         Made with by ❤ Wizards Next.
