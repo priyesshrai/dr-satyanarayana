@@ -151,6 +151,18 @@ export default function TreatmentList() {
             icon: '/images/treatment/icon-10.svg',
             link: '/services/preventive-kidney-health',
         },
+        {
+            title: 'Perm Catheterization (Permcath Insertion)',
+            summary: (
+                <div className='w-full mt-3 flex flex-col gap-2'>
+                    <p className='lg:text-base text-zinc-600 mt-1 font-medium text-sm'>
+                        Perm catheterization, also known as Permcath insertion or tunneled cuffed catheter insertion, is a medical procedure done to provide long-term vascular access for patients who require regular dialysis. It is commonly used in patients with chronic kidney disease when an AV fistula is not available, not functioning properly, or while waiting for a fistula to mature.
+                    </p>
+                </div>
+            ),
+            icon: '/images/treatment/icon-11.svg',
+            link: '/services/perm_catheterization',
+        },
     ]
     const bgColors = [
         "#DBEAFE", // light blue

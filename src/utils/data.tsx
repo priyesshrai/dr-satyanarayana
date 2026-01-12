@@ -914,5 +914,62 @@ export const Data = [
         metaTitle: "Preventive Kidney Health – Early Detection",
         metaDescription: "Preventive kidney health care by Dr. Satyanarayana Garre in Hyderabad. Early detection, lifestyle advice, and regular checkups for stronger kidneys.",
         canonical: "https://www.drsatyanarayanagarre.in/services/preventive-kidney-health"
+    },
+    {
+        id: "perm_catheterization",
+        content: (
+            <div className="relative w-full mx-auto max-w-4xl">
+                <h1 className="font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy">
+                    Preventive Kidney Health & Lifestyle Guidance
+                </h1>
+                <p className="mt-4">
+                    Perm catheterization, also known as Permcath insertion or tunneled cuffed catheter insertion, is a medical procedure done to provide long-term vascular access for patients who require regular dialysis. It is commonly used in patients with chronic kidney disease when an AV fistula is not available, not functioning properly, or while waiting for a fistula to mature.
+                </p>
+                <p className="mt-2">
+                    A Permcath is a soft, flexible tube placed into a large vein, usually in the neck. In some situations, it may be placed in the groin. The catheter has two separate channels—one carries blood from the body to the dialysis machine, and the other returns the cleaned blood back into the body. A special cuff attached to the catheter stays under the skin and helps keep the catheter secure while also reducing the risk of infection. This design is why the procedure is medically called tunneled cuffed catheter insertion.
+                </p>
+                <Image
+                    src="/images/treatment/img-10.png"
+                    alt="Preventive Kidney Health & Lifestyle Guidance"
+                    width={900}
+                    height={400}
+                    className="rounded-lg w-full h-[400px] object-cover object-center md:mt-8 mt-4"
+                />
+
+                <div className="relative w-full flex flex-col gap-3 mt-10 md:text-lg text-base text-zinc-600 font-medium">
+
+                    <h2 className="md:text-2xl text-lg text-dark-navy font-semibold">
+                        Permcath Insertion Procedure
+                    </h2>
+                    <p className="text-base ">
+                        The permcath insertion procedure, or tunneled cuffed catheter insertion, is minimally invasive and is performed under local anesthesia in a cath lab or angiography suite. Ultrasound and X-ray guidance are used to safely place the catheter into the vein. A small tunnel is created under the skin of the chest, through which the catheter is passed before entering the vein. This tunnel helps protect against infection and allows the catheter to remain in place for several months.
+                    </p>
+                    <p className="text-base mt-1">
+                        The procedure usually takes about 30 to 45 minutes. After placement, a sterile dressing is applied, and the catheter can be used immediately for dialysis.
+
+                    </p>
+
+                    <h2 className="md:text-2xl text-lg text-dark-navy font-semibold">
+                        After the Procedure
+                    </h2>
+                    <p className="text-base ">
+                        Mild pain or discomfort near the insertion site is common and usually settles within a few days. Patients are advised to keep the catheter area clean and dry and to avoid heavy lifting or strenuous activity.
+                    </p>
+
+                    <h2 className="md:text-2xl text-lg text-dark-navy font-semibold">
+                        When to Seek Medical Care
+                    </h2>
+                    <p className="text-base mt-1">
+                        Contact your doctor if you notice fever, chills, increasing pain, swelling, pus discharge, bleeding, or difficulty during dialysis.
+                        <br />
+                        Perm catheterization, or tunneled cuffed catheter insertion, offers a safe and reliable option for dialysis access when other methods are not suitable.
+                    </p>
+
+                </div>
+            </div>
+        ),
+        metaTitle: "Tunneled Cuffed Catheter Insertion for Dialysis (Permcath)",
+        metaDescription: "Tunneled cuffed catheter insertion, or permcath insertion, provides reliable vascular access for dialysis in chronic kidney disease patients.",
+        canonical: "https://www.drsatyanarayanagarre.in/services/perm_catheterization"
     }
 ]
