@@ -19,10 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.drsatyanarayanagarre.in/blogs/understanding-chronic-kidney-disease', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/blogs/bun-complete-guide', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/blogs/cost-of-kidney-transplantation', priority: 0.8 },
+    { url: 'https://www.drsatyanarayanagarre.in/blogs/perm-catheterization-for-dialysis', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/services/hypertension-and-diabetes-kidney-problems', priority: 0.64 },
     { url: 'https://www.drsatyanarayanagarre.in/services/inherited-and-rare-kidney-disorders', priority: 0.64 },
     { url: 'https://www.drsatyanarayanagarre.in/services/interventional-nephrology-and-renal-imaging', priority: 0.64 },
     { url: 'https://www.drsatyanarayanagarre.in/services/preventive-kidney-health', priority: 0.64 },
+    { url: 'https://www.drsatyanarayanagarre.in/services/perm_catheterization', priority: 0.64 },
   ]
 
   return pages.map(page => ({

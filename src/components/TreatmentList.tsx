@@ -160,7 +160,7 @@ export default function TreatmentList() {
                     </p>
                 </div>
             ),
-            icon: '/images/treatment/icon-10.svg',
+            icon: '/images/treatment/icon-11.svg',
             link: '/services/perm_catheterization',
         },
     ]

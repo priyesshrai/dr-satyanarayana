@@ -6,11 +6,11 @@ import React from 'react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: "Kidney Health Blog – Nephrology & Prevention Tips",
-    description: "Explore kidney health blogs by Dr. Satyanarayana Garre. Learn about prevention, symptoms, causes, and treatments for kidney disease, stones, and failure.",
-    alternates: {
-        canonical: "https://www.drsatyanarayanagarre.in/blogs",
-    },
+  title: "Kidney Health Blog – Nephrology & Prevention Tips",
+  description: "Explore kidney health blogs by Dr. Satyanarayana Garre. Learn about prevention, symptoms, causes, and treatments for kidney disease, stones, and failure.",
+  alternates: {
+    canonical: "https://www.drsatyanarayanagarre.in/blogs",
+  },
 }
 
 interface Blog {
@@ -63,6 +63,12 @@ export default function Blogs() {
       slug: '/blogs/cost-of-kidney-transplantation',
       image: '/images/blog/blog-7.jpg'
     },
+    {
+      title: 'Perm Catheterization for Dialysis: A Nephrologist’s Practical Guide',
+      content: 'When kidney function becomes severely reduced, the kidneys are no longer able to clean the blood and remove waste from the body. In such situations, dialysis is required. For dialysis to be performed safely and regularly, a reliable blood access is needed.',
+      slug: '/blogs/perm-catheterization-for-dialysis',
+      image: '/images/blog/blog-8.jpg'
+    },
   ]
   return (
     <Section>
@@ -79,17 +85,19 @@ export default function Blogs() {
 
           <div className='w-full flex-1 relative grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
             {
-              blog.map((data, idx) => (
-                <div key={idx + 32} className='w-full h-full overflow-hidden border border-gray-300 rounded-xl'>
+              blog.reverse().map((data, idx) => (
+                <div key={idx + 32} className='flex flex-col w-full h-full overflow-hidden border border-gray-300 rounded-xl'>
                   <Image src={data.image} width={500} height={400} className='w-full object-cover h-auto' alt={data.title} />
 
-                  <div className='relative mt-5 px-5 pb-5'>
-                    <Link href={data.slug} className='lg:text-2xl md:text-xl text-base font-medium text-dark-navy leading-[1.2] '>
-                      {data.title}
-                    </Link>
-                    <Subheading className='text-left mt-2 line-clamp-5'>
-                      {data.content}
-                    </Subheading>
+                  <div className='relative mt-5 px-5 pb-5 flex flex-col justify-between flex-1'>
+                    <div>
+                      <Link href={data.slug} className='lg:text-2xl md:text-xl text-base font-medium text-dark-navy leading-[1.2] '>
+                        {data.title}
+                      </Link>
+                      <Subheading className='text-left mt-2 line-clamp-5'>
+                        {data.content}
+                      </Subheading>
+                    </div>
 
                     <Link href={data.slug} className='mt-7 w-max ml-auto !font-montserrat font-medium text-blue-500 flex items-center gap-2'>
                       Read this Blog

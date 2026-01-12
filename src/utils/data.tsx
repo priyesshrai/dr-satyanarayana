@@ -929,9 +929,9 @@ export const Data = [
                     A Permcath is a soft, flexible tube placed into a large vein, usually in the neck. In some situations, it may be placed in the groin. The catheter has two separate channels—one carries blood from the body to the dialysis machine, and the other returns the cleaned blood back into the body. A special cuff attached to the catheter stays under the skin and helps keep the catheter secure while also reducing the risk of infection. This design is why the procedure is medically called tunneled cuffed catheter insertion.
                 </p>
                 <Image
-                    src="/images/treatment/img-9.jpg"
+                    src="/images/treatment/img-10.png"
                     alt="Preventive Kidney Health & Lifestyle Guidance"
-                    width={600}
+                    width={900}
                     height={400}
                     className="rounded-lg w-full h-[400px] object-cover object-center md:mt-8 mt-4"
                 />
@@ -968,8 +968,8 @@ export const Data = [
                 </div>
             </div>
         ),
-        metaTitle: "Preventive Kidney Health – Early Detection",
-        metaDescription: "Preventive kidney health care by Dr. Satyanarayana Garre in Hyderabad. Early detection, lifestyle advice, and regular checkups for stronger kidneys.",
+        metaTitle: "Tunneled Cuffed Catheter Insertion for Dialysis (Permcath)",
+        metaDescription: "Tunneled cuffed catheter insertion, or permcath insertion, provides reliable vascular access for dialysis in chronic kidney disease patients.",
         canonical: "https://www.drsatyanarayanagarre.in/services/perm_catheterization"
     }
 ]
