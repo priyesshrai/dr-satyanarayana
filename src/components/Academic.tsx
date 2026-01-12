@@ -9,7 +9,7 @@ export default function Academic() {
                 <div className='relative w-full flex flex-col lg:gap-14 md:gap-10 gap-8'>
                     <div className='flex-1 text-center'>
                         <Heading>
-                            Academic Excellence & Clinical Contributions
+                            Professional Profile & Expertise
                         </Heading>
                         <Subheading className='mx-auto max-w-3xl'>
                             Highlighting Dr. Satyanarayana Garre&apos;s journey of scholarly achievements, pioneering research, and impactful clinical work in the field of nephrology.
