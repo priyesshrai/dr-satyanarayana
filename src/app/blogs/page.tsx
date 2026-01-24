@@ -22,12 +22,6 @@ interface Blog {
 export default function Blogs() {
   const blog: Blog[] = [
     {
-      title: 'Kidney Problems Diet Chart',
-      content: 'A well-planned kidney problems diet chart plays an important role in managing kidney disease. The right diet can reduce the load on your kidneys, control symptoms, and help slow down further damage.',
-      slug: '/blogs/kidney-problems-diet-chart',
-      image: '/images/blog/kidney-problem-diet-chart-plan.webp'
-    },
-    {
       title: 'Symptoms of Kidney Stones',
       content: 'Kidney stones are hard mineral masses inside your kidneys or urinary tract. They can be very painful, but knowing the symptoms early helps in quick treatment and avoiding complications. Here are the common signs and what to watch out for. Kidney stones e...',
       slug: '/blogs/symptoms-of-kidney-stones',
@@ -74,6 +68,12 @@ export default function Blogs() {
       content: 'When kidney function becomes severely reduced, the kidneys are no longer able to clean the blood and remove waste from the body. In such situations, dialysis is required. For dialysis to be performed safely and regularly, a reliable blood access is needed.',
       slug: '/blogs/perm-catheterization-for-dialysis',
       image: '/images/blog/blog-8.jpg'
+    },
+    {
+      title: 'Kidney Problems Diet Chart',
+      content: 'A well-planned kidney problems diet chart plays an important role in managing kidney disease. The right diet can reduce the load on your kidneys, control symptoms, and help slow down further damage.',
+      slug: '/blogs/kidney-problems-diet-chart',
+      image: '/images/blog/kidney-problem-diet-chart-plan.webp'
     },
   ]
   return (
