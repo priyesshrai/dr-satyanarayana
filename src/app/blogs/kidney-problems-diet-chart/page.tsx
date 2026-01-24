@@ -134,7 +134,44 @@ Fresh fruit, vegetable sticks, or light homemade snacks<br /><br />
 Use herbs, lemon, garlic, and spices instead of salt to add flavour. Always check food labels for hidden sodium and phosphorus.
 
                         </Subheading>
-                        
+                        <h2 className="md:text-3xl font-semibold text-dark-navy">Common Kidney Diet Mistakes to Avoid</h2>
+<Subheading className="text-left">Many patients unknowingly make diet mistakes that can harm kidney health.</Subheading>
+
+<Subheading className="text-left">Common mistakes include:</Subheading>
+<ul className="flex flex-col gap-1 list-disc pl-6 text-zinc-600 text-normal">
+  <li>Eating too much protein</li>
+  <li>Ignoring salt content in packaged foods</li>
+  <li>Consuming high-potassium foods without guidance</li>
+  <li>Skipping meals or overeating later</li>
+  <li>Depending on fast food or ready-made meals</li>
+  <li>Managing diet without medical advice</li>
+</ul>
+
+<Subheading className="text-left">Avoiding these mistakes and following expert guidance can greatly improve outcomes.</Subheading>
+
+<h2 className="md:text-3xl font-semibold text-dark-navy">When to Consult a Nephrologist</h2>
+<Subheading className="text-left">
+  You should consult a kidney specialist if you experience swelling, fatigue, loss of appetite,
+  changes in urine, nausea, or uncontrolled blood pressure. Early medical care and diet planning
+  can prevent further kidney damage.
+</Subheading>
+
+<Subheading className="text-left">
+  <strong>Dr. Satyanarayana Garre, Nephrology Specialist in Hyderabad</strong>, provides expert guidance on kidney
+  disease management, including personalized diet advice.
+</Subheading>
+
+<h2 className="md:text-3xl font-semibold text-dark-navy">Conclusion</h2>
+<Subheading className="text-left">
+  A properly planned kidney problems diet chart is a powerful tool in managing kidney disease.
+  Eating the right foods helps reduce waste buildup, control symptoms, and protect kidney function.
+</Subheading>
+
+<Subheading className="text-left">
+  With timely medical care, lifestyle changes, and the right diet under expert supervision, kidney
+  patients can lead healthier and more comfortable lives. Always consult your nephrologist before
+  making major diet changes.
+</Subheading>
                     </div>
                 </div>
             </Wrapper>
