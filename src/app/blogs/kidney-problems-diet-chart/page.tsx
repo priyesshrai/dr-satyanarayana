@@ -77,85 +77,64 @@ A kidney-friendly eating plan focuses on balance and control. The diet may vary 
 
 
                         <Subheading className="text-left">
-                            It provides immediate and dependable access for dialysis treatment.
+                            It is always best to follow a personalized diet plan recommended by a nephrologist or dietitian.
                         </Subheading>
 
                         <h2 className="md:text-3xl font-semibold text-dark-navy">
-                            Perm Catheterization Procedure – Before, During & After
+                            Best Foods for Kidney Patients
                         </h2>
 
-                        <Subheading className="text-left font-semibold">Before the Procedure</Subheading>
+                        <Subheading className="text-left font-semibold">Choosing the right foods can make a big difference in managing kidney disease.</Subheading>
                         <Subheading className="text-left">
-                            Blood tests are done to check clotting and infection risk. Patients are asked to fast for a few hours.
-                            The nephrologist explains the procedure and informed consent is taken.
-                        </Subheading>
-
-                        <Subheading className="text-left font-semibold">During the Procedure</Subheading>
-                        <Subheading className="text-left">
-                            The procedure is done under local anesthesia using ultrasound and X-ray guidance. A tunnel is created
-                            under the skin of the chest through which the catheter is passed. It usually takes 30–45 minutes.
-                        </Subheading>
-
-                        <Subheading className="text-left font-semibold">After the Procedure</Subheading>
-                        <Subheading className="text-left">
-                            A sterile dressing is applied. The permcath can be used immediately for dialysis and most patients
-                            go home the same day.
-                        </Subheading>
-
-                        <h2 className="md:text-3xl font-semibold text-dark-navy">
-                            Is Perm Catheter Really Permanent?
-                        </h2>
-
-                        <Subheading className="text-left">
-                            Despite the name, a permcath is not permanent for life. It is meant for medium-term use and can remain
-                            for months if cared for properly. It is usually removed once a permanent access like an AV fistula is ready.
-                        </Subheading>
-
-                        <h2 className="md:text-3xl font-semibold text-dark-navy">
-                            Permcath vs AV Fistula
-                        </h2>
-
-                        <Subheading className="text-left">
-                            An AV fistula is the best long-term dialysis access because it lasts longer and has a lower infection risk.
-                            A permcath is used when dialysis must start immediately or when a fistula is not yet ready.
-                        </Subheading>
-
-                        <h2 className="md:text-3xl font-semibold text-dark-navy">
-                            Possible Complications
-                        </h2>
-
-                        <Subheading className="text-left">
-                            Mild soreness is normal. However, seek medical attention if you notice:
+                            Healthy food options for kidney patients include:
                         </Subheading>
 
                         <ul className="flex flex-col gap-1 list-disc pl-6 text-zinc-600 text-normal">
-                            <li>Fever with chills</li>
-                            <li>Redness, swelling, or pus at the catheter site</li>
-                            <li>Severe pain or bleeding</li>
-                            <li>Difficulty during dialysis due to blockage</li>
+                            <li>Fresh fruits like apples, berries, grapes, and pears</li>
+                            <li>Vegetables such as cabbage, cauliflower, cucumber, and bottle gourd</li>
+                            <li>Grains like rice, oats, and white bread in controlled portions</li>
+                            <li>Lean proteins such as egg whites, chicken, or fish as advised</li>
+                            <li>Healthy fats like olive oil or small amounts of vegetable oils</li>
                         </ul>
-
+                        <Subheading className="text-left font-semibold">Cooking food at home using fresh ingredients helps reduce hidden salt and additives.</Subheading>
                         <h2 className="md:text-3xl font-semibold text-dark-navy">
-                            When to Consult a Nephrologist
+                            Foods to Avoid in Kidney Disease
                         </h2>
-
                         <Subheading className="text-left">
-                            If kidney function is declining or dialysis is planned, consult a nephrologist early. Proper planning
-                            ensures safer dialysis and avoids emergency procedures.
+                           Some foods increase waste and mineral levels in the body and should be limited or avoided.
+                        </Subheading>
+                        <Subheading className="text-left">
+                           Foods bad for kidney patients include:
+                        </Subheading>
+                        <ul className="flex flex-col gap-1 list-disc pl-6 text-zinc-600 text-normal">
+                            <li>Packaged and processed foods</li>
+                            <li>Salty snacks and pickles</li>
+                            <li>Processed meats and frozen meals</li>
+                            <li>Cola drinks and packaged juices</li>
+                            <li>High-potassium fruits like bananas and oranges</li>
+                            <li>Fast food and deep-fried items</li>
+                        </ul>
+                        <Subheading className="text-left">
+Avoiding these foods helps control blood pressure, fluid buildup, and mineral imbalance.
                         </Subheading>
 
                         <h2 className="md:text-3xl font-semibold text-dark-navy">
-                            Conclusion
+Sample Diet Chart for Kidney Patients
                         </h2>
-
                         <Subheading className="text-left">
-                            Perm catheterization plays a crucial role in providing immediate and safe dialysis access. With proper
-                            care and timely medical guidance, it helps patients receive life-saving dialysis until a permanent access
-                            is established.
-                            <br /><br />
-                            If you need dialysis access or have concerns, consult Dr. Satyanarayana Garre, Nephrologist, Hyderabad,
-                            for expert guidance and care.
+A simple kidney problems diet chart may look like this:<br /><br />
+<strong>Breakfast:</strong><br />
+Whole grains with a low-potassium fruit and a small protein portion<br /><br />
+<strong>Lunch:</strong><br />
+Rice or pasta with lean protein and cooked low-potassium vegetables<br /><br />
+<strong>Dinner:</strong><br />
+Grains, vegetables, and a controlled portion of protein<br /><br />
+<strong>Snacks:</strong><br />
+Fresh fruit, vegetable sticks, or light homemade snacks<br /><br />
+Use herbs, lemon, garlic, and spices instead of salt to add flavour. Always check food labels for hidden sodium and phosphorus.
+
                         </Subheading>
+                        
                     </div>
                 </div>
             </Wrapper>
