@@ -35,6 +35,12 @@ export default function Blog() {
             content: 'Salt is something we all use – in cooking, in packaged foods, and at the table. A small amount of salt (sodium) is necessary for our body to work properly. But when salt intake is too high, it can start to harm our kidneys. In this blog,....',
             slug: '/blogs/can-too-much-salt-cause-kidney-damage',
             image: '/images/blog/blog-4.jpg'
+        },
+        {
+            title: 'Kidney Problems Diet Chart',
+            content: 'A well-planned kidney problems diet chart plays an important role in managing kidney disease. The right diet can reduce the load on your kidneys, control symptoms, and help slow down further damage. Under the guidance of an experienced nephrologist patients can maintain better kidney health with proper food choices.',
+            slug: '/blogs/kidney-problems-diet-chart',
+            image: '/images/blog/kidney-problem-diet-chart-plan.webp'
         }
     ]
     return (
