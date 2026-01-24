@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
     title: "Kidney Problems Diet Chart",
     description:
-        "well-planned kidney problems diet chart plays an important role in managing kidney disease",
+        "Well-planned kidney problems diet chart plays an important role in managing kidney disease. Experienced nephrologist in Hyderabad",
     alternates: {
         canonical: "https://www.drsatyanarayanagarre.in/blogs/kidney-problems-diet-chart",
     },
@@ -17,7 +17,7 @@ export default function PermCathBlogPage() {
             <Wrapper>
                 <div className="relative w-full max-w-4xl mx-auto">
                     <h1 className="md:text-4xl text-dark-navy font-bold">
-                        Perm Catheterization for Dialysis: A Nephrologist&apos;s Practical Guide
+                        Kidney Problems Diet Chart
                     </h1>
 
                     <span className="text-sm italic font-normal text-zinc-700 block mt-2">
@@ -25,48 +25,56 @@ export default function PermCathBlogPage() {
                     </span>
 
                     <Image
-                        src="/images/blog/blog-8.jpg"
+                        src="/images/blog/kidney-problem-diet-chart-plan.webp"
                         width={500}
                         height={400}
-                        alt="Perm Catheterization for Dialysis"
+                        alt="Kidney Problems Diet Chart"
                         className="mt-7 w-full rounded-2xl"
                     />
 
                     <div className="mt-5 flex flex-col gap-4">
                         <Subheading className="text-left">
-                            When kidney function becomes severely reduced, the kidneys can no longer clean the blood and remove waste.
-                            In such situations, dialysis is required. To perform dialysis safely and regularly, a reliable blood
-                            access is needed. One such access is perm catheterization, medically known as tunneled cuffed catheter insertion.
+                            Kidney problems are becoming common today due to diabetes, high blood pressure, unhealthy food habits, and stress. When kidneys are not working properly, they cannot remove waste, extra fluids, and minerals from the body. This can slowly affect your overall health.<br /><br />
+                            A well-planned kidney problems diet chart plays an important role in managing kidney disease. The right diet can reduce the load on your kidneys, control symptoms, and help slow down further damage. Under the guidance of an experienced nephrologist like <strong>Dr.SatyanarayanaGarre, Nephrology Specialist in Hyderabad</strong>, patients can maintain better kidney health with proper food choices.
                         </Subheading>
 
                         <h2 className="md:text-3xl font-semibold text-dark-navy">
-                            What Exactly Is a Perm Catheter?
+                            Why a Kidney-Friendly Diet Is Important?
                         </h2>
 
                         <Subheading className="text-left">
-                            A Permcath is a soft, flexible tube placed into a large vein, usually in the neck. The correct medical term
-                            for this is tunneled cuffed catheter insertion. It has two channels — one to take blood to the dialysis
-                            machine and the other to return cleaned blood to the body.
-                            <br /><br />
-                            The catheter is tunneled under the skin and has a cuff that helps keep it in place and reduces the risk
-                            of infection, making it suitable for medium- to long-term dialysis use.
+                            When kidney function reduces, waste products and extra minerals start building up in the blood. This may lead to swelling, tiredness, high blood pressure, weak bones, and heart problems.
                         </Subheading>
-
-                        <h2 className="md:text-3xl font-semibold text-dark-navy">
-                            Who Needs Perm Catheterization?
-                        </h2>
-
                         <Subheading className="text-left">
-                            Perm catheterization is commonly advised for patients who:
+                            Following a kidney-friendly diet helps to:
                         </Subheading>
+
 
                         <ul className="flex flex-col gap-1 list-disc pl-6 text-zinc-600 text-normal">
-                            <li>Require urgent dialysis</li>
-                            <li>Do not have a functioning AV fistula</li>
-                            <li>Have a failed or blocked fistula</li>
-                            <li>Are waiting for a newly created fistula to mature</li>
-                            <li>Are not suitable candidates for fistula surgery</li>
+                            <li>Slow down the progression of kidney disease</li>
+                            <li>Maintain fluid and electrolyte balance</li>
+                            <li>Control blood pressure and swelling</li>
+                            <li>Support muscle strength and daily energy needs</li>
+                            <li>Reduce the risk of complications in chronic kidney disease</li>
                         </ul>
+                        <Subheading className="text-left">
+                            A proper kidney diet does not mean starving. It means eating the right foods in the right amounts to protect remaining kidney function.                        
+                        </Subheading>
+
+                        <h2 className="md:text-3xl font-semibold text-dark-navy">
+Key Elements of a Kidney Problems Diet Chart                        </h2>
+
+                        <Subheading className="text-left">
+A kidney-friendly eating plan focuses on balance and control. The diet may vary depending on the stage of kidney disease, but some common principles apply.                        </Subheading>
+
+                        <ul className="flex flex-col gap-1 list-disc pl-6 text-zinc-600 text-normal">
+                            <li><strong>Low sodium intake</strong> helps control blood pressure and prevents fluid retention.</li>
+                            <li><strong>Controlled potassium intake</strong> is important because weak kidneys cannot remove excess potassium easily, which may affect heart health.</li>
+                            <li><strong>Limited phosphorus intake</strong> helps protect bones and blood vessels.</li>
+                            <li><strong>Moderate protein intake</strong> supports muscles without creating excess waste for kidneys</li>
+                            <li><strong>Fluid control</strong>, if advised by the doctor, helps prevent swelling and breathing issues.</li>
+                        </ul>
+
 
                         <Subheading className="text-left">
                             It provides immediate and dependable access for dialysis treatment.
