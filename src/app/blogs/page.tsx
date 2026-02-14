@@ -75,6 +75,12 @@ export default function Blogs() {
       slug: '/blogs/kidney-problems-diet-chart',
       image: '/images/blog/kidney-problem-diet-chart-plan.webp'
     },
+    {
+      title: 'Creatinine Levels Before and After Dialysis',
+      content: 'Creatinine levels are one of the most common concerns for patients with kidney problems. Many patients often ask what their creatinine level means, when to worry about creatinine levels, and how dialysis affects these numbers. Understanding creatinine levels before and after dialysis can help patients make informed decisions about their kidney health.',
+      slug: '/blogs/creatinine-levels-before-and-after-dialysis',
+      image: '/images/blog/creatinine-levels-before-and-after-dialysis.png'
+    },
   ]
   return (
     <Section>
