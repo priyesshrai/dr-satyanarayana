@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Creatinine Levels Before and After Dialysis – Explained",
     description: "Understand creatinine levels before and after dialysis. Learn what creatinine means, when to worry, and how dialysis affects creatinine levels.",
     alternates: {
-        canonical: "https://www.drsatyanarayanagarre.in/blogs/creatinine-levels-before-after-dialysis",
+        canonical: "https://www.drsatyanarayanagarre.in/blogs/creatinine-levels-before-and-after-dialysis",
     },
 }
 
