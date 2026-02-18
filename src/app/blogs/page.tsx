@@ -81,6 +81,12 @@ export default function Blogs() {
       slug: '/blogs/creatinine-levels-before-and-after-dialysis',
       image: '/images/blog/creatinine-levels-before-and-after-dialysis.png'
     },
+    {
+      title: 'Is Beer Good for Kidney Stones?',
+      content: 'Kidney stones can cause severe pain and discomfort, often making patients search for quick relief. One common question many people ask is, “Is beer good for kidney stones?” This belief has been around for years, with many thinking beer can help flush stones out of the body. But is this really true, or is it just another myth?',
+      slug: '/blogs/is-beer-good-for-kidney-stones',
+      image: '/images/blog/blog-9.png'
+    },
   ]
   return (
     <Section>
