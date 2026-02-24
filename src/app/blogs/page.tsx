@@ -87,6 +87,12 @@ export default function Blogs() {
       slug: '/blogs/is-beer-good-for-kidney-stones',
       image: '/images/blog/blog-9.png'
     },
+    {
+      title: 'Hematuria: What It Means',
+      content: 'Hematuria is the presence of blood in the urine. It can appear as red or pink urine, which is called gross or visible hematuria. Sometimes, blood is present but cannot be seen with the naked eye. This is known as microscopic hematuria, which is detected only under a microscope or through a urine test.',
+      slug: '/blogs/what-is-hematuria',
+      image: '/images/blog/blog-10.png'
+    },
   ]
   return (
     <Section>
