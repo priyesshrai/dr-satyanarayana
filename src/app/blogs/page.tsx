@@ -93,6 +93,12 @@ export default function Blogs() {
       slug: '/blogs/what-is-hematuria',
       image: '/images/blog/blog-10.png'
     },
+    {
+      title: 'UTIs in Women: Causes & Prevention',
+      content: 'Urinary tract infections, commonly called UTIs, are one of the most common health problems in women. A urinary tract infection (UTI) occurs when bacteria enter the urinary system and cause infection. The urinary system includes the kidneys, ureters, bladder, and urethra.',
+      slug: '/blogs/utis-in-women-causes-prevention',
+      image: '/images/blog/urinary-tract-infections.png'
+    },
   ]
   return (
     <Section>
