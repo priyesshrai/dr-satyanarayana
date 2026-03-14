@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.drsatyanarayanagarre.in/blogs/creatinine-levels-before-and-after-dialysis', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/blogs/is-beer-good-for-kidney-stones', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/blogs/what-is-hematuria', priority: 0.8 },
+    { url: 'https://www.drsatyanarayanagarre.in/blogs/utis-in-women-causes-prevention', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/services/hypertension-and-diabetes-kidney-problems', priority: 0.64 },
     { url: 'https://www.drsatyanarayanagarre.in/services/inherited-and-rare-kidney-disorders', priority: 0.64 },
     { url: 'https://www.drsatyanarayanagarre.in/services/interventional-nephrology-and-renal-imaging', priority: 0.64 },
