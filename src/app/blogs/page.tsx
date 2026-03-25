@@ -99,6 +99,12 @@ export default function Blogs() {
       slug: '/blogs/utis-in-women-causes-prevention',
       image: '/images/blog/urinary-tract-infections.png'
     },
+    {
+      title: 'Why Kidney Disease is Called a “Silent Killer”',
+      content: 'Kidney disease is often called a “silent killer” because it usually develops without clear warning signs in the early stages. Many people may not realize they have a kidney problem until the disease has already progressed. By the time symptoms appear, a large portion of kidney function may already be lost.',
+      slug: '/blogs/why-kidney-disease-is-called-a-silent-killer',
+      image: '/images/blog/why-kidney-disease-is-a-silent-killer.png'
+    },
   ]
   return (
     <Section>

@@ -5,110 +5,180 @@ export const Data = [
         id: "acute-kidney-injury",
         content: (
             <div className='relative w-full mx-auto max-w-4xl'>
-                <h1 className='font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy '>
-                    Acute Kidney Injury (AKI) & Acute Renal Failure
+                {/* H1 */}
+                <h1 className='font-bold lg:text-4xl md:text-2xl text-xl text-dark-navy'>
+                    Acute Kidney Injury Treatment in Hyderabad
                 </h1>
-                <p className='mt-4'>
-                    Acute Kidney Injury (AKI), also known as Acute Renal Failure, is a sudden loss of kidney function that develops within hours or days. It causes waste and fluid to build up in the body, which can be life-threatening if not treated quickly. With timely diagnosis and treatment, kidney function can often be restored fully or partially.
-                </p>
-                <Image src='/images/treatment/img-1.jpg' alt='Kidney Stones & Urinary Disorders' width={600} height={400} className='rounded-lg w-full h-[400px] object-cover object-center md:mt-8 mt-4 '
-                />
-                <div className='relative w-full flex flex-col gap-3 mt-10 md:text-lg text-base text-zinc-600 font-medium'>
 
+                <p className='mt-4'>
+                    Many patients in Hyderabad come with sudden urinary loss, body swelling, or unusual weakness—and upon testing, it's revealed to be Acute Kidney Injury (AKI).
+                </p>
+
+                <p className='mt-3'>
+                    Dr. Satyanarayana Garre, an experienced <a className="text-blue-500" href="/">Nephrologist in Hyderabad</a>, identifies AKI cases at an early stage in his clinic and plans appropriate treatment. Many patients who come to him have kidney function suddenly affected due to dehydration, infection or medications.
+                </p>
+
+                <p className='mt-3'>
+                    People often search for "acute kidney injury cure"—the reality is that early-stage patients have a good recovery, but delaying treatment increases the risk.
+                </p>
+
+                {/* IMAGE (UNCHANGED) */}
+                <Image
+                    src='/images/treatment/img-1.jpg'
+                    alt='Acute Kidney Injury Treatment'
+                    width={600}
+                    height={400}
+                    className='rounded-lg w-full h-[400px] object-cover object-center md:mt-8 mt-4'
+                />
+
+                <div className='relative w-full flex flex-col gap-4 mt-10 md:text-lg text-base text-zinc-600 font-medium'>
+
+                    {/* H2 */}
+                    <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
+                        What is Acute Kidney Injury (AKI)
+                    </h2>
+
+                    <p>
+                        Acute kidney injury is a condition in which the kidneys suddenly stop functioning properly. Normally, the kidneys remove toxins and excess fluid from the body, but in AKI, this process is disrupted.
+                    </p>
+
+                    <p>
+                        In this condition, waste begins to accumulate in the body, which can be harmful to health. This problem can develop over a few hours or days, so early AKI treatment is crucial.
+                    </p>
+
+                    <p>
+                        In Dr. Garre's experience, many cases are reversible—it just takes catching the condition early.
+                    </p>
+
+                    {/* Symptoms */}
                     <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
                         Symptoms of Acute Kidney Injury
                     </h2>
 
                     <ul className='list-disc pl-7'>
-                        <li>
-                            Sudden decrease in urine output.
-                        </li>
-                        <li>
-                            Swelling in legs, ankles, or face.
-                        </li>
-                        <li>
-                            Shortness of breath or chest pain.
-                        </li>
-                        <li>
-                            Nausea, vomiting, or poor appetite.
-                        </li>
-                        <li>
-                            Confusion, dizziness, or fatigue.
-                        </li>
-                        <li>
-                            Irregular heartbeat due to electrolyte imbalance.
-                        </li>
+                        <li>Sudden decrease in urine output</li>
+                        <li>Swelling in the legs or face</li>
+                        <li>Unusual body fatigue</li>
+                        <li>Vomiting or nausea</li>
+                        <li>Heaviness of breath</li>
+                        <li>Confusion or low energy</li>
                     </ul>
 
+                    <p>
+                        If you are experiencing these symptoms, it is not safe to wait—they could be an early sign of a kidney issue.
+                    </p>
+
+                    {/* Causes */}
                     <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
                         Causes of Acute Kidney Injury
                     </h2>
 
                     <ul className='list-disc pl-7'>
+                        <li>Severe infection (sepsis)</li>
+                        <li>Dehydration</li>
                         <li>
-                            Severe dehydration or blood loss.
+                            <a href="/blogs/how-diabetes-causes-kidney-failure" className="text-blue-500">High blood pressure and diabetes</a>
                         </li>
-                        <li>
-                            Sepsis or infections affecting kidneys.
-                        </li>
-                        <li>
-                            Heart failure or liver disease.
-                        </li>
-                        <li>
-                            Obstruction in the urinary tract (stones, tumors, prostate issues).
-                        </li>
-                        <li>
-                            Certain medications or toxins damaging kidneys.
-                        </li>
-                        <li>
-                            Sudden drop in blood pressure due to shock or surgery.
-                        </li>
+                        <li>Side effects of certain medications</li>
+                        <li>Complications after surgery</li>
+                        <li>Kidney blockage</li>
                     </ul>
 
+                    <p>
+                        The important thing is that the cause is different for every patient – hence proper treatment is given only after diagnosis.
+                    </p>
+
+                    {/* When to See Doctor */}
                     <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
-                        Managing Acute Kidney Problems: Do&apos;s & Don&apos;ts
+                        When to See a Doctor
                     </h2>
 
                     <ul className='list-disc pl-7'>
-                        <span className='font-bold text-lg text-green-600'>Do&apos;s</span>
+                        <li>Urine production has decreased significantly</li>
+                        <li>Body swelling is suddenly increasing</li>
+                        <li>Breathing problems are occurring</li>
                         <li>
-                            Seek immediate medical attention if symptoms appear.
-                        </li>
-                        <li>
-                            Stay hydrated unless restricted by your doctor.
-                        </li>
-                        <li>
-                            Monitor urine output regularly during illness.
-                        </li>
-                        <li>
-                            Take prescribed medicines and follow doctor&apos;s instructions strictly.
-                        </li>
-                        <li>
-                            Get regular follow-up tests to track kidney recovery.
-                        </li>
-
-                        <span className='font-bold text-lg text-red-600 block mt-5'>Don&apos;ts</span>
-                        <li>
-                            Do not ignore sudden swelling, reduced urination, or breathing issues.
-                        </li>
-                        <li>
-                            Avoid self-medicating with painkillers or antibiotics.
-                        </li>
-                        <li>
-                            Don&apos;t consume high-salt, high-protein, or processed foods.
-                        </li>
-                        <li>
-                            Avoid alcohol and smoking which can worsen kidney stress.
-                        </li>
-                        <li>
-                            Don&apos;t delay hospitalization in case of severe symptoms.
+                            Reports of increased <a href="/blogs/creatinine-levels-before-and-after-dialysis" className="text-blue-500">creatinine levels</a>
                         </li>
                     </ul>
+
+                    <p>
+                        Timely treatment improves the chances of an acute kidney injury cure and a better recovery.
+                    </p>
+
+                    {/* Diagnosis */}
+                    <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
+                        Diagnosis Process at Clinic
+                    </h2>
+
+                    <ul className='list-disc pl-7'>
+                        <li>Blood tests (Creatinine, Urea)</li>
+                        <li>Urine analysis</li>
+                        <li>Ultrasound kidney</li>
+                        <li>Patient history evaluation</li>
+                        <li>BP and fluid monitoring</li>
+                    </ul>
+
+                    <p>
+                        Medical documentation sometimes uses the acute kidney injury ICD code, which is important for diagnosis classification, especially in hospital records.
+                    </p>
+
+                    {/* Treatment */}
+                    <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
+                        Treatment Options at Clinic
+                    </h2>
+
+                    <h3 className='font-semibold text-dark-navy'>✔️ Fluid Management</h3>
+                    <p>Maintaining fluid balance in the body is essential.</p>
+
+                    <h3 className='font-semibold text-dark-navy'>✔️ Medicines</h3>
+                    <p>Medications are given for infection control, blood pressure management, and kidney support.</p>
+
+                    <h3 className='font-semibold text-dark-navy'>✔️ Monitoring</h3>
+                    <p>Regular creatinine tracking and urine output are checked.</p>
+
+                    <h3 className='font-semibold text-dark-navy'>✔️ Dialysis (If Needed)</h3>
+                    <p>Severe cases may require temporary dialysis to remove toxins.</p>
+
+                    <p>
+                        Proper and timely AKI treatment significantly improves the chances of kidney recovery.
+                    </p>
+
+                    {/* Why Choose */}
+                    <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
+                        Why Choose Dr. Satyanarayana Garre
+                    </h2>
+
+                    <ul className='list-disc pl-7'>
+                        <li>
+                            <a href="/" className="text-blue-500">
+                                Experienced kidney specialist in Hyderabad
+                            </a>
+                        </li>
+                        <li>Personalized treatment planning</li>
+                        <li>Advanced diagnostic support</li>
+                        <li>Regular monitoring and follow-up</li>
+                        <li>Clear communication with patients</li>
+                    </ul>
+
+                    {/* FAQs */}
+                    <h2 className='md:text-2xl text-lg text-dark-navy font-semibold'>
+                        FAQs
+                    </h2>
+
+                    <div className='flex flex-col gap-3'>
+                        <p><strong>Q1. Is acute kidney injury curable?</strong><br />Yes, early treatment helps recovery.</p>
+                        <p><strong>Q2. What does AKI treatment involve?</strong><br />Medicines, fluid management, monitoring, and dialysis if needed.</p>
+                        <p><strong>Q3. What is the acute kidney injury ICD code?</strong><br />It is a medical classification code used in hospitals.</p>
+                        <p><strong>Q4. How dangerous is AKI?</strong><br />It can become serious if not treated promptly.</p>
+                        <p><strong>Q5. How long does recovery take?</strong><br />Depends on patient condition and cause.</p>
+                    </div>
+
                 </div>
             </div>
         ),
         metaTitle: "Acute Kidney Injury Treatment – Hyderabad",
-        metaDescription: "Expert care for Acute Kidney Injury in Hyderabad by Dr. Satyanarayana Garre. Early diagnosis, treatment, and recovery support for better kidney health.",
+        metaDescription: "Expert care for Acute Kidney Injury in Hyderabad by Dr. Satyanarayana Garre. Early diagnosis, treatment, and recovery support.",
         canonical: "https://www.drsatyanarayanagarre.in/services/acute-kidney-injury"
     },
     {
