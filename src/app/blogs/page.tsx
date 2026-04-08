@@ -105,6 +105,12 @@ export default function Blogs() {
       slug: '/blogs/why-kidney-disease-is-called-a-silent-killer',
       image: '/images/blog/why-kidney-disease-is-a-silent-killer.png'
     },
+    {
+      title: 'How AV Fistula Improves Quality of Life for Dialysis Patients',
+      content: 'Chronic kidney disease (CKD) is becoming a major health concern worldwide. Many patients progress to end-stage kidney disease (ESKD), where the kidneys stop working properly and dialysis becomes necessary to survive. For dialysis to work effectively, a good vascular access is required. One of the best and most recommended options is an AV fistula (arteriovenous fistula)',
+      slug: '/blogs/how-av-fistula-improves-quality-of-life-for-dialysis-patients',
+      image: '/images/blog/how-av-fistula-improves-quality-of-life-for-dialysis-patients.jpeg'
+    },
   ]
   return (
     <Section>
