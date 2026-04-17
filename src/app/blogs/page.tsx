@@ -111,6 +111,12 @@ export default function Blogs() {
       slug: '/blogs/how-av-fistula-improves-quality-of-life-for-dialysis-patients',
       image: '/images/blog/how-av-fistula-improves-quality-of-life-for-dialysis-patients.jpeg'
     },
+    {
+      title: 'Difference Between Urology and Nephrology',
+      content: 'Many people often get confused between urology and nephrology. The names sound similar, and both are related to the urinary system, so it’s normal to wonder what is the difference between urology and nephrology.',
+      slug: '/blogs/urology-vs-nephrology',
+      image: '/images/blog/difference-between-urology-&-nephrology.png'
+    },
   ]
   return (
     <Section>

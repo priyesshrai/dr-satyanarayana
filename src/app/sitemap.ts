@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.drsatyanarayanagarre.in/blogs/utis-in-women-causes-prevention', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/blogs/why-kidney-disease-is-called-a-silent-killer', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/blogs/how-av-fistula-improves-quality-of-life-for-dialysis-patients', priority: 0.8 },
+    { url: 'https://www.drsatyanarayanagarre.in/blogs/urology-vs-nephrology', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/services/hypertension-and-diabetes-kidney-problems', priority: 0.64 },
     { url: 'https://www.drsatyanarayanagarre.in/services/inherited-and-rare-kidney-disorders', priority: 0.64 },
     { url: 'https://www.drsatyanarayanagarre.in/services/interventional-nephrology-and-renal-imaging', priority: 0.64 },
