@@ -117,6 +117,12 @@ export default function Blogs() {
       slug: '/blogs/urology-vs-nephrology',
       image: '/images/blog/difference-between-urology-&-nephrology.png'
     },
+    {
+      title: 'Best Nephrologist in Hyderabad',
+      content: 'Kidneys play a very important role in keeping your body healthy. They remove waste, balance fluids, and help control blood pressure. When kidneys do not work properly, it can affect your overall health in many ways. This is where a nephrologist comes in. If you are searching for the best nephrologist in Hyderabad, it is important to choose a doctor who has the right experience and provides proper care',
+      slug: '/blogs/best-nephrologist-in-hyderabad',
+      image: '/images/blog/best-nephrologist.jpeg'
+    },
   ]
   return (
     <Section>
