@@ -111,6 +111,18 @@ export default function Blogs() {
       slug: '/blogs/how-av-fistula-improves-quality-of-life-for-dialysis-patients',
       image: '/images/blog/how-av-fistula-improves-quality-of-life-for-dialysis-patients.jpeg'
     },
+    {
+      title: 'Difference Between Urology and Nephrology',
+      content: 'Many people often get confused between urology and nephrology. The names sound similar, and both are related to the urinary system, so it’s normal to wonder what is the difference between urology and nephrology.',
+      slug: '/blogs/urology-vs-nephrology',
+      image: '/images/blog/difference-between-urology-&-nephrology.png'
+    },
+    {
+      title: 'Best Nephrologist in Hyderabad',
+      content: 'Kidneys play a very important role in keeping your body healthy. They remove waste, balance fluids, and help control blood pressure. When kidneys do not work properly, it can affect your overall health in many ways. This is where a nephrologist comes in. If you are searching for the best nephrologist in Hyderabad, it is important to choose a doctor who has the right experience and provides proper care',
+      slug: '/blogs/best-nephrologist-in-hyderabad',
+      image: '/images/blog/best-nephrologist.jpeg'
+    },
   ]
   return (
     <Section>
