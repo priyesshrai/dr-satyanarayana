@@ -28,7 +28,11 @@ const symptoms = [
     "Constant tiredness or weakness",
     "Abnormal kidney test reports",
 ]
-
+const otherDoctors = [
+    "Dr. J. AL. Ranganath",
+    "Dr. Girish Narayan",
+    "Dr. Krishna Vijaykumar Patil",
+]
 
 export default function Page() {
     return (
@@ -139,6 +143,25 @@ export default function Page() {
                                     ))}
                                 </ul>
                             </div>
+                        </div>
+
+                        <div>
+                            <h2 className='text-2xl md:text-3xl font-bold text-dark-navy mb-3'>
+                                Other Experienced Nephrologists in Hyderabad
+                            </h2>
+                            <Subheading className='text-left mb-5'>
+                                Hyderabad has many skilled kidney specialists who provide quality treatment. Some experienced nephrologists in the city are known for handling cases like kidney failure, dialysis, and transplant care.
+                            </Subheading>
+                            <div className='flex flex-wrap gap-3'>
+                                {otherDoctors.map((doc) => (
+                                    <span key={doc} className='px-4 py-2 bg-zinc-100 text-zinc-700 text-sm rounded-full border border-zinc-200 font-medium'>
+                                        {doc}
+                                    </span>
+                                ))}
+                            </div>
+                            <Subheading className='text-left mt-4'>
+                                Choosing the right doctor depends on your condition, comfort level, and the type of treatment you need.
+                            </Subheading>
                         </div>
 
                         {/* When to visit — alert style */}

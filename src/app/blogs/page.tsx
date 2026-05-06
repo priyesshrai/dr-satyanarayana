@@ -123,6 +123,12 @@ export default function Blogs() {
       slug: '/blogs/best-nephrologist-in-hyderabad',
       image: '/images/blog/best-nephrologist.jpeg'
     },
+    {
+      title: 'What Are Kidney Cysts? Causes, Types, Symptoms & Treatment',
+      content: 'Kidney cysts are a common condition and many people may have them without even knowing. In most cases, these cysts are harmless and do not affect kidney function. However, in some cases, they can cause discomfort or lead to complications. Understanding kidney cysts, what causes kidney cysts, types of kidney cysts, and kidney cysts treatment can help you manage the condition better and seek timely care. ',
+      slug: '/blogs/what-are-kidney-cycts',
+      image: '/images/blog/kidney-cyst.jpeg'
+    },
   ]
   return (
     <Section>
