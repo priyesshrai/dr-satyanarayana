@@ -8,7 +8,7 @@ export const metadata: Metadata = {
         "Learn how AV fistula improves dialysis outcomes, reduces complications, and enhances quality of life for kidney patients.",
     alternates: {
         canonical:
-            "https://www.drsatyanarayanagarre.in/blogs/av-fistula-dialysis-benefits",
+            "https://www.drsatyanarayanagarre.in/blogs/how-av-fistula-improves-quality-of-life-for-dialysis-patients",
     },
 }
 

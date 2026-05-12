@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     description:
         "Kidney disease is often called a silent killer because symptoms appear late. Learn causes, risk factors, early detection, and prevention tips.",
     alternates: {
-        canonical: "https://www.drsatyanarayanagarre.in/blogs/kidney-disease-silent-killer",
+        canonical: "https://www.drsatyanarayanagarre.in/blogs/why-kidney-disease-is-called-a-silent-killer",
     },
 }
 
