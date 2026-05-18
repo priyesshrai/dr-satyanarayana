@@ -129,6 +129,12 @@ export default function Blogs() {
       slug: '/blogs/what-are-kidney-cycts',
       image: '/images/blog/kidney-cyst.jpeg'
     },
+    {
+      title: 'Kidney Function Test (KFT) : Purpose, Types, Procedure & Normal Range',
+      content: 'Your kidneys work like natural filters for the body. They remove waste, balance fluids, control blood pressure, and help maintain overall health. But many kidney problems develop slowly, and in the early stages, people may not notice any symptoms. This is why a Kidney Function Test (KFT) is important.',
+      slug: '/blogs/kidney-function-test',
+      image: '/images/blog/kft.png'
+    },
   ]
   return (
     <Section>
