@@ -1,6 +1,6 @@
 'use client'
 import { ButtonPrimary, Section, Subheading, Wrapper } from '@/utils/Section'
-import { Calendar } from 'lucide-react'
+import { Award, BadgeCheck, Calendar, HeartHandshake, LucideIcon, Stethoscope } from 'lucide-react'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import AppointmanetForm from './AppointmanetForm';
@@ -13,6 +13,27 @@ interface Data {
     summary: string;
     image: string;
 }
+
+interface Exp {
+    icon: LucideIcon,
+    title: string
+}
+
+const features: Exp[] = [
+    {
+        icon: Award,
+        title: '15+ Years of Experience'
+    },
+    {
+        icon: BadgeCheck,
+        title: 'Evidence Based Treatment'
+    },
+    {
+        icon: HeartHandshake,
+        title: 'Personalised Patient Care'
+    }
+]
+
 export default function Hero() {
     const data: Data[] = [
         {
@@ -52,15 +73,42 @@ export default function Hero() {
         <Section className='bg-[url(/images/hero/bg-image.png)] w-full bg-cover bg-no-repeat bg-center lg:!pt-[120px] md:!pt-[100px] !pt-[120px]'>
             <Wrapper>
                 <div className='w-full relative grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-5'>
-                    <div className="w-full h-full relative flex flex-col justify-center md:items-start items-center">
+                    <div className="w-full h-full relative flex flex-col justify-center items-start">
+                        <span className='flex gap-1.5 items-center border border-dark-navy rounded-full bg-dark-navy/10 uppercase px-3 py-1 font-medium text-dark-navy mb-4 text-sm'>
+                            <Stethoscope size={14}/>
+                            Kidney Care You Can Trust
+                        </span>
                         <h1
-                            className='font-bold md:text-4xl text-[24px] text-dark-navy md:text-left text-center leading-[1.3] max-w-lg'>
-                            Advanced Kidney Care with Best Nephrologist In Hyderabad
+                            className='font-bold md:text-4xl text-3xl text-dark-navy text-left leading-tight max-w-lg'>
+                            Best Nephrologist & Kidney Specialist in Hyderabad
+
                         </h1>
-                        <Subheading className=' md:text-left !mt-3 text-center max-w-md leading-[1.3]'>
-                            <strong>Dr. Satyanarayana Garre</strong>, Specialist in Nephrology - Providing Personalized Treatment for Kidney Health, Dialysis, and More
+                        <Subheading className='text-left !mt-3 max-w-md leading-tight'>
+                            Expert care for kidney disorders, dialysis management, and long-term renal health by <strong> Dr. Satyanarayana Garre</strong> in Jubilee Hills, Hyderabad.
                         </Subheading>
-                        <div className='relative mt-10 flex items-center gap-2 md:justify-start justify-center'>
+
+
+                        <div className='mt-10 w-full grid lg:grid-cols-3 grid-cols-2 lg:gap-2 gap-6'>
+                            {
+                                features.map((items) => (
+                                    <div
+                                        key={items.title}
+                                        className='w-full h-full flex items-center gap-2'
+                                    >
+                                        <div
+                                            className='w-10 h-10 shrink-0 rounded-full bg-dark-navy flex items-center justify-center text-white '>
+                                            <items.icon size={18} />
+                                        </div>
+                                        <span className='leading-tight font-semibold text-dark-navy md:text-sm text-xs'>
+                                            {items.title}
+                                        </span>
+                                    </div>
+                                ))
+                            }
+                        </div>
+
+
+                        <div className='relative mt-10 w-full'>
                             <ButtonPrimary className='flex items-center gap-2 font-normal' onClick={() => setIsFormOpen(true)}>
                                 MAKE AN APPOINTMENT
                                 <Calendar size={16} />
@@ -71,7 +119,7 @@ export default function Hero() {
                     <div className="w-full h-full relative flex items-center md:justify-end justify-center">
                         <Image src={'/images/hero/hero-image-2.png'} width={450} height={460}
                             alt='Hero Image'
-                            className='w-full h-auto max-w-[450px]' priority/>
+                            className='w-full h-auto max-w-[450px]' priority />
                     </div>
                 </div>
 
