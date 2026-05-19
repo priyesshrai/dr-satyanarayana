@@ -7,6 +7,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 import AppointmanetForm from './AppointmanetForm'
+import { Stethoscope } from 'lucide-react'
 
 export default function About() {
     const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
@@ -35,21 +36,27 @@ export default function About() {
                     </div>
 
                     <div className="w-full h-full relative flex flex-col justify-center">
-                        {/**
-                        <span className='!font-open-sans flex items-center justify-between px-4 py-2 border border-light-blue text-light-blue text-base w-max rounded-lg'>More About Me</span>
-                        **/}
+
+                        <span className='flex w-max gap-1.5 items-center border border-light-blue rounded-full bg-light-blue/10 uppercase px-3 py-1 font-medium text-light-blue text-sm'>
+                            <Stethoscope size={14} />
+                            ABOUT THE DOCTOR
+                        </span>
+
                         <Heading className='mt-4 lg:!text-4xl md:!text-[28px] !text-xl'>
-                            Trusted <span className='!font-open-sans text-light-blue'>Nephrology Specialist</span> with Extensive Clinical Expertise
+                            Advanced in <span className='!font-open-sans text-light-blue'>Kidney Care</span> Jubilee Hills, Hyderabad
                         </Heading>
                         <Subheading className='mt-2 text-left max-w-md'>
                             Expert in all aspects of nephrology—from dialysis to transplant care and advanced procedures.
                         </Subheading>
 
                         <Subheading className='mt-4 text-left font-normal'>
-                            Dr. Satyanarayana Garre is one of the best nephrologist in Hyderabad, Telangana, with over 10 years of experience in the field of kidney health and renal treatments. As a highly qualified medical professional, he holds an MBBS, MD, and DNB in Nephrology, ensuring that he possesses an in-depth understanding of the complexities associated with kidney diseases.
+                            Dr. Satyanarayana Garre provides specialized care for patients dealing with kidney-related health concerns ranging from early-stage renal conditions to advanced medical management.
                         </Subheading>
                         <Subheading className='mt-2 text-left font-normal'>
-                            Dr. Garre&apos;s dedication to patient care is reflected in his ability to communicate effectively in multiple languages, including English, Hindi, Telugu, and Kannada, making him accessible to a diverse patient population.
+                            His approach combines clinical precision, detailed evaluation, and structured treatment planning to help patients receive the right care at the right stage.
+                        </Subheading>
+                        <Subheading className='mt-2 text-left font-normal'>
+                            Practicing in Jubilee Hills, Hyderabad, he focuses on building long-term patient relationships through clear communication, ethical guidance, and consistent medical support tailored to individual health needs.
                         </Subheading>
                         <div className='mt-8 flex items-center gap-3 justify-start max-[420px]:flex-col'>
                             <ButtonPrimary onClick={() => setIsFormOpen(true)}>

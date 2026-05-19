@@ -10,6 +10,8 @@ const Testimonial = dynamic(() => import('@/components/Testimonial'), {
 })
 import TreatmentList from '@/components/TreatmentList'
 import { Metadata } from "next";
+import Highlight from "@/components/highlight";
+import FAQ from "@/components/faq";
 const Video = dynamic(() => import('@/components/Video'), {
   loading: () => <p>Loading…</p>
 })
@@ -22,12 +24,14 @@ export default function HomePage() {
     <main className="relative w-full">
       <Hero />
       <About />
-      <Video />
       <TreatmentList />
+      <Highlight />
+      <Video />
       <YoutubeVdo />
       <Marquee />
       <Testimonial />
       <Blog />
+      <FAQ/>
     </main>
   )
 }
