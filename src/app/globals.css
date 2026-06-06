@@ -15,6 +15,10 @@
   --color-light-blue: var(--light-blue);
   --color-hover-navy: var(--hover-navy);
   --color-hover-blue: var(--hover-blue);
+
+  --color-primary: #004254;
+  --color-primary-hover: #0c5a6d;
+
   --font-montserrat: var(--montserrat);
   --font-open-sans: var(--open-sans);
   --animate-marquee: marquee var(--duration) infinite linear;
@@ -87,4 +91,45 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .animate-ripple {
   animation: ripple 2.5s linear infinite;
+}
+
+.labels {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #6b7280;
+  background: white;
+  padding: 0 6px;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.label {
+  position: absolute;
+  top: 14px;
+  left: 8px;
+  font-size: 1rem;
+  color: #6b7280;
+  background: white;
+  padding: 0 6px;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus ~ .labels,
+input:not(:placeholder-shown) ~ .labels {
+  top: -10px;
+  left: 6px;
+  font-size: 0.85rem;
+  color: var(--primary-hover);
+  transform: translateY(0);
+}
+textarea:focus ~ .label,
+textarea:not(:placeholder-shown) ~ .label {
+  top: -10px;
+  left: 6px;
+  font-size: 0.85rem;
+  color: var(--primary-hover);
+  transform: translateY(0);
 }
