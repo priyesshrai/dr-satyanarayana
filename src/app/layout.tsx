@@ -13,6 +13,8 @@ const ContactForm = dynamic(() => import("@/components/ContactForm"), {
 import { Montserrat, Open_Sans } from "next/font/google";
 import dynamic from "next/dynamic";
 import Script from "next/script";
+import AuthBoundary from "@/context/auth_boundry";
+import { QueryProvider } from "@/lib/providers";
 
 export const metadata: Metadata = {
   title: "Nephrologist in Hyderabad | Dr. Satyanarayana Garre - Kidney Specialist",
@@ -41,8 +43,12 @@ export default function RootLayout({
       </head>
       <body className="overflow-x-hidden relative">
         <SmoothScrollProvider>
-        <NavBar />
-          {children}
+          <QueryProvider>
+            <AuthBoundary>
+              <NavBar />
+              {children}
+            </AuthBoundary>
+          </QueryProvider>
         </SmoothScrollProvider>
         <ContactForm />
         <Footer />
