@@ -1,5 +1,5 @@
 "use client";
-import { Role } from "@/generated/prisma/enums";
+import { Role } from "@/app/generated/prisma/enums";
 import { createContext, useState } from "react";
 
 type AuthUser = {
