@@ -89,10 +89,10 @@ export default function NavBar() {
                                 (
                                     <button
                                         onClick={() => isAuthenticated ? router.push("/user/dashboard") : router.push("/login")}
-                                        className='flex flex-col items-center justify-center bg-dark-navy px-3 py-2.5 text-white rounded-lg cursor-pointer transition-colors duration-200 ease-in-out hover:bg-dark-navy/90 text-sm'
+                                        className='flex gap-1 items-center justify-center bg-dark-navy px-3 py-2.5 text-white rounded-lg cursor-pointer transition-colors duration-200 ease-in-out hover:bg-dark-navy/90 text-sm'
                                     >
-                                        <User size={14} />
-                                        <span className='text-sm'>
+                                        <User size={14} fill='white' />
+                                        <span className='text-sm leading-tight'>
                                             {user?.name.trim().split(" ")[0]}
                                         </span>
                                     </button>
