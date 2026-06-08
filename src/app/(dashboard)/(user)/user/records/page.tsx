@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { AppointmentStatus, DocumentType, PrescriptionType } from "@/generated/prisma/enums";
+import { AppointmentStatus, DocumentType, PrescriptionType } from "@/app/generated/prisma/enums";
 
 
 function formatSize(bytes: number): string {
