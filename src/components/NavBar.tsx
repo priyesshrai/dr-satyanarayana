@@ -166,7 +166,7 @@ export default function NavBar() {
                                 isAuthenticated ? setShowOptions((prev) => !prev) : setOpenLoginModal(true)
                             }
                             className='flex items-center gap-1 bg-dark-navy px-3 py-2.5 text-white rounded-lg cursor-pointer transition-colors duration-200 ease-in-out hover:bg-dark-navy/90 text-sm'>
-                            {!isAuthenticated ? "Book Appointement" : <>
+                            {!isAuthenticated ? "Book Appointment" : <>
                                 <User size={14} fill='white' />
                                 <span className='text-sm leading-tight'>
                                     {user?.name.trim().split(" ")[0]}
