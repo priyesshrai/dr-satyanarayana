@@ -40,12 +40,13 @@ export default function RootLayout({
           </QueryProvider>
         </SmoothScrollProvider>
       </body>
+      <Script src="https://cdn.razorpay.com/static/cx/razorpay-risk-detection/bundle.js" async="" />
       <Script
         id="gtm"
         strategy="lazyOnload"
         src="https://www.googletagmanager.com/gtag/js?id=G-G963FVQ89C"
       />
-
+  
       <Script id="gtm-config" strategy="lazyOnload">
         {`
   window.dataLayer = window.dataLayer || [];
