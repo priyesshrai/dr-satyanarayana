@@ -3,6 +3,20 @@ import { Section, Wrapper } from '@/utils/Section'
 import { Data } from '@/utils/data'
 import type { Metadata, ResolvingMetadata } from 'next'
 
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+    const { id } = await params
+    const data = Data.find((d) => d.id.toLowerCase() === id.toLowerCase());
+
+    return {
+        title: data?.metaTitle,
+        description: data?.metaDescription,
+        alternates: {
+            canonical: data?.canonical,
+        }
+    }
+}
+
 export default async function TreatmentDetailsPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
     const data = Data.find((d) => d.id.toLowerCase() === id.toLowerCase())
@@ -23,15 +37,3 @@ type Props = {
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
-    const { id } = await params
-    const data = Data.find((d) => d.id.toLowerCase() === id.toLowerCase());
-
-    return {
-        title: data?.metaTitle,
-        description: data?.metaDescription,
-        alternates: {
-            canonical: data?.canonical,
-        }
-    }
-}

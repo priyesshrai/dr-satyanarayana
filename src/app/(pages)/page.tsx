@@ -18,23 +18,10 @@ const Video = dynamic(() => import('@/components/Video'), {
 const YoutubeVdo = dynamic(() => import('@/components/YoutubeVdo'), {
   loading: () => <p>Loading…</p>
 })
+const NavBar = dynamic(() => import("@/components/NavBar"));
+const Footer = dynamic(() => import("@/components/Footer"));
+const ContactForm = dynamic(() => import("@/components/ContactForm"));
 
-export default function HomePage() {
-  return (
-    <main className="relative w-full">
-      <Hero />
-      <About />
-      <TreatmentList />
-      <Highlight />
-      <Video />
-      <YoutubeVdo />
-      <Marquee />
-      <Testimonial />
-      <Blog />
-      <FAQ/>
-    </main>
-  )
-}
 
 export const metadata: Metadata = {
   title: "Best Nephrologist In Hyderabad : Dr. Satyanarayana Garre",
@@ -43,3 +30,26 @@ export const metadata: Metadata = {
     canonical: "https://www.drsatyanarayanagarre.in",
   },
 }
+
+export default function HomePage() {
+  return (
+    <>
+      <NavBar />
+      <main className="relative w-full">
+        <Hero />
+        <About />
+        <TreatmentList />
+        <Highlight />
+        <Video />
+        <YoutubeVdo />
+        <Marquee />
+        <Testimonial />
+        <Blog />
+        <FAQ />
+      </main>
+      <ContactForm />
+      <Footer />
+    </>
+  )
+}
+

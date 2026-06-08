@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScrollProvider from "@/utils/SmoothScroll";
-const NavBar = dynamic(() => import("@/components/NavBar"), {
-  loading: () => <p>Loading…</p>
-});
-const Footer = dynamic(() => import("@/components/Footer"), {
-  loading: () => <p>Loading…</p>
-});
-const ContactForm = dynamic(() => import("@/components/ContactForm"), {
-  loading: () => <p>Loading…</p>
-});
 import { Montserrat, Open_Sans } from "next/font/google";
-import dynamic from "next/dynamic";
 import Script from "next/script";
 import AuthBoundary from "@/context/auth_boundry";
 import { QueryProvider } from "@/lib/providers";
@@ -45,13 +35,10 @@ export default function RootLayout({
         <SmoothScrollProvider>
           <QueryProvider>
             <AuthBoundary>
-              <NavBar />
               {children}
             </AuthBoundary>
           </QueryProvider>
         </SmoothScrollProvider>
-        <ContactForm />
-        <Footer />
       </body>
       <Script
         id="gtm"

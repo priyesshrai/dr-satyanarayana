@@ -2,6 +2,11 @@ import Academic from '@/components/Academic'
 import WhyUs from '@/components/WhyUs'
 import React from 'react'
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic';
+const NavBar = dynamic(() => import("@/components/NavBar"));
+const Footer = dynamic(() => import("@/components/Footer"));
+const ContactForm = dynamic(() => import("@/components/ContactForm"));
+
 
 export const metadata: Metadata = {
     title: "About Dr Satyanarayana Garre – Hyderabad Nephrologist",
@@ -13,9 +18,14 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
     return (
-        <main className='relative w-full'>
-            <WhyUs />
-            <Academic />
-        </main>
+        <>
+            <NavBar />
+            <main className='relative w-full'>
+                <WhyUs />
+                <Academic />
+            </main>
+            <ContactForm />
+            <Footer />
+        </>
     )
 }
