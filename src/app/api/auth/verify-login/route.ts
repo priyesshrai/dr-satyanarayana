@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs";
 import prisma from "@/lib/prisma";
 import { sendMail } from "@/lib/sendMail";
 import { Prisma } from "@/app/generated/prisma/client";
+import { otpTemplate } from "@/lib/otp_templet";
 
 
 const LoginSchema = z.object({
@@ -63,25 +64,3 @@ export async function POST(req: NextRequest) {
     }
 }
 
-
-function otpTemplate(otp: string) {
-    return `
-    <div style="font-family: Arial; max-width: 600px; margin: auto;">
-      <h2>Your Verification Code</h2>
-      <p>Use the following OTP to verify your email:</p>
-
-      <div style="
-        font-size: 28px;
-        font-weight: bold;
-        letter-spacing: 6px;
-        margin: 20px 0;
-      ">
-        ${otp}
-      </div>
-
-      <p>This code expires in 10 minutes.</p>
-
-      <p>If you didn't request this, please ignore this email.</p>
-    </div>
-  `
-}
