@@ -36,14 +36,17 @@ export default function Sidebar({ mobileOpen, onClose }: SidebarProps) {
             </AnimatePresence>
 
             <motion.aside
-                className={`lg:relative absolute h-screen flex flex-col bg-[#7a71ba] lg:translate-x-0 -translate-x-full transition z-50 ${mobileOpen ? "translate-x-0" : "-translate-x-full"}`}
+                className={`lg:relative absolute h-screen flex flex-col bg-dark-navy lg:translate-x-0 -translate-x-full transition z-50 ${mobileOpen ? "translate-x-0" : "-translate-x-full"}`}
             >
                 <div className="flex items-center justify-between p-4">
                     <Link href={'/'} className='flex items-center gap-2'>
-                        <Image src={'/images/logo/new-logo-1.png'} width={350} height={60} alt='Dr. Satyanarayana Garre Chauhan'
-                            className='w-[50px] h-auto' />
-                        <Image src={'/images/logo/new-logo-2.png'} width={500} height={61} alt='Dr. Satyanarayana Garre Chauhan'
-                            className='w-[180px] h-auto' />
+                        <Image
+                            src={'/images/logo/logo-2.svg'}
+                            width={300} height={50}
+                            alt='Dr. Satyanarayana'
+                            className='md:w-[300px] w-[200px] h-auto'
+                            priority
+                        />
                     </Link>
 
                 </div>

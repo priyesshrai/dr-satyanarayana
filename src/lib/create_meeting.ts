@@ -12,8 +12,8 @@ export async function createGoogleMeet({ startTime, endTime, patientEmail, docto
         calendarId: "primary",
         conferenceDataVersion: 1,
         requestBody: {
-            summary: "Doctor Ankita Chauhan Consultation",
-            description: "Ankita Chauhan Online consultation",
+            summary: "Doctor Satyanarayana Garre Consultation",
+            description: "Satyanarayana Garre Online consultation",
             start: {
                 dateTime: startTime
             },

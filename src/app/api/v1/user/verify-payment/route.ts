@@ -107,12 +107,12 @@ export async function POST(req: NextRequest) {
         });
 
         await sendMail({
-            title: "Dr Ankita Chauhan",
+            title: "Dr. Satyanarayana Garre",
             to: ["prathumjirai@gmail.com", payment.appointment!.patient.email,],
             subject: "Your Appointment is Confirmed",
             html: appointmentEmailTemplate({
                 patientName: payment.appointment!.patient.name,
-                doctorName: "Ankita Chauhan",
+                doctorName: "Satyanarayana Garre",
                 startTime: payment.appointment!.slot.startTime.toISOString(),
                 endTime: payment.appointment!.slot.endTime.toISOString(),
                 meetLink: meet.meetLink!,

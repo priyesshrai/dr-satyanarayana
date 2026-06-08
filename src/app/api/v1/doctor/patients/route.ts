@@ -8,7 +8,8 @@ export async function GET(req: NextRequest) {
     try {
 
         const user = getUser(req);
-
+        console.log(user);
+        
         if (!user?.id) {
             return NextResponse.json(
                 { error: "Unauthorized" },
