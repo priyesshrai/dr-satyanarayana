@@ -1,18 +1,62 @@
 'use client'
 import { useAuth } from '@/hooks/useAuth';
 import { useLenisControl } from '@/utils/SmoothScroll';
-import { Menu, Phone, User, X } from 'lucide-react';
+import { ChevronRight, LogOut, Mail, Menu, User, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Signup from './auth/signup';
+import { AnimatePresence, motion, Variants } from 'motion/react';
+import { getInitials } from '@/lib/generate-initials';
+import { useMutation } from '@tanstack/react-query';
+import axios, { AxiosError } from 'axios';
+import toast from 'react-hot-toast';
 
 interface MenuItem {
     key: string;
     name: string;
     path: string;
 }
+
+const containerVariants: Variants = {
+    hide: {
+        opacity: 0,
+        y: 30,
+        scale: 0.98,
+        pointerEvents: "none",
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        pointerEvents: "auto",
+        transition: {
+            type: "spring",
+            stiffness: 200,
+            damping: 25,
+            mass: 0.8,
+            bounce: 0.4,
+            staggerChildren: 0.2,
+            delayChildren: 0.1,
+        },
+    },
+};
+const itemVariants: Variants = {
+    hide: {
+        opacity: 0,
+        y: -10,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
+        },
+    },
+};
 
 export default function NavBar() {
     const router = useRouter()
@@ -49,15 +93,48 @@ export default function NavBar() {
 
     const [openLoginModal, setOpenLoginModal] = useState<boolean>(false);
     const { isAuthenticated, user } = useAuth();
+    const [showOptions, setShowOptions] = useState<boolean>(false);
+    const dropdownRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        if (isMenuOpen || openLoginModal) {
+        if (isMenuOpen || openLoginModal || showOptions) {
             stopScroll();
         } else {
             startScroll();
         }
         return () => startScroll();
-    }, [isMenuOpen, stopScroll, startScroll, openLoginModal]);
+    }, [isMenuOpen, stopScroll, startScroll, openLoginModal, showOptions]);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target as Node)
+            )
+                setShowOptions(false);
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+
+    const logoutMutation = useMutation({
+        mutationFn: async () => {
+            const response = await axios.post("/api/auth/logout", {}, { withCredentials: true });
+            return response.data;
+        },
+        onSuccess: (val) => {
+            toast.success(val?.message);
+            window.location.href = "/";
+        },
+        onError: (err: AxiosError<{ error: string }>) => {
+            toast.error(err.response?.data?.error || "Something went wrong");
+        }
+    });
 
     return (
         <>
@@ -83,28 +160,78 @@ export default function NavBar() {
                         }
                     </div>
 
-                    <div className='lg:flex flex-col items-end hidden relative w-max'>
-                        {
-                            isAuthenticated ?
-                                (
-                                    <button
-                                        onClick={() => isAuthenticated ? router.push("/user/dashboard") : router.push("/login")}
-                                        className='flex gap-1 items-center justify-center bg-dark-navy px-3 py-2.5 text-white rounded-lg cursor-pointer transition-colors duration-200 ease-in-out hover:bg-dark-navy/90 text-sm'
-                                    >
-                                        <User size={14} fill='white' />
-                                        <span className='text-sm leading-tight'>
-                                            {user?.name.trim().split(" ")[0]}
-                                        </span>
-                                    </button>
-                                )
-                                : (
-                                    <button
-                                        onClick={() => setOpenLoginModal(true)}
-                                        className='bg-dark-navy px-3 py-2.5 text-white rounded-lg cursor-pointer transition-colors duration-200 ease-in-out hover:bg-dark-navy/90 text-sm'>
-                                        Book Appointement
-                                    </button>
-                                )
-                        }
+                    <div className='lg:flex flex-col items-end hidden relative w-max' ref={dropdownRef}>
+                        <button
+                            onClick={() =>
+                                isAuthenticated ? setShowOptions((prev) => !prev) : setOpenLoginModal(true)
+                            }
+                            className='flex items-center gap-1 bg-dark-navy px-3 py-2.5 text-white rounded-lg cursor-pointer transition-colors duration-200 ease-in-out hover:bg-dark-navy/90 text-sm'>
+                            {!isAuthenticated ? "Book Appointement" : <>
+                                <User size={14} fill='white' />
+                                <span className='text-sm leading-tight'>
+                                    {user?.name.trim().split(" ")[0]}
+                                </span>
+                            </>}
+                        </button>
+                        <AnimatePresence>
+                            {showOptions && user && (
+                                <motion.div
+                                    className="absolute z-20 mt-7 top-full right-0 p-4 min-w-60 max-w-64 bg-white backdrop-blur-xl rounded-2xl shadow-xl border border-gray-200 space-y-5"
+                                    variants={containerVariants}
+                                    initial="hide"
+                                    animate="show"
+                                    exit="hide"
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <div className="size-10 rounded-full shrink-0 bg-dark-navy border border-white flex items-center justify-center font-semibold text-sm select-none text-white">
+                                            {getInitials(user.name)}
+                                        </div>
+
+                                        <div className="flex-1 flex flex-col leading-tight">
+                                            <span className="text-sm font-semibold text-gray-900 truncate">
+                                                {user?.name}
+                                            </span>
+                                            <span className="text-xs text-gray-500 flex items-center gap-1 mt-0.5">
+                                                <Mail size={12} className="text-gray-400" />
+                                                {user?.email}
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div className="h-px bg-gray-100" />
+
+                                    {/* Actions */}
+                                    <div className="flex flex-col gap-1">
+                                        <motion.button
+                                            variants={itemVariants}
+                                            onClick={() => (
+                                                router.push(`${user.role === "DOCTOR" ? "/doctor/dashboard" : "/user/dashboard"}`),
+                                                setShowOptions(false)
+                                            )}
+                                            className="cursor-pointer group flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors duration-150"
+                                        >
+                                            <span>Dashboard</span>
+                                            <ChevronRight
+                                                size={14}
+                                                className="text-gray-400 group-hover:translate-x-0.5 transition-transform"
+                                            />
+                                        </motion.button>
+
+                                        <motion.button
+                                            variants={itemVariants}
+                                            onClick={() => (logoutMutation.mutate(), setShowOptions(false))}
+                                            className="cursor-pointer group flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium text-red-600 hover:bg-red-50 transition-colors duration-150"
+                                        >
+                                            <span>Logout</span>
+                                            <LogOut
+                                                size={14}
+                                                className="text-red-500 group-hover:scale-110 transition-transform"
+                                            />
+                                        </motion.button>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
 
                     <button onClick={() => setIsMenuOpen((prev) => !prev)} className='lg:hidden w-12 h-12 flex items-center justify-center cursor-pointer bg-primary rounded-full '>
