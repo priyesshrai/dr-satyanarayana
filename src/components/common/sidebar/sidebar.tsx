@@ -40,9 +40,9 @@ export default function Sidebar({ mobileOpen, onClose }: SidebarProps) {
             >
                 <div className="flex items-center justify-between p-4">
                     <Link href={'/'} className='flex items-center gap-2'>
-                        <Image src={'/images/logo/new-logo-1.png'} width={350} height={60} alt='Dr. Ankita Chauhan'
+                        <Image src={'/images/logo/new-logo-1.png'} width={350} height={60} alt='Dr. Satyanarayana Garre Chauhan'
                             className='w-[50px] h-auto' />
-                        <Image src={'/images/logo/new-logo-2.png'} width={500} height={61} alt='Dr. Ankita Chauhan'
+                        <Image src={'/images/logo/new-logo-2.png'} width={500} height={61} alt='Dr. Satyanarayana Garre Chauhan'
                             className='w-[180px] h-auto' />
                     </Link>
 
