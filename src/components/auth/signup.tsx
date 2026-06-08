@@ -401,7 +401,7 @@ export default function Signup({ openLoginModal, closeLoginModal }: Props) {
                                                                 onChange={handleChange}
                                                                 className='w-full bg-transparent outline-none'
                                                             />
-                                                            <label className='labels'>Name</label>
+                                                            <label className='labels'>Patient Name</label>
                                                         </div>
 
                                                         <div className='relative w-full px-2 py-3 border border-primary-hover rounded-md'>
