@@ -40,7 +40,7 @@ export default function RootLayout({
           </QueryProvider>
         </SmoothScrollProvider>
       </body>
-      <Script src="https://cdn.razorpay.com/static/cx/razorpay-risk-detection/bundle.js" async="" />
+      <Script src="https://cdn.razorpay.com/static/cx/razorpay-risk-detection/bundle.js" async  />
       <Script
         id="gtm"
         strategy="lazyOnload"
