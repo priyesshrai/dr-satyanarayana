@@ -190,7 +190,7 @@ export default function EventDetails() {
                                 ))}
                             </div>
                         ) : (
-                            <div className="p-5 flex flex-col gap-3 max-h-[70vh] overflow-y-auto">
+                            <div className="p-5 flex flex-col gap-3 max-h-max overflow-y-auto">
 
                                 {/* Slot time */}
                                 <Section title="Time Slot" icon={Clock}>
