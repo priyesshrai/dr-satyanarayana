@@ -59,6 +59,7 @@ export type ContextDocument = {
 export type AppointmentContext = {
     id: string;
     reason: string;
+    patientName?: string;
     symptoms?: string | null;
     notes?: string | null;
     contextDocuments: ContextDocument[];

@@ -28,6 +28,7 @@ export type AppointmentContextMinAggregateOutputType = {
   id: string | null
   userId: string | null
   appointmentId: string | null
+  patientName: string | null
   reason: string | null
   symptoms: string | null
   notes: string | null
@@ -39,6 +40,7 @@ export type AppointmentContextMaxAggregateOutputType = {
   id: string | null
   userId: string | null
   appointmentId: string | null
+  patientName: string | null
   reason: string | null
   symptoms: string | null
   notes: string | null
@@ -50,6 +52,7 @@ export type AppointmentContextCountAggregateOutputType = {
   id: number
   userId: number
   appointmentId: number
+  patientName: number
   reason: number
   symptoms: number
   notes: number
@@ -63,6 +66,7 @@ export type AppointmentContextMinAggregateInputType = {
   id?: true
   userId?: true
   appointmentId?: true
+  patientName?: true
   reason?: true
   symptoms?: true
   notes?: true
@@ -74,6 +78,7 @@ export type AppointmentContextMaxAggregateInputType = {
   id?: true
   userId?: true
   appointmentId?: true
+  patientName?: true
   reason?: true
   symptoms?: true
   notes?: true
@@ -85,6 +90,7 @@ export type AppointmentContextCountAggregateInputType = {
   id?: true
   userId?: true
   appointmentId?: true
+  patientName?: true
   reason?: true
   symptoms?: true
   notes?: true
@@ -169,6 +175,7 @@ export type AppointmentContextGroupByOutputType = {
   id: string
   userId: string
   appointmentId: string | null
+  patientName: string | null
   reason: string
   symptoms: string | null
   notes: string | null
@@ -201,6 +208,7 @@ export type AppointmentContextWhereInput = {
   id?: Prisma.StringFilter<"AppointmentContext"> | string
   userId?: Prisma.StringFilter<"AppointmentContext"> | string
   appointmentId?: Prisma.StringNullableFilter<"AppointmentContext"> | string | null
+  patientName?: Prisma.StringNullableFilter<"AppointmentContext"> | string | null
   reason?: Prisma.StringFilter<"AppointmentContext"> | string
   symptoms?: Prisma.StringNullableFilter<"AppointmentContext"> | string | null
   notes?: Prisma.StringNullableFilter<"AppointmentContext"> | string | null
@@ -215,6 +223,7 @@ export type AppointmentContextOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   appointmentId?: Prisma.SortOrderInput | Prisma.SortOrder
+  patientName?: Prisma.SortOrderInput | Prisma.SortOrder
   reason?: Prisma.SortOrder
   symptoms?: Prisma.SortOrderInput | Prisma.SortOrder
   notes?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -232,6 +241,7 @@ export type AppointmentContextWhereUniqueInput = Prisma.AtLeast<{
   OR?: Prisma.AppointmentContextWhereInput[]
   NOT?: Prisma.AppointmentContextWhereInput | Prisma.AppointmentContextWhereInput[]
   userId?: Prisma.StringFilter<"AppointmentContext"> | string
+  patientName?: Prisma.StringNullableFilter<"AppointmentContext"> | string | null
   reason?: Prisma.StringFilter<"AppointmentContext"> | string
   symptoms?: Prisma.StringNullableFilter<"AppointmentContext"> | string | null
   notes?: Prisma.StringNullableFilter<"AppointmentContext"> | string | null
@@ -246,6 +256,7 @@ export type AppointmentContextOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   appointmentId?: Prisma.SortOrderInput | Prisma.SortOrder
+  patientName?: Prisma.SortOrderInput | Prisma.SortOrder
   reason?: Prisma.SortOrder
   symptoms?: Prisma.SortOrderInput | Prisma.SortOrder
   notes?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -263,6 +274,7 @@ export type AppointmentContextScalarWhereWithAggregatesInput = {
   id?: Prisma.StringWithAggregatesFilter<"AppointmentContext"> | string
   userId?: Prisma.StringWithAggregatesFilter<"AppointmentContext"> | string
   appointmentId?: Prisma.StringNullableWithAggregatesFilter<"AppointmentContext"> | string | null
+  patientName?: Prisma.StringNullableWithAggregatesFilter<"AppointmentContext"> | string | null
   reason?: Prisma.StringWithAggregatesFilter<"AppointmentContext"> | string
   symptoms?: Prisma.StringNullableWithAggregatesFilter<"AppointmentContext"> | string | null
   notes?: Prisma.StringNullableWithAggregatesFilter<"AppointmentContext"> | string | null
@@ -273,6 +285,7 @@ export type AppointmentContextScalarWhereWithAggregatesInput = {
 export type AppointmentContextCreateInput = {
   id?: string
   userId: string
+  patientName?: string | null
   reason: string
   symptoms?: string | null
   notes?: string | null
@@ -287,6 +300,7 @@ export type AppointmentContextUncheckedCreateInput = {
   id?: string
   userId: string
   appointmentId?: string | null
+  patientName?: string | null
   reason: string
   symptoms?: string | null
   notes?: string | null
@@ -299,6 +313,7 @@ export type AppointmentContextUncheckedCreateInput = {
 export type AppointmentContextUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
+  patientName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   reason?: Prisma.StringFieldUpdateOperationsInput | string
   symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -313,6 +328,7 @@ export type AppointmentContextUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  patientName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   reason?: Prisma.StringFieldUpdateOperationsInput | string
   symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -326,6 +342,7 @@ export type AppointmentContextCreateManyInput = {
   id?: string
   userId: string
   appointmentId?: string | null
+  patientName?: string | null
   reason: string
   symptoms?: string | null
   notes?: string | null
@@ -336,6 +353,7 @@ export type AppointmentContextCreateManyInput = {
 export type AppointmentContextUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
+  patientName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   reason?: Prisma.StringFieldUpdateOperationsInput | string
   symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -347,6 +365,7 @@ export type AppointmentContextUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  patientName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   reason?: Prisma.StringFieldUpdateOperationsInput | string
   symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -363,6 +382,7 @@ export type AppointmentContextCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   appointmentId?: Prisma.SortOrder
+  patientName?: Prisma.SortOrder
   reason?: Prisma.SortOrder
   symptoms?: Prisma.SortOrder
   notes?: Prisma.SortOrder
@@ -374,6 +394,7 @@ export type AppointmentContextMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   appointmentId?: Prisma.SortOrder
+  patientName?: Prisma.SortOrder
   reason?: Prisma.SortOrder
   symptoms?: Prisma.SortOrder
   notes?: Prisma.SortOrder
@@ -385,6 +406,7 @@ export type AppointmentContextMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   userId?: Prisma.SortOrder
   appointmentId?: Prisma.SortOrder
+  patientName?: Prisma.SortOrder
   reason?: Prisma.SortOrder
   symptoms?: Prisma.SortOrder
   notes?: Prisma.SortOrder
@@ -462,6 +484,7 @@ export type AppointmentContextUpdateOneRequiredWithoutContextDocumentsNestedInpu
 export type AppointmentContextCreateWithoutAppointmentInput = {
   id?: string
   userId: string
+  patientName?: string | null
   reason: string
   symptoms?: string | null
   notes?: string | null
@@ -474,6 +497,7 @@ export type AppointmentContextCreateWithoutAppointmentInput = {
 export type AppointmentContextUncheckedCreateWithoutAppointmentInput = {
   id?: string
   userId: string
+  patientName?: string | null
   reason: string
   symptoms?: string | null
   notes?: string | null
@@ -502,6 +526,7 @@ export type AppointmentContextUpdateToOneWithWhereWithoutAppointmentInput = {
 export type AppointmentContextUpdateWithoutAppointmentInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
+  patientName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   reason?: Prisma.StringFieldUpdateOperationsInput | string
   symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -514,6 +539,7 @@ export type AppointmentContextUpdateWithoutAppointmentInput = {
 export type AppointmentContextUncheckedUpdateWithoutAppointmentInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
+  patientName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   reason?: Prisma.StringFieldUpdateOperationsInput | string
   symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -526,6 +552,7 @@ export type AppointmentContextUncheckedUpdateWithoutAppointmentInput = {
 export type AppointmentContextCreateWithoutPaymentsInput = {
   id?: string
   userId: string
+  patientName?: string | null
   reason: string
   symptoms?: string | null
   notes?: string | null
@@ -539,6 +566,7 @@ export type AppointmentContextUncheckedCreateWithoutPaymentsInput = {
   id?: string
   userId: string
   appointmentId?: string | null
+  patientName?: string | null
   reason: string
   symptoms?: string | null
   notes?: string | null
@@ -566,6 +594,7 @@ export type AppointmentContextUpdateToOneWithWhereWithoutPaymentsInput = {
 export type AppointmentContextUpdateWithoutPaymentsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
+  patientName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   reason?: Prisma.StringFieldUpdateOperationsInput | string
   symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -579,6 +608,7 @@ export type AppointmentContextUncheckedUpdateWithoutPaymentsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  patientName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   reason?: Prisma.StringFieldUpdateOperationsInput | string
   symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -590,6 +620,7 @@ export type AppointmentContextUncheckedUpdateWithoutPaymentsInput = {
 export type AppointmentContextCreateWithoutContextDocumentsInput = {
   id?: string
   userId: string
+  patientName?: string | null
   reason: string
   symptoms?: string | null
   notes?: string | null
@@ -603,6 +634,7 @@ export type AppointmentContextUncheckedCreateWithoutContextDocumentsInput = {
   id?: string
   userId: string
   appointmentId?: string | null
+  patientName?: string | null
   reason: string
   symptoms?: string | null
   notes?: string | null
@@ -630,6 +662,7 @@ export type AppointmentContextUpdateToOneWithWhereWithoutContextDocumentsInput =
 export type AppointmentContextUpdateWithoutContextDocumentsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
+  patientName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   reason?: Prisma.StringFieldUpdateOperationsInput | string
   symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -643,6 +676,7 @@ export type AppointmentContextUncheckedUpdateWithoutContextDocumentsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
   appointmentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  patientName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   reason?: Prisma.StringFieldUpdateOperationsInput | string
   symptoms?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   notes?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -695,6 +729,7 @@ export type AppointmentContextSelect<ExtArgs extends runtime.Types.Extensions.In
   id?: boolean
   userId?: boolean
   appointmentId?: boolean
+  patientName?: boolean
   reason?: boolean
   symptoms?: boolean
   notes?: boolean
@@ -710,6 +745,7 @@ export type AppointmentContextSelectCreateManyAndReturn<ExtArgs extends runtime.
   id?: boolean
   userId?: boolean
   appointmentId?: boolean
+  patientName?: boolean
   reason?: boolean
   symptoms?: boolean
   notes?: boolean
@@ -722,6 +758,7 @@ export type AppointmentContextSelectUpdateManyAndReturn<ExtArgs extends runtime.
   id?: boolean
   userId?: boolean
   appointmentId?: boolean
+  patientName?: boolean
   reason?: boolean
   symptoms?: boolean
   notes?: boolean
@@ -734,6 +771,7 @@ export type AppointmentContextSelectScalar = {
   id?: boolean
   userId?: boolean
   appointmentId?: boolean
+  patientName?: boolean
   reason?: boolean
   symptoms?: boolean
   notes?: boolean
@@ -741,7 +779,7 @@ export type AppointmentContextSelectScalar = {
   updatedAt?: boolean
 }
 
-export type AppointmentContextOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "userId" | "appointmentId" | "reason" | "symptoms" | "notes" | "createdAt" | "updatedAt", ExtArgs["result"]["appointmentContext"]>
+export type AppointmentContextOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "userId" | "appointmentId" | "patientName" | "reason" | "symptoms" | "notes" | "createdAt" | "updatedAt", ExtArgs["result"]["appointmentContext"]>
 export type AppointmentContextInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   appointment?: boolean | Prisma.AppointmentContext$appointmentArgs<ExtArgs>
   contextDocuments?: boolean | Prisma.AppointmentContext$contextDocumentsArgs<ExtArgs>
@@ -766,6 +804,7 @@ export type $AppointmentContextPayload<ExtArgs extends runtime.Types.Extensions.
     id: string
     userId: string
     appointmentId: string | null
+    patientName: string | null
     reason: string
     symptoms: string | null
     notes: string | null
@@ -1200,6 +1239,7 @@ export interface AppointmentContextFieldRefs {
   readonly id: Prisma.FieldRef<"AppointmentContext", 'String'>
   readonly userId: Prisma.FieldRef<"AppointmentContext", 'String'>
   readonly appointmentId: Prisma.FieldRef<"AppointmentContext", 'String'>
+  readonly patientName: Prisma.FieldRef<"AppointmentContext", 'String'>
   readonly reason: Prisma.FieldRef<"AppointmentContext", 'String'>
   readonly symptoms: Prisma.FieldRef<"AppointmentContext", 'String'>
   readonly notes: Prisma.FieldRef<"AppointmentContext", 'String'>

@@ -194,6 +194,7 @@ export const AppointmentContextScalarFieldEnum = {
   id: 'id',
   userId: 'userId',
   appointmentId: 'appointmentId',
+  patientName: 'patientName',
   reason: 'reason',
   symptoms: 'symptoms',
   notes: 'notes',

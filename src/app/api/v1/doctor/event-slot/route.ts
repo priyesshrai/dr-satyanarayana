@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
                 endTime: true,
                 appointment: {
                     where: {
-                        status: { in: ["CONFIRMED","COMPLETED"] },
+                        status: { in: ["CONFIRMED", "COMPLETED"] },
                     },
                     select: {
                         id: true,
@@ -69,6 +69,7 @@ export async function POST(req: NextRequest) {
                         appointmentContexts: {
                             select: {
                                 id: true,
+                                patientName: true,
                                 reason: true,
                                 symptoms: true,
                                 notes: true,
@@ -121,6 +122,7 @@ export async function POST(req: NextRequest) {
                         } : null,
                     appointmentContexts: activeAppointment.appointmentContexts ? {
                         id: activeAppointment.appointmentContexts.id,
+                        patientName:activeAppointment.appointmentContexts.patientName,
                         reason: activeAppointment.appointmentContexts.reason,
                         symptoms: activeAppointment.appointmentContexts.symptoms,
                         notes: activeAppointment.appointmentContexts.notes,

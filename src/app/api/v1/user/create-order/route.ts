@@ -28,6 +28,7 @@ const ContextFileSchema = z.object({
 });
 
 const CreateOrderSchema = z.object({
+    patientName:z.string(),
     slotId: z.cuid({ error: "Invalid Slot Selection" }).trim(),
     reason: z.string().min(1, "Reason is required").max(1000).trim(),
     symptoms: z.string().max(1000).trim().optional(),
@@ -56,7 +57,7 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        const { slotId, reason, symptoms, notes, files } = parsed.data;
+        const { slotId, reason, symptoms, notes, files, patientName } = parsed.data;
 
         const slot = await prisma.timeSlot.findUnique({
             where: { id: slotId },
@@ -90,6 +91,7 @@ export async function POST(req: NextRequest) {
                         reason,
                         symptoms,
                         notes,
+                        patientName,
                         contextDocuments: {
                             deleteMany: {},
                             create: files.map((f) => ({
@@ -129,6 +131,7 @@ export async function POST(req: NextRequest) {
                     reason,
                     symptoms,
                     notes,
+                    patientName,
                     contextDocuments: {
                         create: files.map((f) => ({
                             uploadedById: user.id!,
