@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 import Spinner from "./ui/spinner";
 import { cn } from "@/lib/utils";
 import { getUploadSignature, uploadToCloudinary } from "@/lib/uploadToCloudinary";
+import { useAuth } from "@/hooks/useAuth";
 
 
 export type AppointmentContextData = {
@@ -97,8 +98,9 @@ async function pollBookingStatus(
 
 export default function AppointmentContextForm({ slot, date, changeStep }: { slot: Slot; date: string; changeStep: () => void }) {
     const queryClient = useQueryClient();
-
+    const { user } = useAuth()
     const [reason, setReason] = useState("");
+    const [patientName, setPatientName] = useState<string>(user?.name ?? "");
     const [symptoms, setSymptomsText] = useState("");
     const [notes, setNotes] = useState("");
     const [localFiles, setLocalFiles] = useState<LocalFile[]>([]);
@@ -229,6 +231,7 @@ export default function AppointmentContextForm({ slot, date, changeStep }: { slo
 
     const payment = useMutation({
         mutationFn: async (payload: {
+            patientName: string
             slotId: string;
             reason: string;
             symptoms: string;
@@ -323,6 +326,7 @@ export default function AppointmentContextForm({ slot, date, changeStep }: { slo
             }));
 
         payment.mutate({
+            patientName,
             slotId: slot.id,
             reason: reason.trim(),
             symptoms: symptoms.trim(),
@@ -450,6 +454,19 @@ export default function AppointmentContextForm({ slot, date, changeStep }: { slo
                         {formatTime(slot.startTime, slot.endTime)}
                     </p>
                     <p className="text-sm text-slate-500 mt-0.5">{formatDate(slot.startTime)}</p>
+                </div>
+
+                <div className="rounded-2xl bg-white border border-slate-200 shadow-sm p-5 space-y-2">
+                    <label className="block text-sm font-semibold text-slate-700">
+                        Patient Name
+                    </label>
+                    <input
+                        type="text"
+                        value={patientName}
+                        onChange={(e) => setPatientName(e.target.value)}
+                        disabled={isBlocked}
+                        className="w-full text-sm text-slate-800 placeholder:text-slate-300 border border-slate-200 rounded-xl px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-primary-color/30 focus:border-primary-color transition disabled:opacity-50"
+                    />
                 </div>
 
                 <div className="rounded-2xl bg-white border border-slate-200 shadow-sm p-5 space-y-2">
