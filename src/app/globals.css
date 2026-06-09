@@ -17,7 +17,9 @@
   --color-hover-blue: var(--hover-blue);
 
   --color-primary: #004254;
+  --color-primary-color: #004254;
   --color-primary-hover: #0c5a6d;
+  --color-primary-hover-color: #0c5a6d;
 
   --font-montserrat: var(--montserrat);
   --font-open-sans: var(--open-sans);
