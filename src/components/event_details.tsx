@@ -83,7 +83,8 @@ export default function EventDetails() {
     });
 
     const slot = data?.data;
-
+    console.log(slot);
+    
     const { mutate: cancelAppt, isPending: cancelling } = useMutation({
         mutationFn: async ({ id, status }: { id: string; status: string }) => {
             const res = await axios.post(`/api/v1/doctor/appointment/${id}`, { status }, { withCredentials: true });
