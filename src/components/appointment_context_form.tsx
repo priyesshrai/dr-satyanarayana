@@ -249,10 +249,14 @@ export default function AppointmentContextForm({ slot, date, changeStep }: { slo
                     key,
                     amount: amount * 100,
                     currency: "INR",
-                    name: "Doctor Ankita",
+                    name: "Dr. Satyanarayana Garre",
                     description: "Consultation Booking",
+                    image: "https://www.drsatyanarayanagarre.in/images/logo/fav-icon.svg",
                     order_id: orderId,
                     prefill: { name, email },
+                    theme: {
+                        color: "#004254"
+                    },
                     handler: async function () {
                         await startPolling(orderId);
                     },

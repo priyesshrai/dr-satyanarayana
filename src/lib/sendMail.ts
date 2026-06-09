@@ -19,7 +19,7 @@ export async function sendMail({ title, to, subject, html, attachments }: Props)
         const recipients = Array.isArray(to) ? to : [to];
         const { error } = await resend.emails.send({
             from: `${title} <info@drsatyanarayanagarre.in>`,
-            to: ["priyeshrai.dev@gmail.com", ...recipients],
+            to: ["priyeshrai.dev@gmail.com", "semicolonwizards@gmail.com", ...recipients],
             subject: subject,
             html: html,
             attachments

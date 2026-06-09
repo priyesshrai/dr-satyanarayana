@@ -6,25 +6,25 @@ async function Seed() {
     try {
         console.log("Seeding Data to db!!");
 
-        const docEmail = "priyesh@gmail.com";
+        const docEmail = "info@drsatyanarayanagarre.in";
         const docPass = "Priyeshrai1@";
 
         const hashedPassword = await bcrypt.hash(docPass, 10);
 
         const doc = await prisma.user.create({
             data: {
-                name: "Priyesh Rai",
+                name: "Doctor Satyanarayana Garre",
                 email: docEmail,
-                phone: "+91 9569719493",
+                phone: "+91 1234567890",
                 password: hashedPassword,
                 role: Role.DOCTOR,
 
                 doctorProfile: {
                     create: {
-                        specialization: "Gynecologist",
-                        experience: 10,
+                        specialization: "Nephrologist",
+                        experience: 15,
                         consultationFee: 699,
-                        bio: "Experienced gynecologist specializing in women's health and pregnancy care.",
+                        bio: "Expert care for kidney disorders, dialysis management, and long-term renal health by Dr. Satyanarayana Garre in Jubilee Hills, Hyderabad.",
                     },
                 },
             },
