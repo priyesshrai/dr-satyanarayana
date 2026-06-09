@@ -203,10 +203,12 @@ export default function EventDetails() {
                                     <Section title="Patient" icon={User}>
                                         <div className="flex items-center gap-3 py-3">
                                             <div className="w-9 h-9 rounded-full bg-teal-50 text-teal-700 flex items-center justify-center text-sm font-bold shrink-0">
-                                                {getInitials(patient.name)}
+                                                {getInitials(appt.appointmentContexts?.patientName ?? patient.name)}
                                             </div>
                                             <div className="flex-1 min-w-0">
-                                                <p className="text-sm font-semibold text-slate-800 truncate">{patient.name}</p>
+                                                <p className="text-sm font-semibold text-slate-800 truncate">
+                                                    {appt.appointmentContexts?.patientName ?? patient.name}
+                                                </p>
                                                 <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-0.5">
                                                     <span className="flex items-center gap-1 text-xs text-slate-400">
                                                         <Mail size={10} /> {patient.email}
