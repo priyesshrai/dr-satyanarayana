@@ -39,6 +39,7 @@ export type Patient = {
 
 export type Contexts = {
     id: string,
+    patientName: string;
     reason: string,
     symptoms: string,
     notes: string,
