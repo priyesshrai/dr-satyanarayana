@@ -22,6 +22,7 @@ import {
     XCircle,
     RefreshCw,
     FilePlus,
+    User,
 } from "lucide-react";
 import toast from "react-hot-toast";
 import Spinner from "./ui/spinner";
@@ -209,6 +210,16 @@ function ContextSection({ ctx }: { ctx: NonNullable<AppointmentResponse["appoint
                     <p className="text-[11px] font-semibold uppercase tracking-widest text-slate-400">
                         Appointment Context
                     </p>
+
+                    {ctx.patientName && (
+                        <div className="flex gap-2.5">
+                            <User size={14} className="text-dark-navy mt-0.5 shrink-0" />
+                            <div>
+                                <p className="text-[11px] text-slate-400 font-medium mb-0.5">Patient Name</p>
+                                <p className="text-sm text-slate-700">{ctx.patientName}</p>
+                            </div>
+                        </div>
+                    )}
 
                     {ctx.reason && (
                         <div className="flex gap-2.5">
@@ -404,12 +415,12 @@ function AppointmentCard({ appt, index, onChangeStatus, isPending, pendingId, pe
                 )}
 
                 {/* Divider + Footer row */}
-                <div className="flex items-center justify-between pt-0.5">
+                <div className="flex items-center justify-between pt-0.5 flex-wrap gap-5">
                     <p className="text-xs text-slate-400">
                         Booked {formatDate(appt.createdAt)}
                     </p>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-wrap">
                         {/* Join Meeting */}
                         {!isFinished && meeting?.meetingLink && (
                             <motion.a

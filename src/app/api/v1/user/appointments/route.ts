@@ -60,6 +60,7 @@ export async function GET(req: NextRequest) {
                 appointmentContexts: {
                     select: {
                         id: true,
+                        patientName: true,
                         reason: true,
                         symptoms: true,
                         notes: true,

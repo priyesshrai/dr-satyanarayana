@@ -205,7 +205,7 @@ export default function NavBar() {
                                         <motion.button
                                             variants={itemVariants}
                                             onClick={() => (
-                                                router.push(`${user.role === "DOCTOR" ? "/doctor/dashboard" : "/user/dashboard"}`),
+                                                router.push(`${user.role === "DOCTOR" ? "/doctor/appointments" : "/user/dashboard"}`),
                                                 setShowOptions(false)
                                             )}
                                             className="cursor-pointer group flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors duration-150"
