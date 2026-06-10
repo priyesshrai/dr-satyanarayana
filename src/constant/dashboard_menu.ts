@@ -72,12 +72,12 @@ export const UserDashboardMenu: DashboardMenuType[] = [
 ];
 
 export const DoctorDashboardMenu: DashboardMenuType[] = [
-    {
-        name: "Dashboard",
-        page: "/doctor/dashboard",
-        icon: LayoutDashboard,
-        access: ["DOCTOR"],
-    },
+    // {
+    //     name: "Dashboard",
+    //     page: "/doctor/dashboard",
+    //     icon: LayoutDashboard,
+    //     access: ["DOCTOR"],
+    // },
     {
         name: "Appointments",
         page: "/doctor/appointments",
