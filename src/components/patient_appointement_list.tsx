@@ -15,6 +15,7 @@ import {
     StickyNote,
     Paperclip,
     RotateCcw,
+    User,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -146,6 +147,16 @@ function ContextSection({ ctx }: { ctx: NonNullable<AppointmentResponse["appoint
                     <p className="text-[11px] font-semibold uppercase tracking-widest text-slate-400">
                         Visit context
                     </p>
+
+                    {ctx.patientName && (
+                        <div className="flex gap-2.5">
+                            <User size={13} className="text-dark-navy mt-0.5 shrink-0" />
+                            <div>
+                                <p className="text-[11px] text-slate-400 font-medium mb-0.5">Patient Name</p>
+                                <p className="text-sm text-slate-700">{ctx.patientName}</p>
+                            </div>
+                        </div>
+                    )}
 
                     {ctx.reason && (
                         <div className="flex gap-2.5">
