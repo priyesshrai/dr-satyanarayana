@@ -415,12 +415,12 @@ function AppointmentCard({ appt, index, onChangeStatus, isPending, pendingId, pe
                 )}
 
                 {/* Divider + Footer row */}
-                <div className="flex items-center justify-between pt-0.5">
+                <div className="flex items-center justify-between pt-0.5 flex-wrap gap-5">
                     <p className="text-xs text-slate-400">
                         Booked {formatDate(appt.createdAt)}
                     </p>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-wrap">
                         {/* Join Meeting */}
                         {!isFinished && meeting?.meetingLink && (
                             <motion.a
