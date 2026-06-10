@@ -39,12 +39,12 @@ export const UserDashboardMenu: DashboardMenuType[] = [
         icon: CalendarPlus,
         access: ["PATIENT"],
     },
-    {
-        name: "Upload Prescriptions",
-        page: "/user/prescriptions/upload",
-        icon: Upload,
-        access: ["PATIENT"],
-    },
+    // {
+    //     name: "Upload Prescriptions",
+    //     page: "/user/prescriptions/upload",
+    //     icon: Upload,
+    //     access: ["PATIENT"],
+    // },
     {
         name: "View Prescriptions",
         page: "/user/prescriptions",
@@ -115,27 +115,15 @@ export const DoctorDashboardMenu: DashboardMenuType[] = [
         access: ["DOCTOR"],
     },
     {
-        name: "Payments / Earnings",
-        page: "/doctor/payments",
-        icon: CreditCard,
-        access: ["DOCTOR"],
-    },
-    {
-        name: "Analytics",
-        page: "/doctor/analytics",
-        icon: BarChart3,
-        access: ["DOCTOR"],
-    },
-    {
         name: "Profile",
         page: "/doctor/profile",
         icon: User,
         access: ["DOCTOR"],
     },
-    {
-        name: "Settings",
-        page: "/doctor/settings",
-        icon: Settings,
-        access: ["DOCTOR"],
-    },
+    // {
+    //     name: "Settings",
+    //     page: "/doctor/settings",
+    //     icon: Settings,
+    //     access: ["DOCTOR"],
+    // },
 ];
