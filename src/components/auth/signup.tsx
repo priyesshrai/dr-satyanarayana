@@ -189,7 +189,7 @@ export default function Signup({ openLoginModal, closeLoginModal }: Props) {
                             >
                                 <div className='w-full flex items-center justify-between bg-primary-color md:p-5 p-2.5'>
                                     <div className='flex gap-1 items-center'>
-                                        <Image src={'/images/logo/logo.svg'} width={300} height={50} alt='Dr. Satyanarayana'
+                                        <Image src={'/images/logo/logo-2.svg'} width={300} height={50} alt='Dr. Satyanarayana'
                                             className='md:w-[300px] w-[200px] h-auto' loading='eager' />
                                     </div>
                                     <button
