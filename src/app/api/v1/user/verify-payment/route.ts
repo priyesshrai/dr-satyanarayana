@@ -1,5 +1,5 @@
 import { Role } from "@/app/generated/prisma/enums";
-import { appointmentEmailTemplate } from "@/lib/appointmentEmailTemplate";
+import { doctorAppointmentEmailTemplate, patientAppointmentEmailTemplate } from "@/lib/appointmentEmailTemplate";
 import { authorize } from "@/lib/authorize";
 import { createGoogleMeet } from "@/lib/create_meeting";
 import { getUser } from "@/lib/get-user";
@@ -110,7 +110,7 @@ export async function POST(req: NextRequest) {
             title: "Dr. Satyanarayana Garre",
             to: ["prathumjirai@gmail.com", payment.appointment!.patient.email,],
             subject: "Your Appointment is Confirmed",
-            html: appointmentEmailTemplate({
+            html: patientAppointmentEmailTemplate({
                 patientName: payment.appointment!.patient.name,
                 doctorName: "Satyanarayana Garre",
                 startTime: payment.appointment!.slot.startTime.toISOString(),
