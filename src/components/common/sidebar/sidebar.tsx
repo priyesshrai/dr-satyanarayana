@@ -61,6 +61,7 @@ export default function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                                 key={tabs.name}
                                 href={tabs.page}
                                 onClick={onClose}
+                                target={tabs.nextTab ? "_blank" : "_self"}
                                 className={cn('flex items-center gap-2 px-5 py-3 transition duration-300 ease-in-out font-medium',
                                     pathname === tabs.page
                                         ? "bg-white text-primary-color"
