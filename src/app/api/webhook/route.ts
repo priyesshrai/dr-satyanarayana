@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 import { createGoogleMeet } from "@/lib/create_meeting";
 import { sendMail } from "@/lib/sendMail";
-import { appointmentEmailTemplate } from "@/lib/appointmentEmailTemplate";
+import { doctorAppointmentEmailTemplate, patientAppointmentEmailTemplate } from "@/lib/appointmentEmailTemplate";
 import { generateICS } from "@/lib/generateICS";
 import { Prisma } from "@/app/generated/prisma/client";
 
@@ -281,13 +281,12 @@ async function handlePaymentCaptured(payment: RazorpayPaymentEntity) {
             title: `${slot.doctor.user.name} Online Consultation`,
             to: [patient.email],
             subject: "Appointment Confirmed",
-            html: appointmentEmailTemplate({
+            html: patientAppointmentEmailTemplate({
                 patientName: patient.name,
                 doctorName: slot.doctor.user.name,
                 startTime: slot.startTime,
                 endTime: slot.endTime,
                 meetLink,
-                documents: emailDocuments,
             }),
             attachments: [icsAttachment],
         });
@@ -304,8 +303,8 @@ async function handlePaymentCaptured(payment: RazorpayPaymentEntity) {
             title: `${slot.doctor.user.name} Online Consultation`,
             to: [doctorEmail],
             subject: "New Appointment Confirmed",
-            html: appointmentEmailTemplate({
-                patientName: patient.name,
+            html: doctorAppointmentEmailTemplate({
+                patientName: context?.patientName ?? patient.name,
                 doctorName: slot.doctor.user.name,
                 startTime: slot.startTime,
                 endTime: slot.endTime,
