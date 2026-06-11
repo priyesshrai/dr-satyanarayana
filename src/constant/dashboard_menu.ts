@@ -78,7 +78,7 @@ export const UserDashboardMenu: DashboardMenuType[] = [
         nextTab: false
     },
     {
-        name: "User Manul",
+        name: "User Manual",
         page: "/file/Patient_User_Manual.pdf",
         icon: Book,
         access: ["PATIENT"],
