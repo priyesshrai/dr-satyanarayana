@@ -1,5 +1,5 @@
 import { Heading, Section, Subheading, Wrapper } from "@/utils/Section";
-import { ArrowRight, Book, ShieldEllipsis } from "lucide-react";
+import { ArrowRight, Book, ShieldEllipsis, TestTubeDiagonal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -40,32 +40,64 @@ export default function Highlight() {
               improve their quality of life.
             </Subheading>
 
-            {/* Highlight Card */}
-            <div className="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6">
-              <div className="flex items-center gap-3">
-                <div className="flex size-10 items-center justify-center rounded-xl bg-light-blue/10 text-light-blue">
-                  <Book size={18} />
-                </div>
+          </div>
 
-                <h3 className="text-xl font-semibold text-dark-navy">
-                  Understand Your KFT Report
-                </h3>
+        </div>
+
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-5">
+          {/* Highlight Card */}
+          <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div className="flex items-center gap-3">
+              <div className="flex size-10 items-center justify-center rounded-xl bg-light-blue/10 text-light-blue">
+                <Book size={18} />
               </div>
 
-              <Subheading className="mt-4 text-left text-slate-600">
-                Many people feel worried after seeing their KFT report because of unfamiliar words and numbers like creatinine or eGFR. It is completely normal to feel confused at first. But understanding your KFT report can actually help you take better care of your kidneys and overall health.
-              </Subheading>
+              <h3 className="text-xl font-semibold text-light-blue">
+                Understand Your KFT Report
+              </h3>
+            </div>
 
-              {/* CTA */}
-              <div className="mt-6">
-                <Link
-                  href="/kft-report-guide"
-                  className="inline-flex items-center gap-2 rounded-full bg-light-blue px-6 py-3 text-sm font-semibold text-white transition-all hover:translate-x-1"
-                >
-                  Learn More About KFT Reports
-                  <ArrowRight size={16} />
-                </Link>
+            <Subheading className="mt-4 text-left text-slate-600">
+              Many people feel worried after seeing their KFT report because of unfamiliar words and numbers like creatinine or eGFR. It is completely normal to feel confused at first. But understanding your KFT report can actually help you take better care of your kidneys and overall health.
+            </Subheading>
+
+            {/* CTA */}
+            <div className="mt-6">
+              <Link
+                href="/kft-report-guide"
+                className="inline-flex items-center gap-2 rounded-full bg-light-blue px-6 py-3 text-sm font-semibold text-white transition-all hover:translate-x-1"
+              >
+                Learn More About KFT Reports
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+
+          {/* Highlight Card */}
+          <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 flex flex-col">
+            <div className="flex items-center gap-3">
+              <div className="flex size-10 items-center justify-center rounded-xl bg-dark-navy/10 text-dark-navy">
+                <TestTubeDiagonal size={18} />
               </div>
+
+              <h3 className="text-xl font-semibold text-dark-navy">
+                Understanding Creatinine Levels
+              </h3>
+            </div>
+
+            <Subheading className="mt-4 text-left text-slate-600">
+              Our kidneys quietly work every day to keep the body healthy. They remove waste, balance fluids, and help the body function properly. One important way to check how well the kidneys are working is by looking at creatinine levels.
+            </Subheading>
+
+            {/* CTA */}
+            <div className="md:mt-auto mt-6">
+              <Link
+                href="/understand-creatinine-levels"
+                className="inline-flex items-center gap-2 rounded-full bg-dark-navy px-6 py-3 text-sm font-semibold text-white transition-all hover:translate-x-1"
+              >
+                Learn More Creatinine Levels
+                <ArrowRight size={16} />
+              </Link>
             </div>
           </div>
 
