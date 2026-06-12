@@ -7,6 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.drsatyanarayanagarre.in/services', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/contact', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/blogs', priority: 0.8 },
+    { url: 'https://www.drsatyanarayanagarre.in/kft-report-guide', priority: 0.8 },
+    { url: 'https://www.drsatyanarayanagarre.in/understand-creatinine-levels', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/services/acute-kidney-injury', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/services/chronic-kidney-disease', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/services/kidney-stone', priority: 0.8 },
