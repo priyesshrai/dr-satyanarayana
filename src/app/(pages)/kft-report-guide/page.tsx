@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Understand Your KFT Report and Kidney Health – Dr. Satyanarayana Garre",
     description: "Confused about your KFT report? Understand what KFT means, normal ranges, why reports become abnormal, symptoms to watch for, and how to keep your kidneys healthy — guidance by Dr. Satyanarayana Garre, Nephrologist in Hyderabad.",
     alternates: {
-        canonical: "https://www.drsatyanarayanagarre.in/blogs/understand-your-kft-report",
+        canonical: "https://www.drsatyanarayanagarre.in/kft-report-guide",
     },
 }
 
