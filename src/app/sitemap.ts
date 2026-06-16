@@ -32,6 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.drsatyanarayanagarre.in/blogs/urology-vs-nephrology', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/blogs/best-nephrologist-in-hyderabad', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/blogs/what-are-kidney-cycts', priority: 0.8 },
+    { url: 'https://www.drsatyanarayanagarre.in/blogs/kidney-function-test', priority: 0.8 },
+    { url: 'https://www.drsatyanarayanagarre.in/blogs/swelling-in-feet-face-and-ankles', priority: 0.8 },
     { url: 'https://www.drsatyanarayanagarre.in/services/hypertension-and-diabetes-kidney-problems', priority: 0.64 },
     { url: 'https://www.drsatyanarayanagarre.in/services/inherited-and-rare-kidney-disorders', priority: 0.64 },
     { url: 'https://www.drsatyanarayanagarre.in/services/interventional-nephrology-and-renal-imaging', priority: 0.64 },

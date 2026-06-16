@@ -135,6 +135,12 @@ export default function Blogs() {
       slug: '/blogs/kidney-function-test',
       image: '/images/blog/kft.png'
     },
+    {
+      title: 'Swelling in Feet, Face & Ankles – Kidney Disease Signs You Should Never Ignore',
+      content: 'Your kidneys work quietly every day to remove waste, balance fluids, and keep your body healthy. When the kidneys are not working properly, extra fluid can build up in the body, leading to swelling in different areas. Many people ignore this symptom, thinking it is due to tiredness or standing for long hours. However, swelling can be one of the early kidney disease signs and symptoms that should not be overlooked.',
+      slug: '/blogs/swelling-in-feet-face-and-ankles',
+      image: '/images/blog/Swelling-in-Feet-Face-and-Ankles.jpeg'
+    },
   ]
   return (
     <Section>
