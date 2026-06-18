@@ -1,7 +1,7 @@
 export function otpTemplate(otp: string): string {
-    const digits = otp.split("");
+  const digits = otp.split("");
 
-    return `
+  return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,22 +92,19 @@ export function otpTemplate(otp: string): string {
                     <!-- Individual digit boxes -->
                     <table cellpadding="0" cellspacing="0" align="center">
                       <tr>
-                        ${digits
-            .map(
-                (d) => `
+                        ${digits.map((d) => `
                           <td style="padding:0 4px;">
                             <div style="width:44px;height:54px;background:#ffffff;
-                              border:2px solid #0f766e;border-radius:8px;
-                              display:inline-flex;align-items:center;
-                              justify-content:center;font-size:26px;font-weight:700;
+                              border:2px solid #0f766e;border-radius:8px;font-size:26px;font-weight:700;
                               color:#0f766e;letter-spacing:0;line-height:54px;
                               text-align:center;">
                               ${d}
                             </div>
                           </td>
                         `
-            )
-            .join("")}
+  )
+      .join("")
+    }
                       </tr>
                     </table>
 
