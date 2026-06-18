@@ -116,7 +116,7 @@ export async function POST(req: NextRequest) {
             });
         }
 
-        const amount = 50;
+        const amount = 1800;
 
         const order = await razorpay.orders.create({
             amount: amount * 100,
