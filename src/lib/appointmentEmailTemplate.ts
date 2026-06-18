@@ -51,7 +51,7 @@ function formatDateTime(startTime: string | Date, endTime: string | Date) {
   return { date, timeStr };
 }
 
-const dashboardUrl = `${process.env.NEXT_PUBLIC_APP_URL}/login`;
+const dashboardUrl = "https://www.drsatyanarayanagarre.in/login";
 
 // ─── Shared layout fragments ──────────────────────────────────────────────────
 

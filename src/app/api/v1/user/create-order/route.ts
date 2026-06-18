@@ -11,6 +11,8 @@ const razorpay = new Razorpay({
     key_secret: process.env.RAZORPAY_API_SECRET!,
 });
 
+const PENDING_PAYMENT_TTL_MS = 15 * 60 * 1000; // adjust to your checkout window
+
 const DocumentType = z.enum([
     "PRESCRIPTION",
     "LAB_REPORT",
@@ -28,7 +30,7 @@ const ContextFileSchema = z.object({
 });
 
 const CreateOrderSchema = z.object({
-    patientName:z.string(),
+    patientName: z.string(),
     slotId: z.cuid({ error: "Invalid Slot Selection" }).trim(),
     reason: z.string().min(1, "Reason is required").max(1000).trim(),
     symptoms: z.string().max(1000).trim().optional(),
@@ -59,34 +61,60 @@ export async function POST(req: NextRequest) {
 
         const { slotId, reason, symptoms, notes, files, patientName } = parsed.data;
 
-        const slot = await prisma.timeSlot.findUnique({
-            where: { id: slotId },
-        });
-
-        if (!slot || slot.status !== "AVAILABLE") {
-            return NextResponse.json({ error: "Slot not available" }, { status: 400 });
+        const slot = await prisma.timeSlot.findUnique({ where: { id: slotId } });
+        if (!slot) {
+            return NextResponse.json({ error: "Slot not found" }, { status: 404 });
         }
 
-        const existingPayment = await prisma.payment.findFirst({
-            where: {
-                slotId,
-                userId: user.id,
-                status: { in: ["PENDING", "SUCCESS"] },
-            },
-            include: { context: true },
+        // Pull ALL active payments for this slot — not just the current user's —
+        // since an abandoned PENDING from anyone can otherwise block the slot.
+        const activePayments = await prisma.payment.findMany({
+            where: { slotId, status: { in: ["PENDING", "SUCCESS"] } },
         });
 
-        if (existingPayment?.status === "SUCCESS") {
+        const successPayment = activePayments.find((p) => p.status === "SUCCESS");
+        if (successPayment) {
             return NextResponse.json(
-                { error: "You have already booked this slot" },
+                {
+                    error:
+                        successPayment.userId === user.id
+                            ? "You have already booked this slot"
+                            : "Slot not available",
+                },
                 { status: 409 }
             );
         }
 
-        if (existingPayment?.status === "PENDING") {
-            if (existingPayment.contextId) {
+        const now = Date.now();
+        const isExpired = (p: { createdAt: Date }) =>
+            now - p.createdAt.getTime() > PENDING_PAYMENT_TTL_MS;
+
+        const pending = activePayments.filter((p) => p.status === "PENDING");
+        const expiredPending = pending.filter(isExpired);
+        const livePending = pending.filter((p) => !isExpired(p));
+
+        // Auto-expire stale pending payments instead of leaving them stuck forever.
+        if (expiredPending.length > 0) {
+            await prisma.payment.updateMany({
+                where: { id: { in: expiredPending.map((p) => p.id) } },
+                data: { status: "FAILED" }, // use your enum's "expired/failed" value
+            });
+        }
+
+        const myLivePending = livePending.find((p) => p.userId === user.id);
+        const othersLivePending = livePending.find((p) => p.userId !== user.id);
+
+        if (othersLivePending) {
+            return NextResponse.json(
+                { error: "This slot is currently being booked by someone else. Please try again shortly." },
+                { status: 409 }
+            );
+        }
+
+        if (myLivePending) {
+            if (myLivePending.contextId) {
                 await prisma.appointmentContext.update({
-                    where: { id: existingPayment.contextId },
+                    where: { id: myLivePending.contextId },
                     data: {
                         reason,
                         symptoms,
@@ -110,18 +138,18 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({
                 name: user.name,
                 email: user.email,
-                orderId: existingPayment.razorpayOrderId,
-                amount: existingPayment.amount,
+                orderId: myLivePending.razorpayOrderId,
+                amount: myLivePending.amount,
                 key: process.env.RAZORPAY_API_KEY,
             });
         }
 
-        const amount = 50;
-
+        // No live payment is blocking this slot — safe to create a fresh order.
+        const amount = 1800;
         const order = await razorpay.orders.create({
             amount: amount * 100,
             currency: "INR",
-            receipt: `receipt_${slotId}`,
+            receipt: `receipt_${slotId}}`,
         });
 
         await prisma.$transaction(async (tx) => {
@@ -164,7 +192,6 @@ export async function POST(req: NextRequest) {
             amount,
             key: process.env.RAZORPAY_API_KEY,
         });
-
     } catch (error) {
         console.error("Error while creating order:", error);
         return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
