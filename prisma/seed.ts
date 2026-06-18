@@ -6,7 +6,7 @@ async function Seed() {
     try {
         console.log("Seeding Data to db!!");
 
-        const docEmail = "info@drsatyanarayanagarre.in";
+        const docEmail = "achuridraradhya@gmail.com";
         const docPass = "Priyeshrai1@";
 
         const hashedPassword = await bcrypt.hash(docPass, 10);
@@ -23,7 +23,7 @@ async function Seed() {
                     create: {
                         specialization: "Nephrologist",
                         experience: 15,
-                        consultationFee: 699,
+                        consultationFee: 1800,
                         bio: "Expert care for kidney disorders, dialysis management, and long-term renal health by Dr. Satyanarayana Garre in Jubilee Hills, Hyderabad.",
                     },
                 },
