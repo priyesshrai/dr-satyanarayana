@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cancellation and Refund Policy – Dr. Satyanarayana Garre</title>
+<meta name="description" content="Cancellation, rescheduling, and refund terms for appointments booked with Dr. Satyanarayana Garre on drsatyanarayanagarre.in.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal-900: #00323e;
+  --teal-700: #004151;
+  --teal-500: #0f6b7d;
+  --mint-100: #e3fbf8;
+  --mint-200: #c9f5ef;
+  --ink: #1c2226;
+  --muted: #5b6770;
+  --border: #e3e6e7;
+  --paper: #ffffff;
+  --font-display: "Poppins", "Segoe UI", Arial, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-padding-top: 90px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+  font-size: 16.5px;
+}
+
+a { color: var(--teal-500); text-decoration: underline; text-decoration-color: var(--mint-200); text-decoration-thickness: 1.5px; }
+a:hover { color: var(--teal-900); }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2.5px solid var(--teal-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--border);
+}
+.site-header__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand-mark {
+  width: 38px; height: 38px; border-radius: 9px;
+  background: var(--teal-700);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.brand-name { font-family: var(--font-display); font-weight: 600; color: var(--teal-900); font-size: 16px; line-height: 1.2; }
+.brand-tag { font-size: 12.5px; color: var(--muted); line-height: 1.2; }
+
+.hero {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 24px 28px;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  color: var(--teal-700);
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+.hero__sub { color: var(--muted); font-size: 15.5px; margin: 0 0 16px; }
+.hero__dates {
+  display: inline-flex; gap: 18px; flex-wrap: wrap;
+  font-size: 13.5px; color: var(--teal-900);
+  background: var(--mint-100);
+  border: 1px solid var(--mint-200);
+  padding: 8px 14px; border-radius: 8px;
+}
+.hero__dates b { font-weight: 600; }
+
+.layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 8px 24px 80px;
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.toc {
+  position: sticky;
+  top: 84px;
+  align-self: start;
+  width: 220px;
+  flex: 0 0 220px;
+}
+.toc__label {
+  font-family: var(--font-display);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+.toc a {
+  display: flex; gap: 8px;
+  font-size: 13.5px; text-decoration: none; color: var(--ink);
+  padding: 3px 0;
+}
+.toc a span.n { color: var(--teal-500); font-weight: 600; min-width: 18px; }
+.toc a:hover { color: var(--teal-700); }
+.toc a:hover span.n { color: var(--teal-700); }
+
+.mobile-toc { display: none; }
+
+main.policy { flex: 1 1 auto; min-width: 0; }
+
+.policy-section {
+  display: flex;
+  gap: 20px;
+  padding-top: 30px;
+  scroll-margin-top: 84px;
+}
+.policy-section + .policy-section { border-top: 1px solid var(--border); }
+.section-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--mint-200);
+  line-height: 1;
+  flex: 0 0 64px;
+}
+.section-body { flex: 1 1 auto; min-width: 0; }
+.policy-section h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 19.5px;
+  color: var(--teal-700);
+  margin: 4px 0 10px;
+}
+.policy-section p { margin: 0 0 14px; }
+.policy-section p.indent { margin-left: 22px; }
+.policy-section p:last-child { margin-bottom: 0; }
+strong { font-weight: 600; color: var(--teal-900); }
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--mint-100);
+}
+.site-footer__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+  color: var(--teal-900);
+}
+.site-footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.site-footer a { color: var(--teal-900); text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+.site-footer .current { font-weight: 600; text-decoration: none; cursor: default; color: var(--teal-700); }
+
+@media (max-width: 959px) {
+  .layout { flex-direction: column; }
+  .toc { display: none; }
+  .mobile-toc {
+    display: block;
+    margin-bottom: 8px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 4px 14px;
+  }
+  .mobile-toc summary {
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--teal-700);
+    padding: 10px 0;
+  }
+  .mobile-toc ol { list-style: none; margin: 0 0 10px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .mobile-toc a { font-size: 14px; text-decoration: none; color: var(--ink); }
+  .policy-section { flex-direction: column; gap: 4px; }
+  .section-num { font-size: 26px; flex-basis: auto; }
+}
+
+@media print {
+  .site-header, .toc, .mobile-toc, .site-footer nav { display: none; }
+  .layout { flex-direction: column; }
+  .section-num { color: #cfd6d7; }
+  a { color: var(--ink); text-decoration: underline; }
+}
+
+/* Fallback spacing for engines without flexbox `gap` support (modern browsers
+   support gap and skip this block entirely, so spacing is never doubled). */
+@supports not (gap: 1px) {
+  .hero__dates > * + * { margin-left: 18px; }
+  .policy-section > * + * { margin-left: 20px; }
+  .site-footer__inner > * + * { margin-left: 28px; }
+  .site-footer nav > * + * { margin-left: 20px; }
+  @media (max-width: 959px) {
+    .policy-section > * + * { margin-left: 0; margin-top: 4px; }
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="https://www.drsatyanarayanagarre.in/">
+        <span class="brand-mark">SG</span>
+        <span>
+          <span class="brand-name">Dr. Satyanarayana Garre</span><br>
+          <span class="brand-tag">Renal Sciences Expert</span>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Cancellation and Refund Policy</h1>
+    <p class="hero__sub">Online Consultation &amp; Appointment Booking Services of Dr. Satyanarayana Garre</p>
+    <div class="hero__dates"><span><b>Effective:</b> 1 June 2026</span><span><b>Last updated:</b> 1 June 2026</span></div>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc__label">On this page</p>
+      <ol>
+<li><a href="#section-1"><span class="n">1</span>Introduction</a></li>
+<li><a href="#section-2"><span class="n">2</span>Definitions</a></li>
+<li><a href="#section-3"><span class="n">3</span>Cancellation Policy</a></li>
+<li><a href="#section-4"><span class="n">4</span>Postponement / Rescheduling</a></li>
+<li><a href="#section-5"><span class="n">5</span>Refunds — General Position</a></li>
+<li><a href="#section-6"><span class="n">6</span>Doctor-Initiated Cancellation or Non-Availability</a></li>
+<li><a href="#section-7"><span class="n">7</span>Technical or Platform Failures</a></li>
+<li><a href="#section-8"><span class="n">8</span>Duplicate Payments or Payment Errors</a></li>
+<li><a href="#section-9"><span class="n">9</span>Mode and Timeline of Refunds</a></li>
+<li><a href="#section-10"><span class="n">10</span>Force Majeure</a></li>
+<li><a href="#section-11"><span class="n">11</span>Grievance Redressal</a></li>
+<li><a href="#section-12"><span class="n">12</span>Changes to this Policy</a></li>
+<li><a href="#section-13"><span class="n">13</span>Governing Law and Jurisdiction</a></li>
+<li><a href="#section-14"><span class="n">14</span>Acceptance</a></li>
+      </ol>
+    </nav>
+
+    <main class="policy">
+      <details class="mobile-toc">
+        <summary>Jump to a section</summary>
+        <ol>
+<li><a href="#section-1"><span class="n">1</span>Introduction</a></li>
+<li><a href="#section-2"><span class="n">2</span>Definitions</a></li>
+<li><a href="#section-3"><span class="n">3</span>Cancellation Policy</a></li>
+<li><a href="#section-4"><span class="n">4</span>Postponement / Rescheduling</a></li>
+<li><a href="#section-5"><span class="n">5</span>Refunds — General Position</a></li>
+<li><a href="#section-6"><span class="n">6</span>Doctor-Initiated Cancellation or Non-Availability</a></li>
+<li><a href="#section-7"><span class="n">7</span>Technical or Platform Failures</a></li>
+<li><a href="#section-8"><span class="n">8</span>Duplicate Payments or Payment Errors</a></li>
+<li><a href="#section-9"><span class="n">9</span>Mode and Timeline of Refunds</a></li>
+<li><a href="#section-10"><span class="n">10</span>Force Majeure</a></li>
+<li><a href="#section-11"><span class="n">11</span>Grievance Redressal</a></li>
+<li><a href="#section-12"><span class="n">12</span>Changes to this Policy</a></li>
+<li><a href="#section-13"><span class="n">13</span>Governing Law and Jurisdiction</a></li>
+<li><a href="#section-14"><span class="n">14</span>Acceptance</a></li>
+        </ol>
+      </details>
+
+      <section id="section-1" class="policy-section">
+        <span class="section-num" aria-hidden="true">1</span>
+        <div class="section-body">
+          <h2>Introduction</h2>
+          <p>1.1 This Cancellation and Refund Policy (“Policy”) governs all appointments booked through <strong>drsatyanarayanagarre.in</strong> (“<strong>Platform</strong>”), operated by Dr. Satyanarayana Garre, for consultations with Dr. Satyanarayana Garre, Consultant Nephrologist (“<strong>Doctor</strong>”). By booking an Appointment and completing payment, the patient or the person booking on a patient’s behalf (“<strong>Patient</strong>”) agrees to be bound by this Policy, in addition to the Platform’s Terms of Service and Privacy Policy.</p>
+        </div>
+      </section>
+      <section id="section-2" class="policy-section">
+        <span class="section-num" aria-hidden="true">2</span>
+        <div class="section-body">
+          <h2>Definitions</h2>
+          <p>2.1 “<strong>Booking</strong>” or “<strong>Appointment</strong>” means a consultation slot with the Doctor reserved through the Platform upon successful payment of the Consultation Fee and receipt of a Confirmation.</p>
+        <p>2.2 “<strong>Consultation Fee</strong>” means the amount charged to the Patient at the time of Booking.</p>
+        <p>2.3 “<strong>Postponement</strong>” or “<strong>Rescheduling</strong>” means moving an already-confirmed Appointment to a different date and/or time, without the original Booking being treated as cancelled.</p>
+        <p>2.4 “<strong>Confirmation</strong>” means the SMS, email, WhatsApp, or in-app notification sent once payment is successfully processed.</p>
+        </div>
+      </section>
+      <section id="section-3" class="policy-section">
+        <span class="section-num" aria-hidden="true">3</span>
+        <div class="section-body">
+          <h2>Cancellation Policy</h2>
+          <p>3.1 Once a Booking is confirmed and payment has been received, <strong>the Booking cannot be cancelled by the Patient</strong>.</p>
+        <p>3.2 No refund of the Consultation Fee will be made on account of a Patient-initiated cancellation, for any reason whatsoever — including change of mind, personal unavailability, or scheduling conflict — except where Clause <a href="#section-6">6</a> (Doctor-Initiated Cancellation) applies.</p>
+        <p>3.3 The only relief available to a Patient who is unable to attend a confirmed Appointment is the Postponement process described in Clause <a href="#section-4">4</a>.</p>
+        </div>
+      </section>
+      <section id="section-4" class="policy-section">
+        <span class="section-num" aria-hidden="true">4</span>
+        <div class="section-body">
+          <h2>Postponement / Rescheduling</h2>
+          <p>4.1 A Patient may request to postpone a confirmed Appointment, subject to <strong>all</strong> of the following conditions:</p>
+        <p class="indent">(a) The request is raised <strong>at least twenty-four (24) hours before</strong> the scheduled Appointment date and time. Requests made within 24 hours of the Appointment will not be accepted, and the original Appointment will stand as booked.</p>
+        <p class="indent">(b) An alternate slot is <strong>available</strong> on the Doctor’s schedule.</p>
+        <p class="indent">(c) The request is <strong>reviewed and approved</strong> by the Doctor (or by the Platform on the Doctor’s behalf). Submitting a request does not by itself guarantee that it will be granted.</p>
+        <p>4.2 <strong>How to request a postponement:</strong> via the patient dashboard, or by email at <a href="mailto:satyakishoregarre@gmail.com">satyakishoregarre@gmail.com</a>, quoting the booking reference, at least 24 hours before the Appointment.</p>
+        <p>4.3 Where a Postponement is approved, the Consultation Fee already paid is carried forward to the new slot at no extra charge.</p>
+        <p>4.4 If no mutually convenient alternate slot is available, or the Doctor is unable to approve the request, the original Appointment date and time remain valid and binding, and Clause <a href="#section-3">3</a> (no cancellation, no refund) continues to apply.</p>
+        </div>
+      </section>
+      <section id="section-5" class="policy-section">
+        <span class="section-num" aria-hidden="true">5</span>
+        <div class="section-body">
+          <h2>Refunds — General Position</h2>
+          <p>5.1 Except as set out in Clauses <a href="#section-6">6</a>, <a href="#section-7">7</a>, and <a href="#section-8">8</a>, the Consultation Fee is <strong>non-refundable</strong> once a Booking is confirmed.</p>
+        <p>5.2 A Patient who does not join the consultation at the scheduled time, and who has not used the Postponement process under Clause <a href="#section-4">4</a>, is treated as a no-show, and the Consultation Fee is not refunded.</p>
+        </div>
+      </section>
+      <section id="section-6" class="policy-section">
+        <span class="section-num" aria-hidden="true">6</span>
+        <div class="section-body">
+          <h2>Doctor-Initiated Cancellation or Non-Availability</h2>
+          <p>6.1 If the Doctor is unable to honour a confirmed Appointment for reasons attributable to the Doctor (such as a medical emergency or unforeseen unavailability), the Patient will be offered, at their choice:</p>
+        <p class="indent">(a) a free rescheduled Appointment at the next available slot; or</p>
+        <p class="indent">(b) a full refund of the Consultation Fee for that Appointment.</p>
+        <p>6.2 Refunds under this Clause are processed to the original payment method within <strong>4–6 business days</strong>, subject to the Patient’s bank/payment provider’s own timelines, and net of any payment-gateway charges that are not recoverable by the Platform.</p>
+        </div>
+      </section>
+      <section id="section-7" class="policy-section">
+        <span class="section-num" aria-hidden="true">7</span>
+        <div class="section-body">
+          <h2>Technical or Platform Failures</h2>
+          <p>7.1 If an online consultation cannot take place due to a verified technical failure on the Platform’s side (for instance, a Google Meet video/audio failure not caused by the Patient’s own device or connection), the Patient is entitled to a free rescheduled session or a full refund, at the Platform’s discretion, once the issue is verified.</p>
+        </div>
+      </section>
+      <section id="section-8" class="policy-section">
+        <span class="section-num" aria-hidden="true">8</span>
+        <div class="section-body">
+          <h2>Duplicate Payments or Payment Errors</h2>
+          <p>8.1 Any amount charged in error — such as a duplicate payment caused by a technical glitch — is refunded to the original payment method within <strong>4–6 working days</strong> of verification, on the Patient providing the relevant transaction reference.</p>
+        </div>
+      </section>
+      <section id="section-9" class="policy-section">
+        <span class="section-num" aria-hidden="true">9</span>
+        <div class="section-body">
+          <h2>Mode and Timeline of Refunds</h2>
+          <p>9.1 Wherever a refund is due under this Policy, it is credited only to the original mode of payment used at the time of Booking, via Razorpay.</p>
+        <p>9.2 Refunds are ordinarily processed within <strong>4–6 business days</strong> of approval; the actual credit to the Patient’s account may take longer depending on the Patient’s bank or payment provider.</p>
+        </div>
+      </section>
+      <section id="section-10" class="policy-section">
+        <span class="section-num" aria-hidden="true">10</span>
+        <div class="section-body">
+          <h2>Force Majeure</h2>
+          <p>10.1 Neither the Platform nor the Doctor is liable for a missed consultation caused by circumstances beyond reasonable control — including natural disasters, government restrictions, internet/network outages, strikes, or public health emergencies. In such cases, the Patient is offered a rescheduled Appointment or a refund, at the Platform’s discretion.</p>
+        </div>
+      </section>
+      <section id="section-11" class="policy-section">
+        <span class="section-num" aria-hidden="true">11</span>
+        <div class="section-body">
+          <h2>Grievance Redressal</h2>
+          <p>11.1 For questions or complaints regarding a Booking, Postponement, or refund, Patients may contact Dr. Satyanarayana Garre, Consultant Nephrologist, at <a href="mailto:satyakishoregarre@gmail.com">satyakishoregarre@gmail.com</a> or <a href="tel:+919391086902">+91 93910 86902</a>. Queries are ordinarily addressed within 24 hours.</p>
+        </div>
+      </section>
+      <section id="section-12" class="policy-section">
+        <span class="section-num" aria-hidden="true">12</span>
+        <div class="section-body">
+          <h2>Changes to this Policy</h2>
+          <p>12.1 drsatyanarayanagarre.in may revise this Policy at any time. The updated Policy takes effect once published on the Platform; continuing to book Appointments after that date constitutes acceptance of the revised terms.</p>
+        </div>
+      </section>
+      <section id="section-13" class="policy-section">
+        <span class="section-num" aria-hidden="true">13</span>
+        <div class="section-body">
+          <h2>Governing Law and Jurisdiction</h2>
+          <p>13.1 This Policy is governed by the laws of India. Courts at Hyderabad, Telangana, have exclusive jurisdiction over any dispute arising from it.</p>
+        </div>
+      </section>
+      <section id="section-14" class="policy-section">
+        <span class="section-num" aria-hidden="true">14</span>
+        <div class="section-body">
+          <h2>Acceptance</h2>
+          <p>14.1 By completing a Booking and paying the Consultation Fee, the Patient confirms having read, understood, and agreed to this Cancellation and Refund Policy in its entirety.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>&copy; 2026 Dr. Satyanarayana Garre &middot; Hyderabad, Telangana</span>
+      <nav>
+          <a href="https://www.drsatyanarayanagarre.in/privacy-policy">Privacy Policy</a>
+          <a href="https://www.drsatyanarayanagarre.in/terms-of-service">Terms of Service</a>
+          <span class="current">Cancellation & Refund Policy</span>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
