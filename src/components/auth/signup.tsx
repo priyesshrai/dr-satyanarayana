@@ -11,6 +11,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from "@/hooks/useAuth";
 import { UserInput } from "@/types/user";
 import Spinner from "../ui/spinner";
+import Link from "next/link";
 
 
 type Props = {
@@ -436,7 +437,7 @@ export default function Signup({ openLoginModal, closeLoginModal }: Props) {
                                     </AnimatePresence>
                                 </div>
 
-                                {!changeForm && <div className="py-5 flex items-center justify-center gap-1">
+                                {!changeForm && <div className="pt-5 flex items-center justify-center gap-1">
                                     <span className="text-sm font-medium text-gray-600">
                                         {isLoginMode ? "New User?" : "Already have an account?"}
                                     </span>
@@ -445,6 +446,16 @@ export default function Signup({ openLoginModal, closeLoginModal }: Props) {
                                         {isLoginMode ? "Create Account" : "Login"}
                                     </button>
                                 </div>}
+
+                                <div className="py-2 flex items-center justify-center gap-1">
+                                    <Link
+                                        href={"/file/Patient_Registration_Appointment_Booking_Guide.pdf"}
+                                        target="_blank"
+                                        className="font-medium text-blue-500 cursor-pointer text-sm"
+                                    >
+                                        Account Setup Guide
+                                    </Link>
+                                </div>
                             </motion.div>
 
                         </div>
