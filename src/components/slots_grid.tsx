@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import items from "razorpay/dist/types/items";
 
 type Slot = {
     id: string;
@@ -71,8 +72,9 @@ export default function PremiumSlots({
                             {group.map((slot) => {
                                 const isActive = selected?.id === slot.id;
                                 const isPast = new Date(slot.startTime) < now;
-                                const isBooked = slot.status !== "AVAILABLE";
-                                const disabled = isPast || isBooked;
+                                const isBooked = slot.status === "BOOKED";
+                                const isBlocked = slot.status === "BLOCKED" || slot.status === "CANCELLED"
+                                const disabled = isPast || isBlocked;
 
                                 return (
                                     <motion.button
@@ -82,19 +84,43 @@ export default function PremiumSlots({
                                         whileHover={!disabled ? { scale: 1.04 } : {}}
                                         onClick={() => setSelected(slot)}
                                         className={cn(
-                                            "relative py-3 rounded-xl border text-sm font-medium transition-all flex flex-col items-center justify-center bg-white text-slate-700 border-slate-200",
+                                            "relative py-3 rounded-xl border text-sm font-medium transition-all flex flex-col items-center justify-center bg-green-100 text-green-500 border-green-200 cursor-pointer",
                                             disabled && "bg-slate-100 text-slate-400 border-slate-200 cursor-not-allowed",
                                             isBooked && "bg-rose-50 text-rose-500 border-rose-200 cursor-not-allowed",
-                                            isActive && "bg-primary-color text-white border-slate-300 ring-2 ring-primary-color shadow-sm"
+                                            isActive && "bg-green-600 text-green-100 border-green-300 ring-2 ring-green-500 shadow-sm",
+                                            isBlocked && "bg-gray-600 text-gray-100 cursor-not-allowed"
                                         )}
                                     >
                                         {isBooked ? (
                                             <div className="flex flex-col items-center">
-                                                <span className="text-xs font-semibold">Booked</span>
-                                                <span className="text-[11px] opacity-70">{formatTime(slot.startTime, slot.endTime)}</span>
+                                                <span className="text-xs font-semibold">
+                                                    Booked
+                                                </span>
+                                                <span className="text-[11px] opacity-70">
+                                                    {formatTime(slot.startTime, slot.endTime)}
+                                                </span>
                                             </div>
                                         ) : (
-                                            formatTime(slot.startTime, slot.endTime)
+                                            isPast ? (
+                                                <div className="flex flex-col items-center">
+                                                    <span className="text-xs font-semibold">
+                                                        {isBlocked ? slot.status : "Expired"}
+                                                    </span>
+                                                    <span className="text-[11px] opacity-70">
+                                                        {formatTime(slot.startTime, slot.endTime)}
+                                                    </span>
+                                                </div>
+                                            )
+                                                : (
+                                                    <div className="flex flex-col items-center">
+                                                        <span className="text-xs font-semibold">
+                                                            {slot.status}
+                                                        </span>
+                                                        <span className="text-[11px] opacity-70">
+                                                            {formatTime(slot.startTime, slot.endTime)}
+                                                        </span>
+                                                    </div>
+                                                )
                                         )}
                                     </motion.button>
                                 );
