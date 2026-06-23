@@ -1,0 +1,953 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy – Dr. Satyanarayana Garre</title>
+    <meta
+      name="description"
+      content="How drsatyanarayanagarre.in collects, uses, and protects your personal and health data for online consultations and appointment bookings with Dr. Satyanarayana Garre."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --teal-900: #00323e;
+        --teal-700: #004151;
+        --teal-500: #0f6b7d;
+        --mint-100: #e3fbf8;
+        --mint-200: #c9f5ef;
+        --ink: #1c2226;
+        --muted: #5b6770;
+        --border: #e3e6e7;
+        --paper: #ffffff;
+        --font-display: "Poppins", "Segoe UI", Arial, sans-serif;
+        --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-padding-top: 90px;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        html {
+          scroll-behavior: smooth;
+        }
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-body);
+        color: var(--ink);
+        background: var(--paper);
+        line-height: 1.65;
+        font-size: 16.5px;
+      }
+
+      a {
+        color: var(--teal-500);
+        text-decoration: underline;
+        text-decoration-color: var(--mint-200);
+        text-decoration-thickness: 1.5px;
+      }
+      a:hover {
+        color: var(--teal-900);
+      }
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible {
+        outline: 2.5px solid var(--teal-500);
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: var(--paper);
+        border-bottom: 1px solid var(--border);
+      }
+      .site-header__inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 9px;
+        background: var(--teal-700);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 15px;
+        flex-shrink: 0;
+      }
+      .brand-name {
+        font-family: var(--font-display);
+        font-weight: 600;
+        color: var(--teal-900);
+        font-size: 16px;
+        line-height: 1.2;
+      }
+      .brand-tag {
+        font-size: 12.5px;
+        color: var(--muted);
+        line-height: 1.2;
+      }
+
+      .hero {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 48px 24px 28px;
+      }
+      .hero h1 {
+        font-family: var(--font-display);
+        color: var(--teal-700);
+        font-weight: 700;
+        font-size: clamp(28px, 4vw, 40px);
+        margin: 0 0 10px;
+        letter-spacing: -0.01em;
+      }
+      .hero__sub {
+        color: var(--muted);
+        font-size: 15.5px;
+        margin: 0 0 16px;
+      }
+      .hero__dates {
+        display: inline-flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        font-size: 13.5px;
+        color: var(--teal-900);
+        background: var(--mint-100);
+        border: 1px solid var(--mint-200);
+        padding: 8px 14px;
+        border-radius: 8px;
+      }
+      .hero__dates b {
+        font-weight: 600;
+      }
+
+      .layout {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 8px 24px 80px;
+        display: flex;
+        gap: 48px;
+        align-items: flex-start;
+      }
+
+      .toc {
+        position: sticky;
+        top: 84px;
+        align-self: start;
+        width: 220px;
+        flex: 0 0 220px;
+      }
+      .toc__label {
+        font-family: var(--font-display);
+        font-size: 11.5px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 0 0 10px;
+      }
+      .toc ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      .toc a {
+        display: flex;
+        gap: 8px;
+        font-size: 13.5px;
+        text-decoration: none;
+        color: var(--ink);
+        padding: 3px 0;
+      }
+      .toc a span.n {
+        color: var(--teal-500);
+        font-weight: 600;
+        min-width: 18px;
+      }
+      .toc a:hover {
+        color: var(--teal-700);
+      }
+      .toc a:hover span.n {
+        color: var(--teal-700);
+      }
+
+      .mobile-toc {
+        display: none;
+      }
+
+      main.policy {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .policy-section {
+        display: flex;
+        gap: 20px;
+        padding-top: 30px;
+        scroll-margin-top: 84px;
+      }
+      .policy-section + .policy-section {
+        border-top: 1px solid var(--border);
+      }
+      .section-num {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 40px;
+        color: var(--mint-200);
+        line-height: 1;
+        flex: 0 0 64px;
+      }
+      .section-body {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .policy-section h2 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 19.5px;
+        color: var(--teal-700);
+        margin: 4px 0 10px;
+      }
+      .policy-section p {
+        margin: 0 0 14px;
+      }
+      .policy-section p.indent {
+        margin-left: 22px;
+      }
+      .policy-section p:last-child {
+        margin-bottom: 0;
+      }
+      strong {
+        font-weight: 600;
+        color: var(--teal-900);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--border);
+        background: var(--mint-100);
+      }
+      .site-footer__inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 28px 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px 28px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13.5px;
+        color: var(--teal-900);
+      }
+      .site-footer nav {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .site-footer a {
+        color: var(--teal-900);
+        text-decoration: none;
+      }
+      .site-footer a:hover {
+        text-decoration: underline;
+      }
+      .site-footer .current {
+        font-weight: 600;
+        text-decoration: none;
+        cursor: default;
+        color: var(--teal-700);
+      }
+
+      @media (max-width: 959px) {
+        .layout {
+          flex-direction: column;
+        }
+        .toc {
+          display: none;
+        }
+        .mobile-toc {
+          display: block;
+          margin-bottom: 8px;
+          border: 1px solid var(--border);
+          border-radius: 10px;
+          padding: 4px 14px;
+        }
+        .mobile-toc summary {
+          cursor: pointer;
+          font-family: var(--font-display);
+          font-weight: 600;
+          font-size: 13.5px;
+          color: var(--teal-700);
+          padding: 10px 0;
+        }
+        .mobile-toc ol {
+          list-style: none;
+          margin: 0 0 10px;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        .mobile-toc a {
+          font-size: 14px;
+          text-decoration: none;
+          color: var(--ink);
+        }
+        .policy-section {
+          flex-direction: column;
+          gap: 4px;
+        }
+        .section-num {
+          font-size: 26px;
+          flex-basis: auto;
+        }
+      }
+
+      @media print {
+        .site-header,
+        .toc,
+        .mobile-toc,
+        .site-footer nav {
+          display: none;
+        }
+        .layout {
+          flex-direction: column;
+        }
+        .section-num {
+          color: #cfd6d7;
+        }
+        a {
+          color: var(--ink);
+          text-decoration: underline;
+        }
+      }
+
+      /* Fallback spacing for engines without flexbox `gap` support (modern browsers
+   support gap and skip this block entirely, so spacing is never doubled). */
+      @supports not (gap: 1px) {
+        .hero__dates > * + * {
+          margin-left: 18px;
+        }
+        .policy-section > * + * {
+          margin-left: 20px;
+        }
+        .site-footer__inner > * + * {
+          margin-left: 28px;
+        }
+        .site-footer nav > * + * {
+          margin-left: 20px;
+        }
+        @media (max-width: 959px) {
+          .policy-section > * + * {
+            margin-left: 0;
+            margin-top: 4px;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="https://www.drsatyanarayanagarre.in/">
+          <img src="/images/logo/logo.svg" alt="Dr. Satyanarayana Garre" style="width: 300px;">
+        </a>
+      </div>
+    </header>
+
+    <div class="hero">
+      <h1>Privacy Policy</h1>
+      <p class="hero__sub">
+        Online Consultation &amp; Appointment Booking Services of Dr.
+        Satyanarayana Garre
+      </p>
+      <div class="hero__dates">
+        <span><b>Effective:</b> 1 June 2026</span
+        ><span><b>Last updated:</b> 1 June 2026</span>
+      </div>
+    </div>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc__label">On this page</p>
+        <ol>
+          <li>
+            <a href="#section-1"><span class="n">1</span>Introduction</a>
+          </li>
+          <li>
+            <a href="#section-2"><span class="n">2</span>Definitions</a>
+          </li>
+          <li>
+            <a href="#section-3"
+              ><span class="n">3</span>Information We Collect</a
+            >
+          </li>
+          <li>
+            <a href="#section-4"
+              ><span class="n">4</span>How We Use Your Information</a
+            >
+          </li>
+          <li>
+            <a href="#section-5"
+              ><span class="n">5</span>Legal Basis for Processing</a
+            >
+          </li>
+          <li>
+            <a href="#section-6"
+              ><span class="n">6</span>Sharing and Disclosure of Information</a
+            >
+          </li>
+          <li>
+            <a href="#section-7"
+              ><span class="n">7</span>Data Storage, Security, and Retention</a
+            >
+          </li>
+          <li>
+            <a href="#section-8"><span class="n">8</span>Your Rights</a>
+          </li>
+          <li>
+            <a href="#section-9"
+              ><span class="n">9</span>Cookies and Tracking Technologies</a
+            >
+          </li>
+          <li>
+            <a href="#section-10"><span class="n">10</span>Children’s Data</a>
+          </li>
+          <li>
+            <a href="#section-11"
+              ><span class="n">11</span>Grievance Officer / Contact Us</a
+            >
+          </li>
+          <li>
+            <a href="#section-12"
+              ><span class="n">12</span>Changes to this Policy</a
+            >
+          </li>
+          <li>
+            <a href="#section-13"
+              ><span class="n">13</span>Governing Law and Jurisdiction</a
+            >
+          </li>
+          <li>
+            <a href="#section-14"><span class="n">14</span>Acceptance</a>
+          </li>
+        </ol>
+      </nav>
+
+      <main class="policy">
+        <details class="mobile-toc">
+          <summary>Jump to a section</summary>
+          <ol>
+            <li>
+              <a href="#section-1"><span class="n">1</span>Introduction</a>
+            </li>
+            <li>
+              <a href="#section-2"><span class="n">2</span>Definitions</a>
+            </li>
+            <li>
+              <a href="#section-3"
+                ><span class="n">3</span>Information We Collect</a
+              >
+            </li>
+            <li>
+              <a href="#section-4"
+                ><span class="n">4</span>How We Use Your Information</a
+              >
+            </li>
+            <li>
+              <a href="#section-5"
+                ><span class="n">5</span>Legal Basis for Processing</a
+              >
+            </li>
+            <li>
+              <a href="#section-6"
+                ><span class="n">6</span>Sharing and Disclosure of
+                Information</a
+              >
+            </li>
+            <li>
+              <a href="#section-7"
+                ><span class="n">7</span>Data Storage, Security, and
+                Retention</a
+              >
+            </li>
+            <li>
+              <a href="#section-8"><span class="n">8</span>Your Rights</a>
+            </li>
+            <li>
+              <a href="#section-9"
+                ><span class="n">9</span>Cookies and Tracking Technologies</a
+              >
+            </li>
+            <li>
+              <a href="#section-10"><span class="n">10</span>Children’s Data</a>
+            </li>
+            <li>
+              <a href="#section-11"
+                ><span class="n">11</span>Grievance Officer / Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="#section-12"
+                ><span class="n">12</span>Changes to this Policy</a
+              >
+            </li>
+            <li>
+              <a href="#section-13"
+                ><span class="n">13</span>Governing Law and Jurisdiction</a
+              >
+            </li>
+            <li>
+              <a href="#section-14"><span class="n">14</span>Acceptance</a>
+            </li>
+          </ol>
+        </details>
+
+        <section id="section-1" class="policy-section">
+          <span class="section-num" aria-hidden="true">1</span>
+          <div class="section-body">
+            <h2>Introduction</h2>
+            <p>
+              1.1 This Privacy Policy (“Policy”) explains how
+              <strong>drsatyanarayanagarre.in</strong> (“Platform”, “we”, “us”,
+              “our”), operated by Dr. Satyanarayana Garre, collects, uses,
+              stores, shares, and protects the personal data of patients and
+              visitors (“you”, “Patient”) in connection with online
+              consultations and appointment bookings with Dr. Satyanarayana
+              Garre, Consultant Nephrologist (“Doctor”), and other use of the
+              Platform.
+            </p>
+            <p>
+              1.2 This Policy should be read together with our
+              <strong>Terms of Service</strong> and our
+              <strong>Cancellation and Refund Policy</strong>. By registering
+              on, or using, the Platform, you consent to the collection and
+              processing of your personal data as described in this Policy.
+            </p>
+            <p>
+              1.3 This Policy applies to personal data collected through the
+              Platform’s website and any associated mobile or web application,
+              including during registration, OTP verification, appointment
+              booking, document upload, and payment.
+            </p>
+          </div>
+        </section>
+        <section id="section-2" class="policy-section">
+          <span class="section-num" aria-hidden="true">2</span>
+          <div class="section-body">
+            <h2>Definitions</h2>
+            <p>
+              2.1 “<strong>Personal Data</strong>” means any data about an
+              individual who is identifiable by or in relation to such data, as
+              defined under the Digital Personal Data Protection Act, 2023.
+            </p>
+            <p>
+              2.2 “<strong>Health Data</strong>” means information relating to
+              your physical or mental health, medical history, symptoms,
+              prescriptions, lab reports, scans, and other clinical records
+              shared with the Doctor.
+            </p>
+            <p>
+              2.3 “<strong>Processing</strong>” means any operation performed on
+              Personal Data, including its collection, storage, use, sharing,
+              and erasure.
+            </p>
+            <p>
+              2.4 “<strong>Data Fiduciary</strong>” means the entity that
+              determines the purpose and means of processing Personal Data — in
+              this case, drsatyanarayanagarre.in, operated by Dr. Satyanarayana
+              Garre.
+            </p>
+            <p>
+              2.5 “<strong>Data Principal</strong>” means the individual to whom
+              the Personal Data relates — that is, you, the Patient or website
+              visitor.
+            </p>
+            <p>
+              2.6 “<strong>Booking</strong>”, “<strong>Appointment</strong>”,
+              “<strong>Consultation Fee</strong>”, and
+              “<strong>Confirmation</strong>” have the meanings given to them in
+              our Terms of Service.
+            </p>
+          </div>
+        </section>
+        <section id="section-3" class="policy-section">
+          <span class="section-num" aria-hidden="true">3</span>
+          <div class="section-body">
+            <h2>Information We Collect</h2>
+            <p>3.1 Information you provide directly:</p>
+            <p class="indent">
+              (a) Registration details: your name, email address, and mobile
+              number, provided when creating an account.
+            </p>
+            <p class="indent">
+              (b) OTP and verification data generated to confirm your email
+              address or mobile number.
+            </p>
+            <p class="indent">
+              (c) Appointment details: your preferred date and time slot, reason
+              for visit, and current symptoms.
+            </p>
+            <p class="indent">
+              (d) Health Data you choose to upload: prescriptions, lab reports,
+              scans, or other documents, and any additional notes for the
+              Doctor.
+            </p>
+            <p class="indent">
+              (e) Communications: any message you send us through the Platform,
+              WhatsApp, email, or phone, including for rescheduling or grievance
+              redressal.
+            </p>
+            <p>3.2 Information collected automatically:</p>
+            <p class="indent">
+              (a) Technical data such as IP address, browser type and version,
+              device identifiers, and operating system.
+            </p>
+            <p class="indent">
+              (b) Usage data such as pages visited, time spent, and actions
+              taken on the Platform.
+            </p>
+            <p class="indent">
+              (c) Cookies and similar tracking technologies, as described in
+              Clause <a href="#section-9">9</a>.
+            </p>
+            <p>3.3 Information from third parties:</p>
+            <p class="indent">
+              (a) Payment confirmation and transaction status from our payment
+              gateway, Razorpay, once a payment is completed. We do not collect
+              or store your full card, UPI, or bank account details — these are
+              handled directly by the payment gateway under its own security
+              standards.
+            </p>
+            <p class="indent">
+              (b) Confirmation of meeting or video-consultation access from our
+              video consultation provider, Google Meet.
+            </p>
+          </div>
+        </section>
+        <section id="section-4" class="policy-section">
+          <span class="section-num" aria-hidden="true">4</span>
+          <div class="section-body">
+            <h2>How We Use Your Information</h2>
+            <p>4.1 We process your Personal Data and Health Data to:</p>
+            <p class="indent">
+              (a) create and verify your account, including sending OTPs;
+            </p>
+            <p class="indent">
+              (b) schedule, confirm, reschedule, and otherwise manage your
+              Appointment;
+            </p>
+            <p class="indent">
+              (c) enable the Doctor to review your symptoms, reason for visit,
+              notes, and uploaded documents ahead of and during the
+              consultation;
+            </p>
+            <p class="indent">
+              (d) process payment of the Consultation Fee through our payment
+              gateway;
+            </p>
+            <p class="indent">
+              (e) send Confirmations, reminders, and the meeting link for your
+              Appointment by SMS, email, WhatsApp, or in-app notification;
+            </p>
+            <p class="indent">
+              (f) respond to queries, complaints, and rescheduling requests;
+            </p>
+            <p class="indent">
+              (g) maintain medical and transaction records as required by
+              applicable law and medical record-keeping norms;
+            </p>
+            <p class="indent">
+              (h) improve the Platform, prevent fraud and misuse, and comply
+              with legal and regulatory obligations; and
+            </p>
+            <p class="indent">
+              (i) where you have given separate consent, send you health
+              information, appointment reminders, or promotional communications.
+            </p>
+            <p>
+              4.2 We do not use Health Data for advertising or marketing
+              purposes, and we do not sell Personal Data or Health Data to any
+              third party.
+            </p>
+          </div>
+        </section>
+        <section id="section-5" class="policy-section">
+          <span class="section-num" aria-hidden="true">5</span>
+          <div class="section-body">
+            <h2>Legal Basis for Processing</h2>
+            <p>
+              5.1 We process your Personal Data on the basis of your consent,
+              given at the time of registration and Booking, and, where
+              applicable, for the performance of the services you have
+              requested.
+            </p>
+            <p>
+              5.2 Certain processing — such as maintaining records for legal,
+              medical, or tax purposes — is carried out to comply with
+              applicable law, independent of consent.
+            </p>
+            <p>
+              5.3 You may withdraw consent for non-essential processing (such as
+              promotional communications) at any time. This will not affect the
+              lawfulness of processing carried out before withdrawal, and will
+              not affect our ability to retain records we are legally required
+              to keep.
+            </p>
+          </div>
+        </section>
+        <section id="section-6" class="policy-section">
+          <span class="section-num" aria-hidden="true">6</span>
+          <div class="section-body">
+            <h2>Sharing and Disclosure of Information</h2>
+            <p>
+              6.1 We share your Personal Data and Health Data only as reasonably
+              necessary, with:
+            </p>
+            <p class="indent">
+              (a) the Doctor, for the purpose of providing the consultation;
+            </p>
+            <p class="indent">
+              (b) Razorpay, to process payment of the Consultation Fee;
+            </p>
+            <p class="indent">
+              (c) Google Meet, to enable the online consultation and generate
+              the meeting link;
+            </p>
+            <p class="indent">
+              (d) SMS, email, and WhatsApp service providers, to deliver OTPs,
+              Confirmations, and reminders;
+            </p>
+            <p class="indent">
+              (e) cloud hosting and data storage providers, to securely store
+              Platform data;
+            </p>
+            <p class="indent">
+              (f) professional advisors, such as auditors or legal counsel,
+              where necessary; and
+            </p>
+            <p class="indent">
+              (g) courts, regulators, or law enforcement authorities, where
+              required by law or in response to a valid legal process.
+            </p>
+            <p>
+              6.2 We do not sell, rent, or trade your Personal Data or Health
+              Data to third parties for their own marketing purposes.
+            </p>
+            <p>
+              6.3 Any third party who processes Personal Data on our behalf is
+              required to apply appropriate security safeguards and to use the
+              data only for the purpose for which it was shared.
+            </p>
+          </div>
+        </section>
+        <section id="section-7" class="policy-section">
+          <span class="section-num" aria-hidden="true">7</span>
+          <div class="section-body">
+            <h2>Data Storage, Security, and Retention</h2>
+            <p>
+              7.1 We adopt reasonable security practices and procedures,
+              including access controls and encryption where appropriate, to
+              protect Personal Data and Health Data against unauthorised access,
+              alteration, disclosure, or destruction.
+            </p>
+            <p>
+              7.2 Personal Data and Health Data are retained only for as long as
+              necessary for the purposes set out in this Policy, or as required
+              by applicable law, including medical record-keeping requirements
+              applicable to the Doctor (a minimum of three (3) years from the
+              date of consultation). Data is securely deleted or anonymised once
+              it is no longer required.
+            </p>
+            <p>
+              7.3 In the event of a Personal Data breach that is likely to
+              affect you, we will notify you and the Data Protection Board of
+              India in accordance with applicable law.
+            </p>
+          </div>
+        </section>
+        <section id="section-8" class="policy-section">
+          <span class="section-num" aria-hidden="true">8</span>
+          <div class="section-body">
+            <h2>Your Rights</h2>
+            <p>8.1 Subject to applicable law, you have the right to:</p>
+            <p class="indent">
+              (a) access the Personal Data we hold about you;
+            </p>
+            <p class="indent">
+              (b) request correction or updating of inaccurate or incomplete
+              Personal Data;
+            </p>
+            <p class="indent">
+              (c) request erasure of Personal Data that is no longer necessary
+              for the purpose it was collected, subject to our legal
+              record-keeping obligations;
+            </p>
+            <p class="indent">
+              (d) withdraw consent for processing that is based on consent;
+            </p>
+            <p class="indent">
+              (e) nominate another individual to exercise your rights under this
+              Policy in the event of your death or incapacity; and
+            </p>
+            <p class="indent">
+              (f) lodge a complaint with the Data Protection Board of India,
+              without prejudice to your right to approach us first under Clause
+              <a href="#section-11">11</a>.
+            </p>
+            <p>
+              8.2 To exercise any of these rights, please contact us using the
+              details in Clause <a href="#section-11">11</a>. We will respond
+              within a reasonable time and, in any event, no later than ninety
+              (90) days, or such other period as may be prescribed by applicable
+              law.
+            </p>
+          </div>
+        </section>
+        <section id="section-9" class="policy-section">
+          <span class="section-num" aria-hidden="true">9</span>
+          <div class="section-body">
+            <h2>Cookies and Tracking Technologies</h2>
+            <p>
+              9.1 The Platform may use cookies and similar technologies to keep
+              you signed in, remember your preferences, and understand how the
+              Platform is used.
+            </p>
+            <p>
+              9.2 You can control or disable cookies through your browser
+              settings. Doing so may affect some features of the Platform, such
+              as staying signed in.
+            </p>
+          </div>
+        </section>
+        <section id="section-10" class="policy-section">
+          <span class="section-num" aria-hidden="true">10</span>
+          <div class="section-body">
+            <h2>Children’s Data</h2>
+            <p>
+              10.1 The Platform is intended for use by adults. Where an
+              Appointment is booked for a minor (a person under 18 years of
+              age), the Booking must be made by, and the relevant consents given
+              by, the minor’s parent or legal guardian, who is responsible for
+              the accuracy of the information provided.
+            </p>
+            <p>
+              10.2 We do not knowingly collect Personal Data directly from a
+              minor without the involvement of a parent or legal guardian. If we
+              become aware that we have done so, we will take reasonable steps
+              to delete such data, unless retention is necessary for the
+              provision of healthcare services or as required by law.
+            </p>
+          </div>
+        </section>
+        <section id="section-11" class="policy-section">
+          <span class="section-num" aria-hidden="true">11</span>
+          <div class="section-body">
+            <h2>Grievance Officer / Contact Us</h2>
+            <p>
+              11.1 For any questions, complaints, or requests relating to this
+              Policy or your Personal Data, please contact Dr. Satyanarayana
+              Garre, Consultant Nephrologist, at
+              <a href="mailto:satyakishoregarre@gmail.com"
+                >satyakishoregarre@gmail.com</a
+              >
+              or <a href="tel:+919391086902">+91 93910 86902</a>.
+            </p>
+            <p>
+              11.2 Queries are ordinarily acknowledged within 24 hours and
+              resolved within a reasonable time thereafter.
+            </p>
+          </div>
+        </section>
+        <section id="section-12" class="policy-section">
+          <span class="section-num" aria-hidden="true">12</span>
+          <div class="section-body">
+            <h2>Changes to this Policy</h2>
+            <p>
+              12.1 We may revise this Policy from time to time to reflect
+              changes in our practices or in applicable law, including the
+              phased implementation of the Digital Personal Data Protection Act,
+              2023 and rules notified under it. The updated Policy takes effect
+              once published on the Platform; continued use of the Platform
+              after that date constitutes acceptance of the revised Policy.
+            </p>
+          </div>
+        </section>
+        <section id="section-13" class="policy-section">
+          <span class="section-num" aria-hidden="true">13</span>
+          <div class="section-body">
+            <h2>Governing Law and Jurisdiction</h2>
+            <p>
+              13.1 This Policy is governed by the laws of India, including the
+              Information Technology Act, 2000 and rules made under it, and the
+              Digital Personal Data Protection Act, 2023, as applicable from
+              time to time. Courts at Hyderabad, Telangana, have exclusive
+              jurisdiction over any dispute arising from it.
+            </p>
+          </div>
+        </section>
+        <section id="section-14" class="policy-section">
+          <span class="section-num" aria-hidden="true">14</span>
+          <div class="section-body">
+            <h2>Acceptance</h2>
+            <p>
+              14.1 By registering on, or using, the Platform, you confirm having
+              read, understood, and agreed to this Privacy Policy in its
+              entirety.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <span
+          >&copy; 2026 Dr. Satyanarayana Garre &middot; Hyderabad,
+          Telangana</span
+        >
+        <nav>
+          <span class="current">Privacy Policy</span>
+          <a href="https://www.drsatyanarayanagarre.in/terms-of-service"
+            >Terms of Service</a
+          >
+          <a
+            href="https://www.drsatyanarayanagarre.in/cancellation-and-refund-policy"
+            >Cancellation & Refund Policy</a
+          >
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

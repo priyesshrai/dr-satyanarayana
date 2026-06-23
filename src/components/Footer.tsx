@@ -7,6 +7,7 @@ interface MenuItem {
     key: string;
     name: string;
     path: string;
+    next_tab: boolean;
 }
 interface Contact {
     name: string;
@@ -23,27 +24,50 @@ export default function Footer() {
         {
             key: 'home',
             name: 'Home',
-            path: '/'
+            path: '/',
+            next_tab: false
         },
         {
             key: 'about',
             name: 'Dr. Garre Profile',
-            path: '/about'
+            path: '/about',
+            next_tab: false
         },
         {
             key: 'services',
             name: 'Treatments',
-            path: '#'
+            path: '/services',
+            next_tab: false
         },
         {
             key: 'contact',
             name: 'Contact',
-            path: '#'
+            path: '/contact',
+            next_tab: false
         },
         {
             key: 'blog',
             name: 'Nephrology Blogs',
-            path: '#'
+            path: '/blogs',
+            next_tab: false
+        },
+        {
+            key: 'terms-of-service',
+            name: 'Terms of Service',
+            path: '/terms-of-service.html',
+            next_tab: true
+        },
+        {
+            key: 'privacy-policy',
+            name: 'Privacy Policy',
+            path: '/privacy-policy.html',
+            next_tab: true
+        },
+        {
+            key: 'refund',
+            name: 'Refund & Cancellation',
+            path: '/cancellation-and-refund-policy.html',
+            next_tab: true
         }
     ]
     const contactInfo: Contact[] = [
@@ -80,7 +104,7 @@ export default function Footer() {
 
     return (
         <footer className='bg-dark-navy lg:!pt-20 md:!pt-16 pt-11 w-full relative pb-5'>
-            <div className='w-full max-w-7xl relative mx-auto px-6 grid lg:grid-cols-[400px_200px_1fr_1fr] md:grid-cols-2 grid-cols-1 gap-5 mb-10'>
+            <div className='w-full max-w-7xl relative mx-auto px-6 grid lg:grid-cols-[350px_250px_1fr_1fr] md:grid-cols-2 grid-cols-1 gap-5 mb-10'>
                 <div className="w-full h-full relative flex flex-col">
                     <Image src='/images/logo/logo-2.svg' alt='' width={400} height={200} />
                     <Subheading className='text-left mt-5 !text-white'>
@@ -103,8 +127,13 @@ export default function Footer() {
                     <div className='relative mt-5 flex flex-col gap-1'>
                         {
                             menuItems.map(item => (
-                                <Link href={item.path} key={item.key} className='uppercase font-normal text-white !font-montserrat flex items-center gap-1 text-sm'>
-                                    <Image src={'/images/footer/link.svg'} width={18} height={18} alt={item.name} />
+                                <Link
+                                    href={item.path}
+                                    key={item.key}
+                                    target={item.next_tab ? "_blank" : "_self"}
+                                    className='capitalize font-normal text-white !font-montserrat flex items-center gap-1 text-sm'
+                                >
+                                    <Image src={'/images/footer/link.svg'} width={12} height={12} alt={item.name} />
                                     {item.name}
                                 </Link>
                             ))
@@ -117,8 +146,8 @@ export default function Footer() {
                     <div className='relative mt-5 flex flex-col gap-3'>
                         {
                             contactInfo.map((item, idx) => (
-                                <Link href={item.link} target='_blank' key={idx} className='font-normal text-sm text-white !font-montserrat flex items-center gap-3'>
-                                    <Image src={item.icon} width={28} height={28} alt={item.name} className='w-6 h-6' />
+                                <Link href={item.link} target='_blank' key={idx} className='font-normal text-sm text-white !font-montserrat flex items-start gap-3'>
+                                    <Image src={item.icon} width={20} height={20} alt={item.name} className='w-4 h-4' />
                                     {item.name}
                                 </Link>
                             ))

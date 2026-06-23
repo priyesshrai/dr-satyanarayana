@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms of Service – Dr. Satyanarayana Garre</title>
+    <meta
+      name="description"
+      content="Terms governing the use of drsatyanarayanagarre.in for booking and attending online consultations with Dr. Satyanarayana Garre."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --teal-900: #00323e;
+        --teal-700: #004151;
+        --teal-500: #0f6b7d;
+        --mint-100: #e3fbf8;
+        --mint-200: #c9f5ef;
+        --ink: #1c2226;
+        --muted: #5b6770;
+        --border: #e3e6e7;
+        --paper: #ffffff;
+        --font-display: "Poppins", "Segoe UI", Arial, sans-serif;
+        --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-padding-top: 90px;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        html {
+          scroll-behavior: smooth;
+        }
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-body);
+        color: var(--ink);
+        background: var(--paper);
+        line-height: 1.65;
+        font-size: 16.5px;
+      }
+
+      a {
+        color: var(--teal-500);
+        text-decoration: underline;
+        text-decoration-color: var(--mint-200);
+        text-decoration-thickness: 1.5px;
+      }
+      a:hover {
+        color: var(--teal-900);
+      }
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible {
+        outline: 2.5px solid var(--teal-500);
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: var(--paper);
+        border-bottom: 1px solid var(--border);
+      }
+      .site-header__inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 9px;
+        background: var(--teal-700);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 15px;
+        flex-shrink: 0;
+      }
+      .brand-name {
+        font-family: var(--font-display);
+        font-weight: 600;
+        color: var(--teal-900);
+        font-size: 16px;
+        line-height: 1.2;
+      }
+      .brand-tag {
+        font-size: 12.5px;
+        color: var(--muted);
+        line-height: 1.2;
+      }
+
+      .hero {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 48px 24px 28px;
+      }
+      .hero h1 {
+        font-family: var(--font-display);
+        color: var(--teal-700);
+        font-weight: 700;
+        font-size: clamp(28px, 4vw, 40px);
+        margin: 0 0 10px;
+        letter-spacing: -0.01em;
+      }
+      .hero__sub {
+        color: var(--muted);
+        font-size: 15.5px;
+        margin: 0 0 16px;
+      }
+      .hero__dates {
+        display: inline-flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        font-size: 13.5px;
+        color: var(--teal-900);
+        background: var(--mint-100);
+        border: 1px solid var(--mint-200);
+        padding: 8px 14px;
+        border-radius: 8px;
+      }
+      .hero__dates b {
+        font-weight: 600;
+      }
+
+      .layout {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 8px 24px 80px;
+        display: flex;
+        gap: 48px;
+        align-items: flex-start;
+      }
+
+      .toc {
+        position: sticky;
+        top: 84px;
+        align-self: start;
+        width: 220px;
+        flex: 0 0 220px;
+      }
+      .toc__label {
+        font-family: var(--font-display);
+        font-size: 11.5px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 0 0 10px;
+      }
+      .toc ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      .toc a {
+        display: flex;
+        gap: 8px;
+        font-size: 13.5px;
+        text-decoration: none;
+        color: var(--ink);
+        padding: 3px 0;
+      }
+      .toc a span.n {
+        color: var(--teal-500);
+        font-weight: 600;
+        min-width: 18px;
+      }
+      .toc a:hover {
+        color: var(--teal-700);
+      }
+      .toc a:hover span.n {
+        color: var(--teal-700);
+      }
+
+      .mobile-toc {
+        display: none;
+      }
+
+      main.policy {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .policy-section {
+        display: flex;
+        gap: 20px;
+        padding-top: 30px;
+        scroll-margin-top: 84px;
+      }
+      .policy-section + .policy-section {
+        border-top: 1px solid var(--border);
+      }
+      .section-num {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 40px;
+        color: var(--mint-200);
+        line-height: 1;
+        flex: 0 0 64px;
+      }
+      .section-body {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .policy-section h2 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 19.5px;
+        color: var(--teal-700);
+        margin: 4px 0 10px;
+      }
+      .policy-section p {
+        margin: 0 0 14px;
+      }
+      .policy-section p.indent {
+        margin-left: 22px;
+      }
+      .policy-section p:last-child {
+        margin-bottom: 0;
+      }
+      strong {
+        font-weight: 600;
+        color: var(--teal-900);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--border);
+        background: var(--mint-100);
+      }
+      .site-footer__inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 28px 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px 28px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13.5px;
+        color: var(--teal-900);
+      }
+      .site-footer nav {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .site-footer a {
+        color: var(--teal-900);
+        text-decoration: none;
+      }
+      .site-footer a:hover {
+        text-decoration: underline;
+      }
+      .site-footer .current {
+        font-weight: 600;
+        text-decoration: none;
+        cursor: default;
+        color: var(--teal-700);
+      }
+
+      @media (max-width: 959px) {
+        .layout {
+          flex-direction: column;
+        }
+        .toc {
+          display: none;
+        }
+        .mobile-toc {
+          display: block;
+          margin-bottom: 8px;
+          border: 1px solid var(--border);
+          border-radius: 10px;
+          padding: 4px 14px;
+        }
+        .mobile-toc summary {
+          cursor: pointer;
+          font-family: var(--font-display);
+          font-weight: 600;
+          font-size: 13.5px;
+          color: var(--teal-700);
+          padding: 10px 0;
+        }
+        .mobile-toc ol {
+          list-style: none;
+          margin: 0 0 10px;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        .mobile-toc a {
+          font-size: 14px;
+          text-decoration: none;
+          color: var(--ink);
+        }
+        .policy-section {
+          flex-direction: column;
+          gap: 4px;
+        }
+        .section-num {
+          font-size: 26px;
+          flex-basis: auto;
+        }
+      }
+
+      @media print {
+        .site-header,
+        .toc,
+        .mobile-toc,
+        .site-footer nav {
+          display: none;
+        }
+        .layout {
+          flex-direction: column;
+        }
+        .section-num {
+          color: #cfd6d7;
+        }
+        a {
+          color: var(--ink);
+          text-decoration: underline;
+        }
+      }
+
+      /* Fallback spacing for engines without flexbox `gap` support (modern browsers
+   support gap and skip this block entirely, so spacing is never doubled). */
+      @supports not (gap: 1px) {
+        .hero__dates > * + * {
+          margin-left: 18px;
+        }
+        .policy-section > * + * {
+          margin-left: 20px;
+        }
+        .site-footer__inner > * + * {
+          margin-left: 28px;
+        }
+        .site-footer nav > * + * {
+          margin-left: 20px;
+        }
+        @media (max-width: 959px) {
+          .policy-section > * + * {
+            margin-left: 0;
+            margin-top: 4px;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="https://www.drsatyanarayanagarre.in/">
+          <!-- <span class="brand-mark">SG</span>
+          <span>
+            <span class="brand-name">Dr. Satyanarayana Garre</span><br />
+            <span class="brand-tag">Renal Sciences Expert</span>
+          </span> -->
+          <img src="/images/logo/logo.svg" alt="Dr. Satyanarayana Garre" style="width: 300px;">
+        </a>
+      </div>
+    </header>
+
+    <div class="hero">
+      <h1>Terms of Service</h1>
+      <p class="hero__sub">
+        Online Consultation &amp; Appointment Booking Services of Dr.
+        Satyanarayana Garre
+      </p>
+      <div class="hero__dates">
+        <span><b>Effective:</b> 1 June 2026</span
+        ><span><b>Last updated:</b> 1 June 2026</span>
+      </div>
+    </div>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc__label">On this page</p>
+        <ol>
+          <li>
+            <a href="#section-1"><span class="n">1</span>Introduction</a>
+          </li>
+          <li>
+            <a href="#section-2"><span class="n">2</span>Definitions</a>
+          </li>
+          <li>
+            <a href="#section-3"
+              ><span class="n">3</span>Eligibility and Account Registration</a
+            >
+          </li>
+          <li>
+            <a href="#section-4"
+              ><span class="n">4</span>Nature of the Services — Important
+              Medical Disclaimer</a
+            >
+          </li>
+          <li>
+            <a href="#section-5"
+              ><span class="n">5</span>Booking, Fees, Cancellation, and
+              Refunds</a
+            >
+          </li>
+          <li>
+            <a href="#section-6"
+              ><span class="n">6</span>Document Uploads and Content</a
+            >
+          </li>
+          <li>
+            <a href="#section-7"><span class="n">7</span>Acceptable Use</a>
+          </li>
+          <li>
+            <a href="#section-8"
+              ><span class="n">8</span>Intellectual Property</a
+            >
+          </li>
+          <li>
+            <a href="#section-9"
+              ><span class="n">9</span>Third-Party Services</a
+            >
+          </li>
+          <li>
+            <a href="#section-10"
+              ><span class="n">10</span>Limitation of Liability</a
+            >
+          </li>
+          <li>
+            <a href="#section-11"><span class="n">11</span>Indemnity</a>
+          </li>
+          <li>
+            <a href="#section-12"><span class="n">12</span>Force Majeure</a>
+          </li>
+          <li>
+            <a href="#section-13"><span class="n">13</span>Termination</a>
+          </li>
+          <li>
+            <a href="#section-14"
+              ><span class="n">14</span>Changes to these Terms</a
+            >
+          </li>
+          <li>
+            <a href="#section-15"
+              ><span class="n">15</span>Grievance Redressal</a
+            >
+          </li>
+          <li>
+            <a href="#section-16"
+              ><span class="n">16</span>Governing Law and Jurisdiction</a
+            >
+          </li>
+          <li>
+            <a href="#section-17"
+              ><span class="n">17</span>Severability and Entire Agreement</a
+            >
+          </li>
+          <li>
+            <a href="#section-18"><span class="n">18</span>Acceptance</a>
+          </li>
+        </ol>
+      </nav>
+
+      <main class="policy">
+        <details class="mobile-toc">
+          <summary>Jump to a section</summary>
+          <ol>
+            <li>
+              <a href="#section-1"><span class="n">1</span>Introduction</a>
+            </li>
+            <li>
+              <a href="#section-2"><span class="n">2</span>Definitions</a>
+            </li>
+            <li>
+              <a href="#section-3"
+                ><span class="n">3</span>Eligibility and Account Registration</a
+              >
+            </li>
+            <li>
+              <a href="#section-4"
+                ><span class="n">4</span>Nature of the Services — Important
+                Medical Disclaimer</a
+              >
+            </li>
+            <li>
+              <a href="#section-5"
+                ><span class="n">5</span>Booking, Fees, Cancellation, and
+                Refunds</a
+              >
+            </li>
+            <li>
+              <a href="#section-6"
+                ><span class="n">6</span>Document Uploads and Content</a
+              >
+            </li>
+            <li>
+              <a href="#section-7"><span class="n">7</span>Acceptable Use</a>
+            </li>
+            <li>
+              <a href="#section-8"
+                ><span class="n">8</span>Intellectual Property</a
+              >
+            </li>
+            <li>
+              <a href="#section-9"
+                ><span class="n">9</span>Third-Party Services</a
+              >
+            </li>
+            <li>
+              <a href="#section-10"
+                ><span class="n">10</span>Limitation of Liability</a
+              >
+            </li>
+            <li>
+              <a href="#section-11"><span class="n">11</span>Indemnity</a>
+            </li>
+            <li>
+              <a href="#section-12"><span class="n">12</span>Force Majeure</a>
+            </li>
+            <li>
+              <a href="#section-13"><span class="n">13</span>Termination</a>
+            </li>
+            <li>
+              <a href="#section-14"
+                ><span class="n">14</span>Changes to these Terms</a
+              >
+            </li>
+            <li>
+              <a href="#section-15"
+                ><span class="n">15</span>Grievance Redressal</a
+              >
+            </li>
+            <li>
+              <a href="#section-16"
+                ><span class="n">16</span>Governing Law and Jurisdiction</a
+              >
+            </li>
+            <li>
+              <a href="#section-17"
+                ><span class="n">17</span>Severability and Entire Agreement</a
+              >
+            </li>
+            <li>
+              <a href="#section-18"><span class="n">18</span>Acceptance</a>
+            </li>
+          </ol>
+        </details>
+
+        <section id="section-1" class="policy-section">
+          <span class="section-num" aria-hidden="true">1</span>
+          <div class="section-body">
+            <h2>Introduction</h2>
+            <p>
+              1.1 These Terms of Service (“Terms”) govern your access to and use
+              of <strong>drsatyanarayanagarre.in</strong> (“Platform”), operated
+              by Dr. Satyanarayana Garre, for booking and attending online
+              consultations with Dr. Satyanarayana Garre, Consultant
+              Nephrologist (“Doctor”). “You” or “Patient” means the person
+              booking an Appointment, whether for themselves or, where
+              permitted, on behalf of another person under their care.
+            </p>
+            <p>
+              1.2 By creating an account, booking an Appointment, or otherwise
+              using the Platform, you agree to be bound by these Terms, our
+              <strong>Privacy Policy</strong>, and our
+              <strong>Cancellation and Refund Policy</strong>, each of which is
+              incorporated into these Terms by reference.
+            </p>
+            <p>
+              1.3 If you do not agree to these Terms, please do not use the
+              Platform.
+            </p>
+          </div>
+        </section>
+        <section id="section-2" class="policy-section">
+          <span class="section-num" aria-hidden="true">2</span>
+          <div class="section-body">
+            <h2>Definitions</h2>
+            <p>
+              2.1 “<strong>Booking</strong>” or “<strong>Appointment</strong>”
+              means a consultation slot with the Doctor reserved through the
+              Platform upon successful payment of the Consultation Fee and
+              receipt of a Confirmation.
+            </p>
+            <p>
+              2.2 “<strong>Consultation Fee</strong>” means the amount charged
+              to the Patient at the time of Booking.
+            </p>
+            <p>
+              2.3 “<strong>Confirmation</strong>” means the SMS, email,
+              WhatsApp, or in-app notification sent once payment is successfully
+              processed.
+            </p>
+            <p>
+              2.4 “<strong>Services</strong>” means the registration,
+              appointment booking, online consultation, and related services
+              made available through the Platform.
+            </p>
+            <p>
+              2.5 “<strong>Content</strong>” means any text, document, image, or
+              other material uploaded to, or generated through, the Platform,
+              including by you.
+            </p>
+          </div>
+        </section>
+        <section id="section-3" class="policy-section">
+          <span class="section-num" aria-hidden="true">3</span>
+          <div class="section-body">
+            <h2>Eligibility and Account Registration</h2>
+            <p>
+              3.1 You must be at least 18 years old to register on the Platform
+              in your own right. A Booking for a minor or a dependent adult must
+              be made by their parent or legal guardian, who is responsible for
+              the accuracy of the information provided and, where appropriate,
+              for being present or reasonably available during the consultation.
+            </p>
+            <p>
+              3.2 You agree to provide accurate, current, and complete
+              information at registration and at the time of Booking, including
+              your name, email address, and mobile number, and to keep this
+              information up to date.
+            </p>
+            <p>
+              3.3 You are responsible for keeping any OTP, password, or login
+              credential confidential, and for all activity that occurs through
+              your account. Notify us immediately of any unauthorised use of
+              your account.
+            </p>
+          </div>
+        </section>
+        <section id="section-4" class="policy-section">
+          <span class="section-num" aria-hidden="true">4</span>
+          <div class="section-body">
+            <h2>Nature of the Services — Important Medical Disclaimer</h2>
+            <p>
+              4.1 The Platform facilitates online (telemedicine) consultations
+              with the Doctor, a Registered Medical Practitioner. Consultations
+              are provided in accordance with the Telemedicine Practice
+              Guidelines, 2020 issued by the Board of Governors/National Medical
+              Commission, and the Indian Medical Council (Professional Conduct,
+              Etiquette and Ethics) Regulations, 2002.
+            </p>
+            <p>
+              4.2 The Platform is not intended for medical emergencies. If you
+              are experiencing a medical emergency, call your local emergency
+              services or go to the nearest hospital immediately. Do not rely on
+              the Platform for emergency or life-threatening conditions.
+            </p>
+            <p>
+              4.3 The mode of consultation (video, audio, or text, as
+              applicable), and whether a particular condition is suitable for
+              teleconsultation at all, is determined by the Doctor’s
+              professional judgment. The Doctor may, at their discretion,
+              recommend an in-person examination instead of, or in addition to,
+              a teleconsultation.
+            </p>
+            <p>
+              4.4 Any prescription issued is at the sole clinical discretion of
+              the Doctor, and in accordance with the categories of medicines
+              permitted to be prescribed through teleconsultation under
+              applicable guidelines. The Doctor may decline to prescribe certain
+              medications remotely where an in-person examination is required.
+            </p>
+            <p>
+              4.5 You are responsible for providing accurate and complete
+              information about your symptoms, medical history, and any
+              documents uploaded. The quality of medical advice provided depends
+              on the accuracy and completeness of the information you share.
+            </p>
+            <p>
+              4.6 Nothing in these Terms limits the Doctor’s professional
+              responsibility for the standard of medical care provided, which
+              continues to be governed by applicable medical practice and
+              negligence law, independent of these Terms.
+            </p>
+          </div>
+        </section>
+        <section id="section-5" class="policy-section">
+          <span class="section-num" aria-hidden="true">5</span>
+          <div class="section-body">
+            <h2>Booking, Fees, Cancellation, and Refunds</h2>
+            <p>
+              5.1 Appointments are confirmed only upon successful payment of the
+              Consultation Fee and receipt of a Confirmation.
+            </p>
+            <p>
+              5.2 Cancellation, rescheduling, and refunds are governed by our
+              separate <strong>Cancellation and Refund Policy</strong>,
+              available at
+              <a
+                href="https://www.drsatyanarayanagarre.in/cancellation-and-refund-policy,"
+                >https://www.drsatyanarayanagarre.in/cancellation-and-refund-policy,</a
+              >
+              which forms part of these Terms by reference. In the event of any
+              conflict between that Policy and these Terms on those subjects,
+              the Cancellation and Refund Policy will prevail.
+            </p>
+            <p>
+              5.3 Payments are processed through Razorpay. We do not store your
+              full card, UPI, or bank account details; these are handled
+              directly by the payment gateway.
+            </p>
+          </div>
+        </section>
+        <section id="section-6" class="policy-section">
+          <span class="section-num" aria-hidden="true">6</span>
+          <div class="section-body">
+            <h2>Document Uploads and Content</h2>
+            <p>
+              6.1 You may upload prescriptions, lab reports, scans, or other
+              documents to assist the Doctor ahead of or during the
+              consultation, in the formats and size limits specified on the
+              Platform.
+            </p>
+            <p>
+              6.2 You confirm that any document or information you upload is
+              genuine, accurate, and either your own or that you have the right
+              to share it (for example, where you are booking on behalf of a
+              dependant).
+            </p>
+            <p>
+              6.3 You agree not to upload any file that contains malicious code,
+              infringes a third party’s rights, or is unlawful, obscene, or
+              harmful.
+            </p>
+            <p>
+              6.4 We use Content you upload only for the purpose of the
+              consultation and related record-keeping, as described in our
+              Privacy Policy.
+            </p>
+          </div>
+        </section>
+        <section id="section-7" class="policy-section">
+          <span class="section-num" aria-hidden="true">7</span>
+          <div class="section-body">
+            <h2>Acceptable Use</h2>
+            <p>7.1 You agree not to:</p>
+            <p class="indent">
+              (a) impersonate any person, or misrepresent your identity or
+              relationship to the Patient;
+            </p>
+            <p class="indent">
+              (b) attempt to gain unauthorised access to the Platform, other
+              accounts, or our systems;
+            </p>
+            <p class="indent">
+              (c) use the Platform for any unlawful purpose, or to harass,
+              abuse, or defraud any person;
+            </p>
+            <p class="indent">
+              (d) interfere with the proper functioning of the Platform,
+              including by introducing viruses or malicious code; or
+            </p>
+            <p class="indent">
+              (e) use automated means, such as bots or scrapers, to access the
+              Platform without our prior written consent.
+            </p>
+            <p>
+              7.2 We may suspend or terminate your access to the Platform, with
+              or without notice, if we reasonably believe you have violated
+              these Terms.
+            </p>
+          </div>
+        </section>
+        <section id="section-8" class="policy-section">
+          <span class="section-num" aria-hidden="true">8</span>
+          <div class="section-body">
+            <h2>Intellectual Property</h2>
+            <p>
+              8.1 The Platform, including its design, text, graphics, logo, and
+              software, is owned by drsatyanarayanagarre.in and/or the Doctor
+              and is protected by applicable intellectual property laws. Nothing
+              in these Terms transfers any ownership of this intellectual
+              property to you.
+            </p>
+            <p>
+              8.2 You may not copy, reproduce, distribute, or create derivative
+              works from any part of the Platform without prior written
+              permission, other than for your personal, non-commercial use in
+              connection with booking and attending an Appointment.
+            </p>
+          </div>
+        </section>
+        <section id="section-9" class="policy-section">
+          <span class="section-num" aria-hidden="true">9</span>
+          <div class="section-body">
+            <h2>Third-Party Services</h2>
+            <p>
+              9.1 The Platform relies on third-party services, including payment
+              gateways, video consultation tools, and messaging, SMS, and email
+              providers, to deliver the Services. We are not responsible for
+              outages, errors, or failures of these third-party services that
+              are beyond our reasonable control, save as set out in our
+              Cancellation and Refund Policy regarding verified technical
+              failures on the Platform’s own side.
+            </p>
+            <p>
+              9.2 Your use of third-party services accessed through the
+              Platform, such as the payment gateway or video consultation tool,
+              may also be subject to that provider’s own terms and privacy
+              policy.
+            </p>
+          </div>
+        </section>
+        <section id="section-10" class="policy-section">
+          <span class="section-num" aria-hidden="true">10</span>
+          <div class="section-body">
+            <h2>Limitation of Liability</h2>
+            <p>
+              10.1 To the maximum extent permitted by applicable law, the
+              Platform is provided on an “as available” basis, and we do not
+              guarantee that it will be uninterrupted, error-free, or secure at
+              all times.
+            </p>
+            <p>
+              10.2 To the maximum extent permitted by applicable law, neither
+              the Platform nor drsatyanarayanagarre.in will be liable for any
+              indirect, incidental, or consequential loss arising from your use
+              of the Platform, except in cases of gross negligence, wilful
+              misconduct, or as otherwise required by applicable consumer
+              protection law.
+            </p>
+            <p>
+              10.3 Nothing in these Terms excludes or limits liability that
+              cannot lawfully be excluded or limited under Indian law, including
+              the Consumer Protection Act, 2019, or the Doctor’s liability for
+              the standard of medical care provided.
+            </p>
+          </div>
+        </section>
+        <section id="section-11" class="policy-section">
+          <span class="section-num" aria-hidden="true">11</span>
+          <div class="section-body">
+            <h2>Indemnity</h2>
+            <p>
+              11.1 You agree to indemnify and hold harmless
+              drsatyanarayanagarre.in and the Doctor from any claim, loss, or
+              expense arising from your breach of these Terms, your misuse of
+              the Platform, or information you have provided that is false,
+              inaccurate, or misleading.
+            </p>
+          </div>
+        </section>
+        <section id="section-12" class="policy-section">
+          <span class="section-num" aria-hidden="true">12</span>
+          <div class="section-body">
+            <h2>Force Majeure</h2>
+            <p>
+              12.1 Neither the Platform nor the Doctor is liable for any failure
+              or delay in performance caused by circumstances beyond reasonable
+              control, as described in our Cancellation and Refund Policy.
+            </p>
+          </div>
+        </section>
+        <section id="section-13" class="policy-section">
+          <span class="section-num" aria-hidden="true">13</span>
+          <div class="section-body">
+            <h2>Termination</h2>
+            <p>
+              13.1 You may stop using the Platform at any time. We may suspend
+              or terminate your account for breach of these Terms, suspected
+              fraud, or as required by law, without affecting any Appointment
+              already validly confirmed, save as provided in Clause
+              <a href="#section-7">7</a>.2.
+            </p>
+          </div>
+        </section>
+        <section id="section-14" class="policy-section">
+          <span class="section-num" aria-hidden="true">14</span>
+          <div class="section-body">
+            <h2>Changes to these Terms</h2>
+            <p>
+              14.1 We may revise these Terms from time to time. The updated
+              Terms take effect once published on the Platform; continuing to
+              use the Platform after that date constitutes acceptance of the
+              revised Terms.
+            </p>
+          </div>
+        </section>
+        <section id="section-15" class="policy-section">
+          <span class="section-num" aria-hidden="true">15</span>
+          <div class="section-body">
+            <h2>Grievance Redressal</h2>
+            <p>
+              15.1 For questions or complaints regarding these Terms or the
+              Services, please contact Dr. Satyanarayana Garre, Consultant
+              Nephrologist, at
+              <a href="mailto:satyakishoregarre@gmail.com"
+                >satyakishoregarre@gmail.com</a
+              >
+              or <a href="tel:+919391086902">+91 93910 86902</a>. Queries are
+              ordinarily addressed within 24 hours.
+            </p>
+          </div>
+        </section>
+        <section id="section-16" class="policy-section">
+          <span class="section-num" aria-hidden="true">16</span>
+          <div class="section-body">
+            <h2>Governing Law and Jurisdiction</h2>
+            <p>
+              16.1 These Terms are governed by the laws of India. Courts at
+              Hyderabad, Telangana, have exclusive jurisdiction over any dispute
+              arising from them.
+            </p>
+          </div>
+        </section>
+        <section id="section-17" class="policy-section">
+          <span class="section-num" aria-hidden="true">17</span>
+          <div class="section-body">
+            <h2>Severability and Entire Agreement</h2>
+            <p>
+              17.1 If any provision of these Terms is found unenforceable, the
+              remaining provisions will continue in full force and effect.
+            </p>
+            <p>
+              17.2 These Terms, together with our Privacy Policy and
+              Cancellation and Refund Policy, constitute the entire agreement
+              between you and drsatyanarayanagarre.in in relation to the
+              Services.
+            </p>
+          </div>
+        </section>
+        <section id="section-18" class="policy-section">
+          <span class="section-num" aria-hidden="true">18</span>
+          <div class="section-body">
+            <h2>Acceptance</h2>
+            <p>
+              18.1 By registering on, or using, the Platform, you confirm having
+              read, understood, and agreed to these Terms of Service in their
+              entirety.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <span
+          >&copy; 2026 Dr. Satyanarayana Garre &middot; Hyderabad,
+          Telangana</span
+        >
+        <nav>
+          <a href="https://www.drsatyanarayanagarre.in/privacy-policy"
+            >Privacy Policy</a
+          >
+          <span class="current">Terms of Service</span>
+          <a
+            href="https://www.drsatyanarayanagarre.in/cancellation-and-refund-policy"
+            >Cancellation & Refund Policy</a
+          >
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
