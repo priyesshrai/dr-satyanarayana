@@ -236,7 +236,7 @@ export default function NavBar() {
                     </div>
 
                     <button onClick={() => setIsMenuOpen((prev) => !prev)} className='lg:hidden w-12 h-12 flex items-center justify-center cursor-pointer bg-primary rounded-full '>
-                        <Menu className='text-dark-navy w-7 h-7' />
+                        <Menu className='text-white w-7 h-7' />
                     </button>
                 </nav>
 
@@ -267,10 +267,11 @@ export default function NavBar() {
                         </div>
 
                         <div className='w-full absolute bottom-0 flex flex-col items-end'>
+                            {/* setOpenLoginModal(true) */}
                             {
                                 !isAuthenticated ?
                                     <button
-                                        onClick={() => (setOpenLoginModal(true), setIsMenuOpen(false))}
+                                        onClick={() => (router.push("/login"), setIsMenuOpen(false))}
                                         className='w-full bg-dark-navy px-3 py-2.5 text-white rounded-lg cursor-pointer transition-colors duration-200 ease-in-out hover:bg-dark-navy/90 text-sm'
                                     >
                                         Book Appointment
