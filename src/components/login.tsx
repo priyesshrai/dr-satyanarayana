@@ -7,7 +7,7 @@ export default function Login() {
             <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden shadow-lg border border-slate-200">
 
                 {/* ── Left: brand panel ── */}
-                <div className="bg-dark-navy p-10 flex flex-col justify-between min-h-[540px]">
+                <div className="bg-dark-navy p-10 flex flex-col justify-between min-h-[540px] md:order-1 order-2">
 
                     {/* Wordmark */}
                     <div>
@@ -81,7 +81,7 @@ export default function Login() {
                 </div>
 
                 {/* ── Right: form panel ── */}
-                <div className="bg-white p-10 flex flex-col justify-center">
+                <div className="bg-white p-10 flex flex-col justify-center md:order-2 order-1">
                     <LoginForm />
                 </div>
 
