@@ -7,12 +7,15 @@ import AppointmanetForm from './AppointmanetForm';
 import { AnimatePresence } from 'motion/react'
 import { useLenisControl } from '@/utils/SmoothScroll'
 import { Toaster } from 'react-hot-toast'
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/hooks/useAuth';
 
 interface List {
     title: string;
     summary: string;
 }
 export default function WhyUs() {
+    const router = useRouter()
     const list: List[] = [
         {
             title: 'Renowned Nephrology Specialist',
@@ -38,6 +41,7 @@ export default function WhyUs() {
         }
         return () => startScroll();
     }, [isFormOpen, stopScroll, startScroll]);
+    const { isAuthenticated } = useAuth();
 
     return (
         <Section className='bg-[#F9FAFB]'>
@@ -69,7 +73,9 @@ export default function WhyUs() {
                                     </div>
                                 ))
                             }
-                            <ButtonPrimary className='mt-6' onClick={()=>setIsFormOpen(true)}>
+                            <ButtonPrimary className='mt-6'
+                                onClick={() => isAuthenticated ? router.push("/user/dashoard") : router.push("/login")}
+                            >
                                 Make an Appointment
                             </ButtonPrimary>
                         </div>
