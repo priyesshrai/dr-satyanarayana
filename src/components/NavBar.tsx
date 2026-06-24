@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import Signup from './auth/signup';
+// import Signup from './auth/signup';
 import { AnimatePresence, motion, Variants } from 'motion/react';
 import { getInitials } from '@/lib/generate-initials';
 import { useMutation } from '@tanstack/react-query';
@@ -161,9 +161,10 @@ export default function NavBar() {
                     </div>
 
                     <div className='lg:flex flex-col items-end hidden relative w-max' ref={dropdownRef}>
+                        {/* setOpenLoginModal(true) */}
                         <button
                             onClick={() =>
-                                isAuthenticated ? setShowOptions((prev) => !prev) : setOpenLoginModal(true)
+                                isAuthenticated ? setShowOptions((prev) => !prev) : router.push("/login")
                             }
                             className='flex items-center gap-1 bg-dark-navy px-3 py-2.5 text-white rounded-lg cursor-pointer transition-colors duration-200 ease-in-out hover:bg-dark-navy/90 text-sm'>
                             {!isAuthenticated ? "Book Appointment" : <>
@@ -291,10 +292,10 @@ export default function NavBar() {
             </header>
 
 
-            <Signup
+            {/* <Signup
                 openLoginModal={openLoginModal}
                 closeLoginModal={() => setOpenLoginModal(false)}
-            />
+            /> */}
         </>
     )
 }
