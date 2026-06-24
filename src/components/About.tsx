@@ -8,8 +8,11 @@ import React, { useEffect, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 import AppointmanetForm from './AppointmanetForm'
 import { Stethoscope } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import { useAuth } from '@/hooks/useAuth'
 
 export default function About() {
+    const router = useRouter()
     const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
     const { stopScroll, startScroll } = useLenisControl();
 
@@ -22,6 +25,7 @@ export default function About() {
         return () => startScroll();
     }, [isFormOpen, stopScroll, startScroll]);
 
+    const { isAuthenticated } = useAuth();
 
 
     return (
@@ -59,7 +63,9 @@ export default function About() {
                             Practicing in Jubilee Hills, Hyderabad, he focuses on building long-term patient relationships through clear communication, ethical guidance, and consistent medical support tailored to individual health needs.
                         </Subheading>
                         <div className='mt-8 flex items-center gap-3 justify-start max-[420px]:flex-col'>
-                            <ButtonPrimary onClick={() => setIsFormOpen(true)}>
+                            <ButtonPrimary
+                                onClick={() => isAuthenticated ? router.push("/user/dashoard") : router.push("/login")}
+                            >
                                 Make an Appointment
                             </ButtonPrimary>
                             <Link href='/about'
@@ -70,13 +76,13 @@ export default function About() {
                     </div>
                 </div>
             </Wrapper>
-            {
+            {/* {
                 isFormOpen && (
                     <AnimatePresence mode='wait'>
                         <AppointmanetForm key="appointment-form" closeForm={setIsFormOpen} />
                     </AnimatePresence>
                 )
-            }
+            } */}
             <Toaster />
         </Section>
     )

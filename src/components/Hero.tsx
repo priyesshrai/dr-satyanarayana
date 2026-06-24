@@ -2,11 +2,13 @@
 import { ButtonPrimary, Section, Subheading, Wrapper } from '@/utils/Section'
 import { Award, BadgeCheck, Calendar, HeartHandshake, LucideIcon, Stethoscope } from 'lucide-react'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-import AppointmanetForm from './AppointmanetForm';
-import { AnimatePresence } from 'motion/react'
+import { useEffect, useState } from 'react'
+// import AppointmanetForm from './AppointmanetForm';
+// import { AnimatePresence } from 'motion/react'
 import { useLenisControl } from '@/utils/SmoothScroll'
 import { Toaster } from 'react-hot-toast'
+import { useAuth } from '@/hooks/useAuth'
+import { useRouter } from 'next/navigation'
 
 interface Data {
     title: string;
@@ -35,6 +37,7 @@ const features: Exp[] = [
 ]
 
 export default function Hero() {
+    const router = useRouter()
     const data: Data[] = [
         {
             title: 'Dialysis Expertise',
@@ -69,13 +72,15 @@ export default function Hero() {
         return () => startScroll();
     }, [isFormOpen, stopScroll, startScroll]);
 
+    const { isAuthenticated } = useAuth();
+
     return (
         <Section className='bg-[url(/images/hero/bg-image.png)] w-full bg-cover bg-no-repeat bg-center lg:!pt-[120px] md:!pt-[100px] !pt-[120px]'>
             <Wrapper>
                 <div className='w-full relative grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-5'>
                     <div className="w-full h-full relative flex flex-col justify-center items-start">
                         <span className='flex gap-1.5 items-center border border-dark-navy rounded-full bg-dark-navy/10 uppercase px-3 py-1 font-medium text-dark-navy mb-4 text-sm'>
-                            <Stethoscope size={14}/>
+                            <Stethoscope size={14} />
                             Kidney Care You Can Trust
                         </span>
                         <h1
@@ -109,7 +114,9 @@ export default function Hero() {
 
 
                         <div className='relative mt-10 w-full'>
-                            <ButtonPrimary className='flex items-center gap-2 font-normal' onClick={() => setIsFormOpen(true)}>
+                            {/* setIsFormOpen(true) */}
+                            <ButtonPrimary className='flex items-center gap-2 font-normal'
+                                onClick={() => isAuthenticated ? router.push("/user/dashoard") : router.push("/login") }>
                                 MAKE AN APPOINTMENT
                                 <Calendar size={16} />
                             </ButtonPrimary>
@@ -143,13 +150,13 @@ export default function Hero() {
                     }
                 </div>
             </Wrapper>
-            {
+            {/* {
                 isFormOpen && (
                     <AnimatePresence mode='wait'>
                         <AppointmanetForm key="appointment-form" closeForm={setIsFormOpen} />
                     </AnimatePresence>
                 )
-            }
+            } */}
             <Toaster />
         </Section>
     )

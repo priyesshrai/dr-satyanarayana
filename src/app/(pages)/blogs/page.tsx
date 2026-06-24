@@ -141,6 +141,12 @@ export default function Blogs() {
       slug: '/blogs/swelling-in-feet-face-and-ankles',
       image: '/images/blog/Swelling-in-Feet-Face-and-Ankles.jpeg'
     },
+    {
+      title: 'Foamy Urine and Kidney Problems',
+      content: 'Foamy urine is something many people notice from time to time. In most cases, it may not be a serious problem. Sometimes, the force of urination, dehydration, or even cleaning products in the toilet can cause bubbles in the urine. However, if foamy urine happens regularly, it may be a sign of an underlying kidney problem that should not be ignored.',
+      slug: '/blogs/foamy-urine-and-kidney-problems',
+      image: '/images/blog/blog-11.png'
+    },
   ]
   return (
     <Section>
