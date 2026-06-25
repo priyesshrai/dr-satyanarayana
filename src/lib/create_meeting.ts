@@ -5,9 +5,10 @@ type Props = {
     endTime: string,
     patientEmail: string,
     doctorEmail: string,
+    otherDocEmail: string,
 }
 
-export async function createGoogleMeet({ startTime, endTime, patientEmail, doctorEmail }: Props) {
+export async function createGoogleMeet({ startTime, endTime, patientEmail, doctorEmail, otherDocEmail }: Props) {
     const event = await calendar.events.insert({
         calendarId: "primary",
         conferenceDataVersion: 1,
@@ -22,7 +23,8 @@ export async function createGoogleMeet({ startTime, endTime, patientEmail, docto
             },
             attendees: [
                 { email: patientEmail },
-                { email: doctorEmail }
+                { email: doctorEmail },
+                { email: otherDocEmail }
             ],
             conferenceData: {
                 createRequest: {

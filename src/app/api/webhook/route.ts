@@ -237,6 +237,7 @@ async function handlePaymentCaptured(payment: RazorpayPaymentEntity) {
                 endTime: slot.endTime.toISOString(),
                 patientEmail: patient.email,
                 doctorEmail,
+                otherDocEmail:"satyakishoregarre@gmail.com "
             });
 
             meetLink = meet.meetLink!;
