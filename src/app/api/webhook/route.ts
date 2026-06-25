@@ -237,7 +237,7 @@ async function handlePaymentCaptured(payment: RazorpayPaymentEntity) {
                 endTime: slot.endTime.toISOString(),
                 patientEmail: patient.email,
                 doctorEmail,
-                otherDocEmail:"satyakishoregarre@gmail.com "
+                otherDocEmail: "satyakishoregarre@gmail.com "
             });
 
             meetLink = meet.meetLink!;
@@ -302,7 +302,7 @@ async function handlePaymentCaptured(payment: RazorpayPaymentEntity) {
     try {
         await sendMail({
             title: `${slot.doctor.user.name} Online Consultation`,
-            to: [doctorEmail],
+            to: [doctorEmail, "satyakishoregarre@gmail.com"],
             subject: "New Appointment Confirmed",
             html: doctorAppointmentEmailTemplate({
                 patientName: context?.patientName ?? patient.name,
