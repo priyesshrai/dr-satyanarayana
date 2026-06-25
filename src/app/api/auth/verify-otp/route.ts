@@ -95,9 +95,16 @@ export async function POST(req: NextRequest) {
 
         void sendMail({
             title: "Dr. Satyanarayana Garre Portal",
-            to: ["satyakishoregarre@gmail.com", "info@drsatyanarayanagarre.in"],
+            to: [
+                "satyakishoregarre@gmail.com",
+                "info@drsatyanarayanagarre.in",
+            ],
             subject: `New Patient Registration — ${user.name}`,
-            html: doctorRegistrationTemplate({ name: user.name, email: user.email, phone: user.phone ?? null })
+            html: doctorRegistrationTemplate({
+                name: user.name,
+                email: user.email,
+                phone: user.phone ?? null,
+            }),
         }).catch((err) => {
             console.error("Registration email failed to send:", err);
         });
