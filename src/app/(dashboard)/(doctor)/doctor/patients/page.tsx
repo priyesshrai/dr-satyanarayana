@@ -11,7 +11,7 @@ import { PatientModal } from "@/components/patient_modal";
 
 export default function PatientDashboard() {
     const [page, setPage] = useState(1);
-    const limit = 10;
+    const limit = 20;
     const [selectedPatient, setSelectedPatient] = useState<Patient | null>(null);
     const [search, setSearch] = useState("");
 
@@ -41,7 +41,7 @@ export default function PatientDashboard() {
     return (
         <div className="p-8">
             <DashboardHeader
-                totalCount={data?.patient.length ?? 0}
+                totalCount={data?.totalPatient ?? 0}
                 search={search}
                 onSearchChange={setSearch}
                 isLoading={isLoading}

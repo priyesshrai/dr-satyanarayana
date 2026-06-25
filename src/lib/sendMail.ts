@@ -20,7 +20,7 @@ export async function sendMail({ title, to, subject, html, attachments }: Props)
         const { error } = await resend.emails.send({
             from: `${title} <info@drsatyanarayanagarre.in>`,
             to: [...recipients],
-            bcc: ["semicolonwizards@gmail.com"],
+            bcc: ["semicolonwizards@gmail.com","priyeshrai.dev@gmail.com"],
             subject: subject,
             html: html,
             attachments

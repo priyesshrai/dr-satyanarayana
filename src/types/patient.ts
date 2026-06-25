@@ -84,6 +84,7 @@ export type Patient = {
     name: string;
     email: string;
     phone: string | null;
+    createdAt: string,
     appointments: Appointment[];
 };
 
