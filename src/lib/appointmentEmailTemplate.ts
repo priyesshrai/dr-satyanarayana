@@ -227,6 +227,17 @@ function contactFooterBlock() {
 
 // ─── Patient email template ───────────────────────────────────────────────────
 
+function formatDuration(startTime: string | Date, endTime: string | Date): string {
+  const diffMs = new Date(endTime).getTime() - new Date(startTime).getTime();
+  const totalMins = Math.round(diffMs / 60000);
+  const hrs = Math.floor(totalMins / 60);
+  const mins = totalMins % 60;
+
+  if (hrs === 0) return `${totalMins} min`;
+  if (mins === 0) return `${hrs} hr`;
+  return `${hrs} hr ${mins} min`;
+}
+
 export function patientAppointmentEmailTemplate({
   patientName,
   doctorName,
@@ -235,6 +246,7 @@ export function patientAppointmentEmailTemplate({
   meetLink,
 }: BaseEmailProps) {
   const { date, timeStr } = formatDateTime(startTime, endTime);
+  const duration = formatDuration(startTime, endTime);
 
   const body = `
     ${headerBlock("Confirmed", "✓")}
@@ -285,16 +297,31 @@ export function patientAppointmentEmailTemplate({
     <!-- Reminder note -->
     <tr>
       <td style="padding:0 40px 28px;">
-        <table width="100%" cellpadding="0" cellspacing="0">
+        <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate;border-spacing:0 8px;">
+ 
+          <!-- Join early note -->
           <tr>
             <td style="background:#f0fdfa;border-left:3px solid #0f766e;
               padding:11px 14px;border-radius:0 6px 6px 0;">
-              <p style="margin:0;font-size:13px;color:#0f766e;">
+              <p style="margin:0;font-size:13px;color:#0f766e;line-height:1.6;">
                 🕐 &nbsp;Please join <strong>5 minutes before</strong> your
                 scheduled time. Keep your medical reports ready.
               </p>
             </td>
           </tr>
+ 
+          <!-- Wait note -->
+          <tr>
+            <td style="background:#fff7ed;border-left:3px solid #f59e0b;
+              padding:11px 14px;border-radius:0 6px 6px 0;">
+              <p style="margin:0;font-size:13px;color:#92400e;line-height:1.6;">
+                ⏳ &nbsp;Your consultation slot is <strong>${duration}</strong>.
+                If the doctor has not joined yet, please <strong>wait up to 10–15 minutes</strong>
+                — they will join within your scheduled meeting window.
+              </p>
+            </td>
+          </tr>
+ 
         </table>
       </td>
     </tr>
