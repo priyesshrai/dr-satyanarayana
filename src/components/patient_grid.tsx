@@ -17,6 +17,7 @@ import {
     ExternalLinkIcon,
     ScrollTextIcon,
     ChevronDownIcon,
+    UserCheckIcon,
 } from "lucide-react";
 import React, { useState } from "react";
 import { format } from "date-fns";
@@ -88,10 +89,11 @@ function PrescriptionStrip({ prescriptions }: { prescriptions: Prescriptions[] }
 interface PrescriptionModalProps {
     prescriptions: Prescriptions[];
     patientName: string;
+    patientCreatedAt: string;
     onClose: () => void;
 }
 
-function PrescriptionModal({ prescriptions, patientName, onClose }: PrescriptionModalProps) {
+function PrescriptionModal({ prescriptions, patientName, patientCreatedAt, onClose }: PrescriptionModalProps) {
     const [selected, setSelected] = useState<Prescriptions>(prescriptions[0]);
 
     return (
@@ -113,7 +115,11 @@ function PrescriptionModal({ prescriptions, patientName, onClose }: Prescription
                             <ScrollTextIcon size={15} className="text-primary-color" />
                             Prescriptions
                         </h2>
-                        <p className="text-xs text-gray-400 mt-0.5">{patientName}</p>
+                        <p className="text-xs text-gray-500 mt-0.5 font-medium">{patientName}</p>
+                        <p className="text-[10px] text-gray-400 mt-0.5 flex items-center gap-1">
+                            <UserCheckIcon size={9} className="flex-shrink-0" />
+                            Registered {fmtDate(patientCreatedAt)}
+                        </p>
                     </div>
                     <button
                         onClick={onClose}
@@ -229,6 +235,7 @@ function PrescriptionModal({ prescriptions, patientName, onClose }: Prescription
         </div>
     );
 }
+
 interface PatientCardProps {
     patient: Patient;
     onView: () => void;
@@ -236,7 +243,6 @@ interface PatientCardProps {
 }
 
 export function PatientCard({ patient, onView }: PatientCardProps) {
-    const [apptExpanded, setApptExpanded] = useState(false);
     const [showRxModal, setShowRxModal] = useState(false);
 
     const allPrescriptions = collectPrescriptions(patient.appointments);
@@ -280,12 +286,24 @@ export function PatientCard({ patient, onView }: PatientCardProps) {
 
                     {/* ── Meta ── */}
                     <div className="space-y-2">
+                        {/* Registration date */}
+                        <div className="flex items-center gap-2 text-xs text-gray-600">
+                            <UserCheckIcon size={13} className="text-gray-400 flex-shrink-0" />
+                            <span>
+                                Registered{" "}
+                                <span className="font-semibold text-gray-800">
+                                    {fmtDate(patient.createdAt)}
+                                </span>
+                            </span>
+                        </div>
+
                         {patient.phone && (
                             <div className="flex items-center gap-2 text-xs text-gray-600">
-                                <CalendarIcon size={13} className="text-gray-400 flex-shrink-0" />
+                                <PhoneIcon size={13} className="text-gray-400 flex-shrink-0" />
                                 <span className="font-semibold text-gray-800">{patient.phone}</span>
                             </div>
                         )}
+
                         <div className="flex items-center gap-2 text-xs text-gray-600">
                             <CalendarIcon size={13} className="text-gray-400 flex-shrink-0" />
                             <span>
@@ -300,6 +318,7 @@ export function PatientCard({ patient, onView }: PatientCardProps) {
                                 )}
                             </span>
                         </div>
+
                         {hasPrescriptions && (
                             <div className="flex items-center gap-2 text-xs text-gray-600">
                                 <ActivityIcon size={13} className="text-gray-400 flex-shrink-0" />
@@ -367,6 +386,7 @@ export function PatientCard({ patient, onView }: PatientCardProps) {
                     <PrescriptionModal
                         prescriptions={allPrescriptions}
                         patientName={patient.name}
+                        patientCreatedAt={patient.createdAt}
                         onClose={() => setShowRxModal(false)}
                     />
                 )}
@@ -442,6 +462,10 @@ export function PatientCardSkeleton() {
                 <div className="flex gap-2 items-center">
                     <SkeletonBlock className="w-3.5 h-3.5 rounded" />
                     <SkeletonBlock className="h-3 w-1/3" />
+                </div>
+                <div className="flex gap-2 items-center">
+                    <SkeletonBlock className="w-3.5 h-3.5 rounded" />
+                    <SkeletonBlock className="h-3 w-1/4" />
                 </div>
             </div>
             <div className="flex gap-2">

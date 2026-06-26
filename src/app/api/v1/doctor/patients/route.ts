@@ -8,8 +8,7 @@ export async function GET(req: NextRequest) {
     try {
 
         const user = getUser(req);
-        console.log(user);
-        
+
         if (!user?.id) {
             return NextResponse.json(
                 { error: "Unauthorized" },
@@ -24,7 +23,7 @@ export async function GET(req: NextRequest) {
 
         const { searchParams } = req.nextUrl
         const page = Math.max(Number(searchParams.get("page")) || 1, 1);
-        const limit = Math.min(Math.max(Number(searchParams.get("limit")) || 10, 1), 50);
+        const limit = Math.min(Math.max(Number(searchParams.get("limit")) || 20, 1), 50);
         const skip = (page - 1) * limit;
 
 
@@ -36,6 +35,7 @@ export async function GET(req: NextRequest) {
                     name: true,
                     email: true,
                     phone: true,
+                    createdAt: true,
                     appointments: {
                         include: {
                             payment: true,
@@ -54,11 +54,15 @@ export async function GET(req: NextRequest) {
                         }
                     }
                 },
-                skip,
-                take: limit,
+                // skip,
+                // take: limit,
+                orderBy: {
+                    createdAt: "desc"
+                }
             }),
             prisma.user.count({ where: { role: Role.PATIENT } })
         ])
+        console.log(totalPatient);
 
         const pageCount = Math.ceil(totalPatient / limit);
 

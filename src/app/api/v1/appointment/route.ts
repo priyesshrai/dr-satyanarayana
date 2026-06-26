@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
 
         const { data, error } = await resend.emails.send({
             from: 'Dr. Satyanarayana Garre <info@drsatyanarayanagarre.in>',
-            to: 'info@drsatyanarayanagarre.in',
+            to: ['info@drsatyanarayanagarre.in',"satyakishoregarre@gmail.com"],
             subject: 'New Appointment Request',
             html: `
         <h2>New Appointment</h2>

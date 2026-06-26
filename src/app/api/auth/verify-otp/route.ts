@@ -1,5 +1,7 @@
 import { signToken } from "@/lib/jtw";
 import prisma from "@/lib/prisma";
+import { doctorRegistrationTemplate } from "@/lib/reg_email_templet";
+import { sendMail } from "@/lib/sendMail";
 import { UserInput } from "@/types/user";
 import bcrypt from "bcryptjs";
 import { NextRequest, NextResponse } from "next/server";
@@ -89,10 +91,27 @@ export async function POST(req: NextRequest) {
             email: user.email,
             role: user.role
         }
+
+
+        void sendMail({
+            title: "Dr. Satyanarayana Garre Portal",
+            to: ["drsatyanarayanagarre1@gmail.com", "info@drsatyanarayanagarre.in",],
+            subject: `New Patient Registration — ${user.name}`,
+            html: doctorRegistrationTemplate({
+                name: user.name,
+                email: user.email,
+                phone: user.phone ?? null,
+            }),
+        }).catch((err) => {
+            console.error("Registration email failed to send:", err);
+        });
+
+
         const response = NextResponse.json(
             { message: "Signup successful", user: validUser },
             { status: 201 }
         )
+
 
         response.cookies.set("auth_token", token, {
             httpOnly: true,

@@ -22,7 +22,7 @@ export async function createGoogleMeet({ startTime, endTime, patientEmail, docto
             },
             attendees: [
                 { email: patientEmail },
-                { email: doctorEmail }
+                { email: doctorEmail },
             ],
             conferenceData: {
                 createRequest: {
