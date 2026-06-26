@@ -95,10 +95,7 @@ export async function POST(req: NextRequest) {
 
         void sendMail({
             title: "Dr. Satyanarayana Garre Portal",
-            to: [
-                "satyakishoregarre@gmail.com",
-                "info@drsatyanarayanagarre.in",
-            ],
+            to: ["drsatyanarayanagarre1@gmail.com", "info@drsatyanarayanagarre.in",],
             subject: `New Patient Registration — ${user.name}`,
             html: doctorRegistrationTemplate({
                 name: user.name,
